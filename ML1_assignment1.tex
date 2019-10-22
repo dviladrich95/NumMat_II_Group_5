@@ -1,0 +1,206 @@
+% !TeX spellcheck = en_GB 
+\documentclass[a4paper]{article}
+\usepackage{ulem}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{cancel}
+\usepackage{ngerman}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[bottom]{footmisc}
+\usepackage[toc,page]{appendix}
+
+\newcommand{\R}{\mathbb{R}}
+
+
+\graphicspath{{./pics/}}
+\geometry{
+	left=25mm,
+	top=20mm,
+	right=20mm,
+	bottom=20mm
+}
+
+\lstset{ captionpos=b,
+	rulecolor=\color{black},
+	breaklines=true,
+	frame=single
+}
+
+\title{\textbf{Machine Learning 1 \\Exercise Sheet 1\\}}
+\author{Wintersemester 2019/20\\\\\\
+	Gruppe:		\\\\
+	Ben Aba, Mondher  (TU Berlin, 380190)\\
+	Baga, Oleksandra  (Beuth Hochshule f"ur Technik, 849852)			\\
+	Herrmannsd"orfer, Daniel Viladrich  (TU Berlin, 412543)\\
+	Jan"sen, Knut Arne  (TU Berlin, 344086 )	\\
+	Kravets, Daria  (Freie  Universit"at Berlin, 4675700)\\
+	Tawfek, Noureldin (TU Berlin, 369213)	\\\\\\\\
+	Abteilung Maschinelles Lernen\\Institut f"ur Softwaretechnik und theoretische Informatik\\Fakult"at IV, Technische Universit"at Berlin\\Prof. Dr. Klaus-Robert M"uller }
+
+
+
+\begin{document}
+	% % % % % % % % % % % % % 
+	% Deckblatt
+	% % % % % % % % % % % % %
+	\begin{titlepage}
+		\maketitle
+		\thispagestyle{empty}
+	\end{titlepage}
+	\newpage
+
+
+\section{Exercise 1: Estimating the Bayes Error}
+a)\\
+The Bayes decision rule for the two classes classification problem results in the Bayes error $$ P(error) = \int P(error|x)p(x) dx$$
+We have to show that the full error can be upper-bounded as follows: $$ P(error) \leq \int \frac{2}{\frac{1}{P(w_{1}|x)} + \frac{1}{P(w_{2}|x)}} p(x) dx$$
+we know from the question that 
+$$\int P(error|x)p(x) dx \leq \int \frac{2}{\frac{1}{P(w_{1}|x)} + \frac{1}{P(w_{2}|x)}} p(x) dx$$
+We can show only the equality:
+$$ P(error|x) \leq \frac{2}{\frac{1}{P(w_{1}|x)} + \frac{1}{P(w_{2}|x)}}$$
+As we know from the task and lecture: 
+$$ P(error|x) = min[P(w_{1}|x), P(w_{2}|x)]$$
+So we can show to the equality of the following:\\
+
+\begin{flalign*}
+\begin{split}
+min[P(w_{1}|x), P(w_{2}|x)] \leq \frac{2}{\frac{1}{P(w_{1}|x)} + \frac{1}{P(w_{2}|x)}} \\
+min[P(w_{1}|x), P(w_{2}|x)] \times\left(\frac{1}{P(w_{1}|x)} + \frac{1}{P(w_{2}|x)}\right) \leq 2 \\
+min\left[\frac{\bcancel{P(w_{1}|x)}}{\bcancel{P(w_{1}|x)}}+ \frac{P(w_{1}|x)}{P(w_{2}|x)}, \frac{\bcancel{P(w_{2}|x)}}{\bcancel{P(w_{2}|x)}} + \frac{P(w_{2}|x)}{P(w_{1}|x)}\right] \leq 2 \\
+min\left[1+ \frac{P(w_{1}|x)}{P(w_{2}|x)}, 1+ \frac{P(w_{2}|x)}{P(w_{1}|x)}\right] \leq 2 \\
+min\left[\frac{P(w_{1}|x)}{P(w_{2}|x)},  \frac{P(w_{2}|x)}{P(w_{1}|x)}\right] \leq 1
+\end{split}&
+\end{flalign*}
+
+
+we know The Bayes decision rule for the two classes:  
+\begin{equation*}
+    =
+    \begin{cases}
+      w_{1}, & \text{if}\ {P(w_{1}|x)} \geq {P(w_{2}|x)}\\
+      w_{2}, & \text{if} \ {P(w_{2}|x)} \geq {P(w_{1}|x)}
+    \end{cases}
+  \end{equation*}
+ So we can take 3 variants for our problem:\\
+1) if we have decided $w_{1}$, 
+$$min\left[\frac{P(w_{1}|x)}{P(w_{2}|x)},  \frac{P(w_{2}|x)}{P(w_{1}|x)}\right] = \frac{P(w_{2}|x)}{P(w_{1}|x)} < 1 $$
+2) if we have decided $w_{2}$, 
+$$min\left[\frac{P(w_{1}|x)}{P(w_{2}|x)},  \frac{P(w_{2}|x)}{P(w_{1}|x)}\right] = \frac{P(w_{1}|x)}{P(w_{2}|x)} < 1 $$
+3) and if ${P(w_{1}|x)} = {P(w_{2}|x)}$,
+$$min\left[\frac{P(w_{1}|x)}{P(w_{2}|x)},  \frac{P(w_{2}|x)}{P(w_{1}|x)} \right] = 1 $$\\
+
+Which was to be proven.\\
+
+
+b)\\
+We start with the inequality derived in section a)
+
+\begin{flalign*}
+\begin{split}
+P(error) & \leq \int \frac{2}{\frac{1}{p(w_{1}|x)} + \frac{1}{p(w_{2}|x)}}p(x) dx \\
+\end{split}&
+\end{flalign*}
+
+The rest of the exercise is manipulating this expression until it has the form given in the exercise:
+
+\text{We apply Bayes' rule to the conditional Probabilities $p(w_i|x)=\frac{p(x|w_i)*P(w_i)}{p(x)}$}\\
+
+\begin{flalign*}
+\begin{split}
+P(error) & \leq 2 \int \frac{1}{\frac{p(x)}{p(x|w_{1})P(w_1)} + \frac{p(x)}{p(x|w_{2})P(w_2}}p(x) dx\\
+P(error) & \leq 2 \int \frac{1}{\frac{1}{p(x|w_{1})P(w_1)} + \frac{1}{p(x|w_{2})P(w_2}} dx\\
+P(error) & \leq 2 \int \frac{1}{\frac{p(x|w_{1})P(w_1)+p(x|w_{2})P(w_2}{p(x|w_{1})P(w_1)p(x|w_{2})P(w_2}} dx\\
+P(error) & \leq 2 \int \frac{p(x|w_{1})P(w_1)p(x|w_{2})P(w_2)}{p(x|w_{1})P(w_1)+p(x|w_{2})P(w_2)} dx\\
+P(error) & \leq 2 \int \frac{P(w_1)P(w_2)}{\frac{p(x|w_2)P(w_2)}{p(x|w_1)p(x|w_2)}+\frac{p(x|w_1)P(w_1)}{p(x|w_1)p(x|w_2)}} dx\\
+P(error) & \leq 2 \int \frac{P(w_1)P(w_2)}{\frac{P(w_2)}{p(x|w_1)}+\frac{P(w_1)}{p(x|w_2)}} dx\\
+P(error) & \leq \frac{2P(w_1)P(w_2)}{\pi} \int \frac{1}{P(w_2)(1+(x-\mu)^2)+P(w_1)(1+(x+\mu)^2)} dx\\
+P(error) & \leq \frac{2P(w_1)P(w_2)}{\pi} \int \frac{1}{(P(w_1)+P(w_2))x^2+2(P(w_1)-P(w_2))\mu x + (P(w_1)+P(w_2))(1+\mu^2)} dx\\
+\end{split}&
+\end{flalign*}
+\text{We use the identity $P(w_1)+P(w_2)=1$ since the two events are complementary}\\
+\begin{flalign*}
+\begin{split}
+P(error) & \leq \frac{2P(w_1)P(w_2)}{\pi} \int \frac{1}{x^2+2(P(w_1)-P(w_2))\mu x + (1+\mu^2)} dx\\
+P(error) & \leq \frac{2P(w_1)P(w_2)}{\pi}\frac{2\pi}{\sqrt{4(1+\mu^2)-4(P(w_1)-P(w_2))^2}}\\
+P(error) & \leq \frac{2P(w_1)P(w_2)}{\sqrt{(1+\mu^2)-\mu^2(P(w_1)-P(w_2))^2}}\\
+\end{split}&
+\end{flalign*}
+\text{Note the identity:$ (P(w_1)-P(w_2))^2=(P(w_1)+P(w_2))^2-4P(w_1)P(w_2) =1 -4P(w_1)P(w_2)$}\\
+\begin{flalign*}
+\begin{split}
+P(error) & \leq \frac{2P(w_1)P(w_2)}{\sqrt{(1+\mu^2)-\mu^2(1-4P(w_1)P(w_2))}}\\
+P(error) & \leq \frac{2P(w_1)P(w_2)}{\sqrt{1+4\mu^2P(w_1)P(w_2)}}\\
+\end{split}&
+\end{flalign*}
+
+Which was to be proven.\\
+
+c)\\
+Because it is known that the Bayes decision rule for the two classes classification problem results in the Bayes error $ P(error) = \int P(error|x)p(x) dx$ that means the same as sum of all probabilities of $P(error, x).$ Without the upper-bounds that are both tight and analytically integrable we would use the sum of all $P(error, x).$
+
+\section{Exercise 2: Bayes Decision Boundaries}
+a)\\
+The Bayes error will reach the maximum when $P(w_{1}|x) = P(w_{2}|x)$, because the both classes is equally the same to be decided.  
+
+$$P(w_{1}|x) = \frac{P(x|w_{1})P(w_{1})}{P(x)} $$ 
+
+$$ P(w_{2}|x) =  \frac{P(x|w_{2})P(w_{2})}{P(x)}$$
+
+$$\frac{P(x|w_{1})P(w_{1})}{P(x)} = \frac{P(x|w_{2})P(w_{2})}{P(x)}$$
+
+$$\frac{P(x|w_{2})}{P(x|w_{1})} = \frac{\exp{(\frac{-|x + \mu|}{\sigma})}}{\exp{(\frac{-|x - \mu|}{\sigma})}}$$ 
+
+$$\Leftrightarrow \exp\left(-\frac{\mid x - \mu \mid}{\sigma}\right)P(w_1) = \exp\left(-\frac{\mid x + \mu \mid}{\sigma}\right)P(w_2) $$
+To solve an exponential equation, we take the log of both sides, and solve for the variable.
+
+\begin{align*}
+&\Leftrightarrow &\ln(\exp\left(-\frac{\mid x - \mu \mid}{\sigma}\right)P(w_1)) &= \ln(\exp\left(-\frac{\mid x + \mu \mid}{\sigma}\right)P(w_2)) \\
+&\Leftrightarrow &-\frac{\mid x - \mu \mid}{\sigma} + \ln(P(w_1)) &= -\frac{\mid x + \mu \mid}{\sigma} + \ln(P(w_2)) \\
+&\Leftrightarrow & \ln(P(w_1)) - \ln(P(w_2)) &= \frac{\mid x - \mu \mid}{\sigma} - \frac{\mid x + \mu \mid}{\sigma} \\
+&\Leftrightarrow & \ln\left(\frac{P(w_1)}{P(w_2)}\right) &= \frac{\mid x - \mu \mid - \mid x + \mu \mid}{\sigma} \\
+&\Leftrightarrow & \sigma\ln\left(\frac{P(w_1)}{P(w_2)}\right) &= \mid x - \mu \mid - \mid x + \mu \mid
+\end{align*}
+
+We can take 4 cases to determine the boundaries:
+\begin{enumerate}
+	\item $x < \mu$ and $-x < \mu$ \\
+	\begin{align*}
+	\sigma\ln\left(\frac{P(w_1)}{P(w_2)}\right) &= -(x - \mu) - (x + \mu ) \\
+	&= -2x \\
+	- \frac{\sigma}{2}\ln\left(\frac{P(w_1)}{P(w_2)}\right) &= x
+	\end{align*}
+	\item $x > \mu$ and $-x > \mu$ \\
+	\begin{align*}
+	\sigma\ln\left(\frac{P(w_1)}{P(w_2)}\right) &= x - \mu + x + \mu \\
+	&= 2x \\
+	\frac{\sigma}{2}\ln\left(\frac{P(w_1)}{P(w_2)}\right) &= x
+	\end{align*}		
+	
+	\item $x \le \mu$ and $-x \geq \mu$ \\
+	\begin{align*}
+	\sigma\ln\left(\frac{P(w_1)}{P(w_2)}\right) &= -(x - \mu) + x + \mu \\
+	&= 2\mu
+	\end{align*}
+	\item $x \geq \mu$ and $-x \le \mu$ \\
+	\begin{align*}
+	\sigma\ln\left(\frac{P(w_1)}{P(w_2)}\right) &= (x - \mu) - (x + \mu ) \\
+	&= -2\mu
+	\end{align*}
+\end{enumerate}
+
+From the equations $(3)$ and $(4)$  we see, that the boundary must lie between the mean $\mu$ of both classes.\\
+
+b\\ Nour's Solutions
+
+\end{document}
