@@ -22,6 +22,8 @@
 
 \newcommand{\R}{\mathbb{R}}
 
+% Apply equation cross reference
+\newcommand*{\EQ}[1]{Equation (\ref{eq:#1})}
 
 \graphicspath{{./pics/}}
 \geometry{
@@ -52,37 +54,36 @@
 	\newpage
 
 
-\section{Exercise 1}itle{Group 5 NumMat II Ex1}
-41
-​
-42
-​
-43
-​
-44
-\begin{document}
-45
-        % % % % % % % % % % % % % 
-46
-        % Deckblatt
-47
-        % % % % % % % % % % % % %
-48
-        \begin{titlepage}
-49
-                \maketitle
-50
-                \thispagestyle{empty}
-51
-        \end{titlepage}
-52
-        \newpage
-53
-​
-54
-​
-55
-\section{Exercise 1}
+\section{Discussion and Analyze of PDEs}
 
+\subsection{Relevant PDEs}
+
+\subsection{Navier-Stokes}
+The Navier-Stokes-Equation describes the motion of the viscous fluid substances and is expressed for compressible fluid as
+\begin{equation}
+	\rho(\partial_t u + u \cdot \nabla u) = - \nabla p + \mu \nabla ^2 u + f
+	\label{eq:NavStokes}
+\end{equation}
+with $\rho$ the density, $u$ velocity vector, $p$ pressure, and $\mu$ kinematic viscosity of the fluid.
+\EQ{NavStokes} is expressed in homogenous form by setting $f = 0$ as follows
+\begin{equation}
+	\rho(\partial_t u + u \cdot \nabla u) + \nabla p - \mu \nabla ^2 u = 0
+	\label{eq:NavStokesHom}
+\end{equation}
+For $u (t,x) = (u_0 x_2 (H - x_2), 0)^T$ with $u_0 \in \R$, $x = (x_ 1, x_2) \in \Omega = \R \times (0, H)$, and $t \in (0, \infty)$, the partial differentiations result
+\begin{align}
+	\frac{\partial u}{\partial t} = (0,0)^T \label{eq:du_dt}   \\
+	\nabla u = (0,0)^T  					\label{eq:grad_u} \\
+	\nabla^2 u = (0,0)^T  					\label{eq:div_grad_u}
+\end{align}
+since $u$ is not $t$-dependent and $u_1$ and $u_2$ are not effected by $x_1$ and $x_2$, respectively.
+Equations \ref{eq:du_dt}, \ref{eq:grad_u} and \ref{eq:div_grad_u} show that $u$ is a twice differentiable function, satisfying the homogenous Navier-Stokes PDE with a boundary condition in a domain $\Omega \in \R^2$, which is reffered to as the classical solution for second order PDEs.
+\\ \\
+For the given conditions, \EQ{NavStokesHom} can be expressed as
+\begin{equation}
+	\nabla p = 0
+\end{equation}
+This can be referred to a 2D-flow model in a tube with a width of $H$ at any certain height, which is observed along the gravity axis. Therefore, the pressure in the domain $\Omega$ is described as $p = const. \in [0, \infty)$. 
+\section{Linear Algebra}
 
 \end{document}
