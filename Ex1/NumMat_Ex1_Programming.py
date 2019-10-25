@@ -43,7 +43,7 @@ import numpy as np
 import random
 
 def a01e03sparse(n):
-	return scipy.sparse.diags([-1,2,-1],[-1,0,1],shape=(n,n))
+	return scipy.sparse.diags([-1,2,-1],[-1,0,1],shape=(n,n)).tocsr()
 
 n={}
 random.seed(a=42)
@@ -56,8 +56,8 @@ Kn=a01e03sparse(n)
 		time=timeit.timeit(setup=setup,stmt =code, number = 10)
 
 		if j==0:
-			fastest=time
-		time_ratio_matrix[i][j]=time/fastest
+			first=time
+		time_ratio_matrix[i][j]=time/first
 		print(time)
 
 
