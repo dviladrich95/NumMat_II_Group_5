@@ -22,8 +22,41 @@
 
 \newcommand{\R}{\mathbb{R}}
 
+% MATRIX AND VECTOR EXPRESSIONS
+% -----------------------------
+\newcommand*{\BMAT}[1]
+{
+	\begin{bmatrix}
+		#1 
+	\end{bmatrix}
+}
+
+\newcommand*{\BVEC}[1]
+{
+	\begin{Bmatrix}
+		#1 
+	\end{Bmatrix}
+}
+
+% CROSS REFERENCES
+%--------------------------------------------
 % Apply equation cross reference
 \newcommand*{\EQ}[1]{Equation (\ref{eq:#1})}
+
+% Apply figure cross reference
+\newcommand*{\FIG}[1]{Figure \ref{fig:#1}}
+
+% Apply table cross reference
+\newcommand*{\TAB}[1]{Table \ref{tab:#1}}
+
+% Apply section cross reference
+\newcommand*{\SEC}[1]{Section \ref{sec:#1}}
+
+% Apply section cross reference
+\newcommand*{\CHA}[1]{Chapter \ref{sec:#1}}
+
+% Apply appendix cross reference
+\newcommand*{\APP}[1]{Appendix \ref{sec:#1}}
 
 \graphicspath{{./pics/}}
 \geometry{
@@ -38,6 +71,7 @@
 	breaklines=true,
 	frame=single
 }
+
 
 \title{Group 5 NumMat II Ex1}
 
@@ -56,9 +90,33 @@
 
 \section{Discussion and Analyze of PDEs}
 
-\subsection{Relevant PDEs}
+\paragraph{a) \& b)}
+\begin{itemize}
+	\item Common PDE: Kaup-Kupershmidt equation
+		\begin{equation}
+			\frac{\partial u }{\partial t} = \frac{\partial ^5 u}{\partial x^5} + 10 \frac{\partial ^3 u}{\partial x^3} u + 25 \frac{\partial ^2 u}{\partial x^2} \frac{\partial u}{\partial x} + 20 u^2 \frac{\partial u}{\partial x}
+		\end{equation}
+		\hspace{2.4cm} is a PDE fifth order.
+	
+	\item Member 1 PDE: Hunter-Saxton equation
+		\begin{equation}
+			\frac{\partial}{\partial x} \left( \frac{\partial u }{\partial t} + u \frac{\partial u}{\partial x} \right) = \frac{1}{2} \frac{\partial ^2 u}{\partial x^2}
+		\end{equation}
+		\hspace{2.4cm} is a PDE second order.
+	\item Member 2 PDE: Liouville equation
+		\begin{equation}
+			\nabla ^2 u + e ^{\lambda u} = 0
+		\end{equation}
+		\hspace{2.4cm} is a PDE second order.
+	\item Member 3 PDE: $\varphi ^4$ - Equation
+		\begin{equation}
+			\frac{\partial ^2 \varphi}{\partial t ^2} - \frac{\partial ^2 \varphi}{\partial x ^2} - \varphi + \varphi ^3 = 0
+		\end{equation}
+		\hspace{2.4cm} is a PDE second order.
+		
+\end{itemize}
 
-\subsection{Navier-Stokes}
+\paragraph{c)}\mbox{} \\
 The Navier-Stokes-Equation describes the motion of the viscous fluid substances and is expressed for compressible fluid as
 \begin{equation}
 	\rho(\partial_t u + u \cdot \nabla u) = - \nabla p + \mu \nabla ^2 u + f
@@ -76,6 +134,7 @@ For $u (t,x) = (u_0 x_2 (H - x_2), 0)^T$ with $u_0 \in \R$, $x = (x_ 1, x_2) \in
 	\nabla u = (0,0)^T  					\label{eq:grad_u} \\
 	\nabla^2 u = (0,0)^T  					\label{eq:div_grad_u}
 \end{align}
+%
 since $u$ is not $t$-dependent and $u_1$ and $u_2$ are not effected by $x_1$ and $x_2$, respectively.
 Equations \ref{eq:du_dt}, \ref{eq:grad_u} and \ref{eq:div_grad_u} show that $u$ is a twice differentiable function, satisfying the homogenous Navier-Stokes PDE with a boundary condition in a domain $\Omega \in \R^2$, which is reffered to as the classical solution for second order PDEs.
 \\ \\
@@ -83,6 +142,55 @@ For the given conditions, \EQ{NavStokesHom} can be expressed as
 \begin{equation}
 	\nabla p = 0
 \end{equation}
+This can be referred to a 2D-flow model of a fluid in a tube with a width of $H$ at any certain height, which is observed along the gravity axis. Therefore, the pressure in the domain $\Omega$ is described as $p = const. \in [0, \infty)$. 
 \section{Linear Algebra}
-
+Given is the Toeplitz-Matrix
+\begin{equation}
+	K_4 = \BMAT{2 & -1 & 0 & 0\\
+				-1 & 2 & -1 & 0\\
+				0 & -1 & 2 & -1\\
+				0 & 0 & -1 & 2} \in \R^{4 \times 4}
+\end{equation}
+and $f(x) = \frac{1}{2} x^T K_4 x: \R^4 \rightarrow R$.
+\paragraph{a)}\mbox{} \\
+$f(x)$ can be expressed by executing the matrix multiplication as
+\begin{equation}
+	f(x)= x_1^2 + (x_1 - x_2)^2 + (x_2 - x_3)^2 + (x_3 - x_4)^2 + x_4^2
+\end{equation}
+and the gradient of $f(x)$ is
+\begin{equation}
+	\nabla f(x) = \BMAT{\frac{\partial f}{\partial x_1} \\
+					   \frac{\partial f}{\partial x_2} \\
+					   \frac{\partial f}{\partial x_3} \\
+					   \frac{\partial f}{\partial x_4} }					   
+				=\frac{1}{2} \BMAT{4x_1 - x_2\\
+								   -x_1 + 4x_2 -x_3\\
+								   -x_2 +4x_3 - x_4\\
+								   -x_3 + 4x_4}
+				= \BMAT{2 x_1 - \frac{x_2}{2} 				  \\
+					    \frac{-x_1}{2}  + 2x_2 - \frac{x_3}{2}\\
+					    \frac{-x_2}{2}  + 2x_3 - \frac{x_4}{2}\\
+					    \frac{-x_3}{2}  + 2x_4}
+					    \label{eq:gradf}
+\end{equation}
+and $K_4 x$ gives
+\begin{equation}
+	K_4 x = \BMAT{2 & -1 & 0 & 0\\
+			     -1 & 2 & -1 & 0\\
+				  0 & -1 & 2 & -1\\
+				  0 & 0 & -1 & 2}
+			\BMAT{x_1\\
+			      x_2\\
+				  x_3\\
+				  x_4}
+			= 
+			\BMAT{2 x_1 - \frac{x_2}{2} 				  \\
+	    	    \frac{-x_1}{2}  + 2x_2 - \frac{x_3}{2}\\
+			    \frac{-x_2}{2}  + 2x_3 - \frac{x_4}{2}\\
+			    \frac{-x_3}{2}  + 2x_4}
+			    \label{eq:k4x}
+\end{equation}
+Hence, the statement $\nabla f(x) = K_4 x$ is verified, since \EQ{gradf} and \EQ{k4x} portray equal functionals. 
+\paragraph{b)}\mbox{} \\
+A real symmetric matrix $K_n \in \R^{n \times n}$ is considered as positive definite, if $x^T K_n x > 0, \forall x \in \R^n \backslash \{0\}$
 \end{document}
