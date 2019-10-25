@@ -32,7 +32,7 @@ code3='np.linalg.inv(Kn.todense()).dot(b)'
 codelist=[code1,code2,code3]
 
 time_ratio_matrix=np.zeros((3,3))
-mean_residual_matrix=np.zeros((3,3))
+residual_matrix=np.zeros((3,3))
 
 for i,n in enumerate((10,100,1000)):
 
@@ -75,10 +75,10 @@ for i,n in enumerate((10,100,1000)):
 	x2=code2=np.linalg.solve(Kn.todense(),b)
 	x3=code3=np.linalg.inv(Kn.todense()).dot(b)
 
-	mean_residual_matrix[i][0]=linalg.norm(Kn.dot(x1)-b)
-	mean_residual_matrix[i][1]=linalg.norm(Kn.dot(x2)-b)
-	mean_residual_matrix[i][2]=linalg.norm(Kn.dot(x3)-b)
+	residual_matrix[i][0]=linalg.norm(Kn.dot(x1)-b)
+	residual_matrix[i][1]=linalg.norm(Kn.dot(x2)-b)
+	residual_matrix[i][2]=linalg.norm(Kn.dot(x3)-b)
 
 
-print('mean_residual_matrix\n',mean_residual_matrix)
+print('residual_matrix\n',residual_matrix)
 print('time_ratio_matrix\n',time_ratio_matrix)
