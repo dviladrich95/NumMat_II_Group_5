@@ -6,7 +6,9 @@ Given is the Toeplitz-Matrix
 				0 & 0 & -1 & 2} \in \mathbb{R}^{4 \times 4}
 \end{equation}
 and $f(x) = \frac{1}{2} \VECT{x}^T \MAT{K_4} \VECT{x}: \mathbb{R}^4 \rightarrow R$.
-\paragraph{a)}\mbox{} \\
+%
+% ----------------
+\addSubExercise{a}
 $f(x)$ can be expressed by executing the matrix multiplication as
 \begin{equation}
 	f(x)= x_1^2 + (x_1 - x_2)^2 + (x_2 - x_3)^2 + (x_3 - x_4)^2 + x_4^2
@@ -46,19 +48,23 @@ and $\MAT{K_4} \VECT{x}$ gives
 			    \label{eq:k4x}
 \end{equation}
 Hence, the statement $\nabla f(x) = \MAT{K_4} \VECT{x}$ is verified, since \EQ{gradf} and \EQ{k4x} portray equal functionals. 
-\paragraph{b)}\mbox{} \\
+%
+% -----------------
+\addSubExercise{b}
 A real symmetric matrix $\MAT{K_n} \in \mathbb{R}^{n \times n}$ is considered as positive definite, if $\VECT{x}^T \MAT{K_n} \VECT{x} > 0, \forall x \in \mathbb{R}^n \backslash \{0\}$. $f(x)$ is a good example for fulfilment of this condition, since the $\VECT{x}^T \MAT{K_4} \VECT{x}$ is already expanded in \EQ{fx_detail} that consists of sum of square terms, and therefore non-negative for all $x \in \mathbb{R}^n \backslash \{0\}$.
-
-\paragraph{c)}\mbox{} \\
+%
+% -----------------
+\addSubExercise{c}
 In the first step of the induction $\det(K_1)$ for $n = 1$ is investigated. With
 \begin{equation}
 	\det(\MAT{K_1}) = \det(2) = 2
 \end{equation}
-the expression $det(\MAT{K_n}) = n + 1 $ is fulfilled.
+the statement $det(\MAT{K_n}) = n + 1 $ is fulfilled.
 \\
 \\
 In the second step, we prove a statement for a general n, assuming that the relation holds for every value up to n-1. The determinant $\det (\MAT{K_n})$ for $n \in \mathbb{N}$ is written with the Laplace expansion as follows
-\begin{align}
+\begin{flalign}
+	\nonumber
 	\begin{vmatrix}
 		2  & -1      &  0     & \cdots  & 0\\
 		-1 &         &        &         &   \\
@@ -67,9 +73,9 @@ In the second step, we prove a statement for a general n, assuming that the rela
 		   &         &        &         &   \\
 		   &         &        &         & -1\\
 		0  & \cdots  &  0     &   -1    & 2
-	\end{vmatrix}_n
-	&=
+	\end{vmatrix}_n = 
 	2\cdot(-1)^{n + n}
+	&
 	\begin{vmatrix}
 		2  & -1      &  0     & \cdots  & 0\\
 		-1 &         &        &         &   \\
@@ -79,15 +85,43 @@ In the second step, we prove a statement for a general n, assuming that the rela
 		   &         &        &         & -1\\
 		0  & \cdots  &  0     &   -1    & 2
 	\end{vmatrix}_{n-1}
-	+
-	(-1)(-1)^{n+n-1}
+	+ \hdots \\
+	\hdots -1\cdot(-1)^{n+n-1}
+	&
 	\begin{vmatrix}
 		2  & -1      &  0     & \cdots  & 0\\
 		-1 &         &        &         &   \\
 		   &         &        &         &   \\
 		   & \ddots  & \ddots & \ddots  &   \\
 		   &         &        &         &   \\
-		   &         &        &       0 & -1\\
-	\end{vmatrix}_{n-1}\\
-	&= 2\det (K_{n-1})
+		 0 & \cdots  &        &       0 & -1\\
+	\end{vmatrix}_{n-1}
+	\label{eq:laplaceExp}
+\end{flalign}
+The minor determinant in the second term on the right hand-side of \EQ{laplaceExp} is further expanded as
+\begin{equation}
+	\begin{vmatrix}
+		2  & -1      &  0     & \cdots  & 0\\
+		-1 &         &        &         &   \\
+		   &         &        &         &   \\
+		   & \ddots  & \ddots & \ddots  &   \\
+		   &         &        &         &   \\
+		 0 & \cdots  &        &       0 & -1\\
+	\end{vmatrix}_{n-1} = 
+	(-1)\cdot(-1)^{n-1+n-1}
+	\begin{vmatrix}
+		2  & -1      &  0     & \cdots  & 0\\
+		-1 &         &        &         &   \\
+		   &         &        &         &   \\
+		   & \ddots  & \ddots & \ddots  &   \\
+		   &         &        &         &   \\
+		   &         &        &         & -1\\
+		0  & \cdots  &  0     &   -1    & 2
+	\end{vmatrix}_{n-2}
+	\label{eq:term2exp}
+\end{equation}
+With \EQ{term2exp} plugged in \EQ{laplaceExp}, and assuming that stated relation holds, $\det(\MAT{K_n})$ can be expressed as
+\begin{align}
+	\det(\MAT{K_n}) &= 2 \det(\MAT{K_{n-1}}) - \det(\MAT{K_{n-2}})\\
+					&= 2n - (n-1) = n+1
 \end{align}
