@@ -1,0 +1,394 @@
+%-------------------------
+\newcommand{\addExercise}[3]
+{
+	\section*{Exercise #1}
+	\label{sec:#2}
+	\input{./TexStructure/#3}
+}
+
+% ------------------------
+\newcommand{\addFramedFig}[5]
+{
+	\begin{figure}[#1]
+		\begin{center}
+			\tcbox[sharp corners,
+				   boxsep=1pt,
+				   boxrule=1pt, 
+				   colframe=black,
+				   colback=white]
+				   {\includegraphics[width=#2, keepaspectratio]{#3.#4}}
+			\caption{#5}
+			\label{fig:#3}
+		\end{center}
+	\end{figure}
+}
+% ------------------------
+\newcommand{\addChart}[4]
+% #1  =
+% #2  =
+% #3  =
+{
+	\begin{figure}[#1]
+		\centering
+		\scalebox{#3}{\input{./Figures/FlowCharts/#2.tex}}
+		\caption{#4}
+		\label{fig:#2}
+	\end{figure}
+}
+% ------------------------
+\newcommand{\addTable}[3]
+{
+	\def\arraystretch{1.2}
+	\begin{table}[#1]
+		\centering
+		\input{./Tables/#2}
+		\caption{#3}
+		\label{tab:#2}
+	\end{table}
+}
+% ------------------------					     
+\newcommand*{\mybox}[2]
+{
+	\begin{center}
+		\colorbox{#1}{\parbox{0.9\linewidth}{#2}}
+	\end{center}
+}
+% ------------------------
+\newcommand*{\addRequirement}[1]
+{%
+	\mybox{gray!10}
+	{%
+		\begin{itemize}[partopsep=0pt]
+		\itemsep2pt
+		#1
+		\end{itemize}
+	}
+}
+% ------------------------
+\newcommand*{\addCode}[1]
+{	
+	\mybox{black!05}
+		  {\textsf{\footnotesize#1}}
+}
+
+% Add units to nomenclature
+\newcommand{\nomunit}[1]
+{
+	\renewcommand{\nomentryend}{\hspace*{\fill}#1}
+}
+
+\newcommand*{\BMAT}[1]
+{
+	\begin{bmatrix}
+		#1 
+	\end{bmatrix}
+}
+
+\newcommand*{\BVEC}[1]
+{
+	\begin{Bmatrix}
+		#1 
+	\end{Bmatrix}
+}
+
+% Applying vector style
+\newcommand*{\VECT}[1]
+{\overline{#1}}
+
+% Applying matrix style
+\newcommand*{\MAT}[1]
+{\overline{ \overline{ \mathbf{#1}}}}
+
+
+% CROSS REFERENCES
+%--------------------------------------------
+% Apply equation cross reference
+\newcommand*{\EQ}[1]{Equation (\ref{eq:#1})}
+
+% Apply figure cross reference
+\newcommand*{\FIG}[1]{Figure \ref{fig:#1}}
+
+% Apply table cross reference
+\newcommand*{\TAB}[1]{Table \ref{tab:#1}}
+
+% Apply section cross reference
+\newcommand*{\SEC}[1]{Section \ref{sec:#1}}
+
+% Apply section cross reference
+\newcommand*{\CHA}[1]{Chapter \ref{sec:#1}}
+
+% Apply appendix cross reference
+\newcommand*{\APP}[1]{Appendix \ref{sec:#1}}
+
+% TEXT STYLE
+% -------------------------------------------
+% Apply xsd style
+\newcommand{\XSD}[1]
+{{\fontfamily{phv}\selectfont#1}}
+
+% Apply function variable style
+\newcommand*{\XSDT}[1]{\footnotesize\XSD{#1}\normalsize}
+
+% Apply flow text
+\newcommand{\FLOW}[1]
+{\textbf{\fontfamily{phv}\selectfont #1}}
+
+% Apply arrow text
+\newcommand{\ARROW}[1]
+{\textit{\fontfamily{phv}\selectfont #1}}
+
+% Apply arrow in text
+\newcommand{\ARROWT}[1] {\footnotesize\ARROW{#1}\normalsize}
+
+% Apply xpath style
+\newcommand*{\XPATH}[1]{\textcolor{black}{\url{#1}}}
+
+% Apply function style
+\newcommand*{\FUN}[1]{\textsf{#1}}
+
+% Apply variable style
+\newcommand*{\VAR}[1]{\texttt{#1}}
+
+% APPENDIX
+%-----------------------------------------------
+\newcommand*{\AppendixResults}[2]
+{
+	\def\ImageWidth{0.45}
+	\def\TableScale{0.5}
+	\begin{landscape}
+		\vfill
+		\begin{table}[H]
+		\noindent
+			% Stress Factor Load Case 1
+			\scalebox{#2}{
+				\begin{subtable}{\TableScale\hsize}
+					\centering
+					\input{./Tables/FactorsSigmaTOP#1_LC1}
+					\caption{Stress Sizing Coefficients of Load Case 1}
+					\label{tab:FactorsSigmaTOP#1_LC1}
+				\end{subtable}
+			}
+			\hfill
+			% Stress Factor Load Case 2
+			\scalebox{#2}{
+				\begin{subtable}{\TableScale\hsize}
+					\centering
+					\input{./Tables/FactorsSigmaTOP#1_LC2}
+					\caption{Stress Sizing Coefficients of Load Case 2}
+					\label{tab:FactorsSigmaTOP#1_LC2}
+				\end{subtable}
+			}
+			
+			\noindent
+			% Buckle Factor Load Case 1
+			\scalebox{#2}{
+				\begin{subtable}{\TableScale\hsize}
+					\centering
+					\input{./Tables/FactorsLambdaTOP#1_LC1}
+					\caption{Stability Sizing Coefficients of Load Case 1}
+					\label{tab:FactorsLambdaTOP#1_LC1}
+				\end{subtable}
+			}
+			\hfill
+			% Buckle Factor Load Case 2
+			\scalebox{#2}{
+				\begin{subtable}{\TableScale\hsize}
+					\centering
+					\input{./Tables/FactorsLambdaTOP#1_LC2}
+					\caption{Stability Sizing Coefficients of Load Case 2}
+					\label{tab:FactorsLambdaTOP#1_LC2}
+				\end{subtable}
+			}
+			\caption{Optimization Results of Topology #1}
+			\label{tab:SizingResults#1}
+		\end{table}
+		\vfill
+	\end{landscape}
+	% FEA Figures
+	\newpage
+	\begin{landscape}
+		\begin{figure}[H]
+			% Load Case 1
+			\begin{subfigure}{\ImageWidth\hsize}
+				\centering
+				\includegraphics[width=\hsize]{Results/Case1/Top#1S.png} 
+				\caption{Stress Distribution of Load Case 1}
+				%\label{fig:TOP#1_LC1_S}
+			\end{subfigure}
+			\hfill
+			% Load Case 2
+			\begin{subfigure}{\ImageWidth\hsize}
+				\centering
+				\includegraphics[width=\hsize]{Results/Case2/Top#1S.png} 
+				\caption{Stress Distribution of Load Case 2}
+				%\label{fig:TOP#1_LC2_S}
+			\end{subfigure}
+			\vfill
+			% Load Case 1
+			\begin{subfigure}{\ImageWidth\hsize}
+				\centering
+				\includegraphics[width=\hsize]{Results/Case1/Top#1B.png} 
+				\caption{Buckle Displacements of Load Case 1}
+				%\label{fig:TOP#1_LC1_S}
+			\end{subfigure}
+			\hfill
+			% Load Case 2
+			\begin{subfigure}{\ImageWidth\hsize}
+				\centering
+				\includegraphics[width=\hsize]{Results/Case2/Top#1B.png} 
+				\caption{Buckle Displacements of Load Case 2}
+				%\label{fig:TOP#1_LC2_S}
+			\end{subfigure}
+			\caption{Converged \acs{fea} Results of Topology #1}
+			\label{fig:TopologyResults#1}
+		\end{figure}
+	\end{landscape}
+}
+
+%---------------------------
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LANDSCAPE SETTINGS - 4 FIGURES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+%\def\LandscapeHeight{175pt}
+%\begin{landscape}
+%	\begin{figure}[H]
+%		\begin{subfigure}{0.50\hsize}
+%			\centering
+%			\includegraphics[height=\LandscapeHeight]{Sizing_PartMass_LC_1.png} 
+%			\caption{}
+%			\label{}
+%		\end{subfigure}
+%		\hfill
+%		\begin{subfigure}{0.50\hsize}
+%			\centering
+%			\includegraphics[height=\LandscapeHeight]{Sizing_PartMass_LC_3.png} 
+%			\caption{}
+%			\label{}
+%		\end{subfigure}
+%		
+%		\begin{subfigure}{0.50\hsize}
+%			\centering
+%			\includegraphics[height=\LandscapeHeight]{Sizing_PartThickness_LC_1.png} 
+%			\caption{Segments}
+%			\label{fig:Segments}
+%		\end{subfigure}
+%		\hfill
+%		\begin{subfigure}{0.50\hsize}
+%			\centering
+%			\includegraphics[height=\LandscapeHeight]{Sizing_PartThickness_LC_3.png} 
+%			\caption{Component Segments}
+%			\label{fig:ComponentSegments}
+%		\end{subfigure}
+%		\caption{}
+%		\label{}
+%	\end{figure}
+%\end{landscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2 FIGURES IN PORTRAIT ORIENTATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+%\begin{figure}[H]
+%	\begin{subfigure}{1\hsize}
+%		\centering
+%		\includegraphics[width=400pt]{Sizing_PartMass_LC_1} 
+%		\caption{Load Case 1}
+%		\label{}
+%	\end{subfigure}
+%	\vfill
+%	\begin{subfigure}{1\hsize}
+%		\centering
+%		\includegraphics[width=400pt]{Sizing_PartMass_LC_3} 
+%		\caption{Load Case 2}
+%		\label{}
+%	\end{subfigure}
+%	\caption{}
+%	\label{}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2 FIGURES IN PORTRAIT ORIENTATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+%\begin{figure}[H]
+%	\begin{subfigure}{1\hsize}
+%		\centering
+%		\includegraphics[width=400pt]{Sizing_PartThickness_LC_1} 
+%		\caption{Load Case 1}
+%		\label{}
+%	\end{subfigure}
+%	\vfill
+%	\begin{subfigure}{1\hsize}
+%		\centering
+%		\includegraphics[width=400pt]{Sizing_PartThickness_LC_3} 
+%		\caption{Load Case 2}
+%		\label{}
+%	\end{subfigure}
+%	\caption{}
+%	\label{}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 3 FIGURES IN PORTRAIT ORIENTATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+%\begin{figure}[H]
+%	\begin{subfigure}{1\hsize}
+%		\centering
+%		\includegraphics[width=300pt]{Sizing_EigenValue.png} 
+%		\caption{Load Case 1}
+%		\label{}
+%	\end{subfigure}
+%	\vfill
+%	\begin{subfigure}{1\hsize}
+%		\centering
+%		\includegraphics[width=300pt]{Sizing_MaximumDisplacement.png} 
+%		\caption{Load Case 2}
+%		\label{}
+%	\end{subfigure}
+%	\vfill
+%	\begin{subfigure}{1\hsize}
+%		\centering
+%		\includegraphics[width=300pt]{Sizing_StructuralMass.png} 
+%		\caption{Load Case 3}
+%		\label{}
+%	\end{subfigure}
+%	\caption{}
+%	\label{}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 3 FIGURES IN PORTRAIT ORIENTATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+%\begin{figure}[H]
+%	\begin{subfigure}{1\hsize}
+%		\centering
+%		\includegraphics[width=300pt]{PartMass_LoadCase1.png} 
+%		\caption{Load Case 1}
+%		\label{}
+%	\end{subfigure}
+%	
+%	\begin{subfigure}{1\hsize}
+%		\centering
+%		\includegraphics[width=300pt]{PartMass_LoadCase2.png} 
+%		\caption{Load Case 2}
+%		\label{}
+%	\end{subfigure}
+%	
+%	\begin{subfigure}{1\hsize}
+%		\centering
+%		\includegraphics[width=300pt]{PartMass_LoadCase3.png} 
+%		\caption{Load Case 3}
+%		\label{}
+%	\end{subfigure}
+%	\caption{}
+%	\label{}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

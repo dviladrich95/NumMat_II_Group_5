@@ -1,0 +1,41 @@
+% DOCUMENT DEFIFNITIONS
+% ------------------------------------------------------
+\documentclass[12pt     ,
+               a4paper  ,
+               fleqn    ,
+               twoside  ,
+               numbers  = noenddot]
+               {article}
+
+\newcommand{\courseName}       {Numerical Mathematics II for Engineers}
+\newcommand{\currentSemester}  {Winter Semester 2019 - 2020}
+\newcommand{\groupMemebers}    {Group 5: Atci, Herrmannsdoerfer, Singh}
+\newcommand{\currentAssignment}{Assignment 1}
+       
+% FILE BINDINGS
+% ------------------------------------------------------
+\input{./Settings/Packages}
+\input{./Settings/Paths}
+\input{./Settings/Commands}
+\input{./Settings/Preferences}
+
+% BEGIN OF DOCUMENT
+% ------------------------------------------------------
+\begin{document}
+\pagestyle{fancy}
+% Add title
+\input{./TexStructure/Title}
+
+% Exercise 1
+\addExercise{1}
+		    {Ex1}
+		    {Exercise1}
+
+% Exercise 2
+\addExercise{2}
+		    {Ex2}
+		    {Exercise2}
+
+% END OF DOCUMENT
+% ------------------------------------------------------
+\end{document}
