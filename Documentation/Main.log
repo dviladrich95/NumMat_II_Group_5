@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  26 OCT 2019 18:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  27 OCT 2019 02:25
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2225,25 +2225,25 @@ LaTeX Warning: Unused global option(s):
 (Main.aux)
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 24.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 26.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 24.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2280,13 +2280,13 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Main.bbl' found.
  (Main.bbl)
-Package biblatex Info: Reference section=0 on input line 26.
-Package biblatex Info: Reference segment=0 on input line 26.
+Package biblatex Info: Reference section=0 on input line 24.
+Package biblatex Info: Reference segment=0 on input line 24.
 \AtBeginShipoutBox=\box115
 \c@lstlisting=\count484
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 26.
+(lastpage)             ! on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2327,9 +2327,10 @@ ABD: EveryShipout initializing macros
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-(TexStructure/Title.tex
+(TexStructure/Assignment1.tex (TexStructure/Title.tex
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 2.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 2.
@@ -2363,14 +2364,14 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 20.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 24.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
-(TexStructure/Exercise1.tex
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 3.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 11.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
@@ -2381,8 +2382,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1
 
-{C:/Users/ATCI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-(TexStructure/Exercise2.tex
+{C:/Users/ATCI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+LaTeX Warning: Reference `eq:NavStokes' on page 2 undefined on input line 43.
+
+
+LaTeX Warning: Reference `eq:du_dt' on page 2 undefined on input line 56.
+
+
+LaTeX Warning: Reference `eq:grad_u' on page 2 undefined on input line 56.
+
+
+LaTeX Warning: Reference `eq:div_grad_u' on page 2 undefined on input line 56.
+
+
+LaTeX Warning: Reference `eq:NavStokesHom' on page 2 undefined on input line 58
+.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2390,14 +2406,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Overfull \hbox (4.35176pt too wide) in paragraph at lines 54--57
+
+LaTeX Warning: Reference `eq:gradf' on page 3 undefined on input line 116.
+
+
+LaTeX Warning: Reference `eq:k4x' on page 3 undefined on input line 116.
+
+
+LaTeX Warning: Reference `eq:fx_detail' on page 3 undefined on input line 120.
+
+
+Overfull \hbox (4.35176pt too wide) in paragraph at lines 120--123
  \T1/lmr/b/n/12 b) \T1/lmr/m/n/12 A re-al sym-me-tric ma-trix $[] \OMS/lmsy/m/n
 /12 2 \U/msb/m/n/12 R[]$ \T1/lmr/m/n/12 is con-si-de-red as po-si-ti-ve de-fi-n
 i-te, if $[][][][] \OML/lmm/m/it/12 >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--66
+Underfull \hbox (badness 10000) in paragraph at lines 127--132
 
  []
 
@@ -2407,7 +2433,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3])
+[3]
+
+LaTeX Warning: Reference `eq:laplaceExp' on page 4 undefined on input line 167.
+
+
+
+LaTeX Warning: Reference `eq:term2exp' on page 4 undefined on input line 189.
+
+
+LaTeX Warning: Reference `eq:laplaceExp' on page 4 undefined on input line 189.
+
+
+)
 
 Package caption Warning: Unused \captionsetup[figure] on input line 49.
 See the caption package documentation for explanation.
@@ -2428,15 +2466,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4] (Main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45201 strings out of 493323
- 914990 string characters out of 3139069
- 1526020 words of memory out of 3000000
- 47914 multiletter control sequences out of 15000+200000
+ 45197 strings out of 493323
+ 914928 string characters out of 3139069
+ 1525758 words of memory out of 3000000
+ 47913 multiletter control sequences out of 15000+200000
  564588 words of font info for 49 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  65i,17n,101p,10407b,1863s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2455,7 +2499,7 @@ s/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
 lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb>
-Output written on Main.pdf (4 pages, 202848 bytes).
+Output written on Main.pdf (4 pages, 203269 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

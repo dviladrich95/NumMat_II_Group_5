@@ -1,9 +1,18 @@
 %-------------------------
-\newcommand{\addExercise}[3]
+\newcommand{\addAssignment}[1]
+{
+	% Set current assignment
+	\newcommand{\currentAssignment}{Assignment #1}
+
+	% Add assignment
+	\input{./TexStructure/Assignment#1}
+}
+
+%-------------------------
+\newcommand{\addExercise}[2]
 {
 	\section*{Exercise #1}
 	\label{sec:#2}
-	\input{./TexStructure/#3}
 }
 
 %-------------------------
@@ -13,35 +22,6 @@
 	%\subsection*{#1)}
 }
 
-% ------------------------
-\newcommand{\addFramedFig}[5]
-{
-	\begin{figure}[#1]
-		\begin{center}
-			\tcbox[sharp corners,
-				   boxsep=1pt,
-				   boxrule=1pt, 
-				   colframe=black,
-				   colback=white]
-				   {\includegraphics[width=#2, keepaspectratio]{#3.#4}}
-			\caption{#5}
-			\label{fig:#3}
-		\end{center}
-	\end{figure}
-}
-% ------------------------
-\newcommand{\addChart}[4]
-% #1  =
-% #2  =
-% #3  =
-{
-	\begin{figure}[#1]
-		\centering
-		\scalebox{#3}{\input{./Figures/FlowCharts/#2.tex}}
-		\caption{#4}
-		\label{fig:#2}
-	\end{figure}
-}
 % ------------------------
 \newcommand{\addTable}[3]
 {

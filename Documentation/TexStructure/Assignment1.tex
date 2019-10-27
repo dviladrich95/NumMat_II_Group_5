@@ -1,3 +1,69 @@
+\newcommand{\assignmentDate}{October 28th, 2019}
+
+% Add title
+\input{./TexStructure/Title}
+
+% EXERCISE 1
+% --------------------------------------------------------------------------------------------------------------------
+\addExercise{1}{Ex1}
+\addSubExercise{a \& b}
+\begin{itemize}
+	\item Common PDE: Kaup-Kupershmidt equation
+		\begin{equation}
+			\frac{\partial u }{\partial t} = \frac{\partial ^5 u}{\partial x^5} + 10 \frac{\partial ^3 u}{\partial x^3} u + 25 \frac{\partial ^2 u}{\partial x^2} \frac{\partial u}{\partial x} + 20 u^2 \frac{\partial u}{\partial x}
+		\end{equation}
+		\hspace{2.4cm} is a PDE fifth order.
+	
+	\item Member 1 PDE: Hunter-Saxton equation
+		\begin{equation}
+			\frac{\partial}{\partial x} \left( \frac{\partial u }{\partial t} + u \frac{\partial u}{\partial x} \right) = \frac{1}{2} \frac{\partial ^2 u}{\partial x^2}
+		\end{equation}
+		\hspace{2.4cm} is a PDE second order.
+	\item Member 2 PDE: Liouville equation
+		\begin{equation}
+			\nabla ^2 u + e ^{\lambda u} = 0
+		\end{equation}
+		\hspace{2.4cm} is a PDE second order.
+	\item Member 3 PDE: $\varphi ^4$ - Equation
+		\begin{equation}
+			\frac{\partial ^2 \varphi}{\partial t ^2} - \frac{\partial ^2 \varphi}{\partial x ^2} - \varphi + \varphi ^3 = 0
+		\end{equation}
+		\hspace{2.4cm} is a PDE second order.
+		
+\end{itemize}
+%
+% ---------------
+\addSubExercise{c}
+The Navier-Stokes-Equation describes the motion of the viscous fluid substances and is expressed for compressible fluid as
+\begin{equation}
+	\rho(\partial_t u + u \cdot \nabla u) = - \nabla p + \mu \nabla ^2 u + f
+	\label{eq:NavStokes}
+\end{equation}
+with $\rho$ the density, $u$ velocity vector, $p$ pressure, and $\mu$ kinematic viscosity of the fluid.
+\EQ{NavStokes} is expressed in homogenous form by setting $f = 0$ as follows
+\begin{equation}
+	\rho(\partial_t u + u \cdot \nabla u) + \nabla p - \mu \nabla ^2 u = 0
+	\label{eq:NavStokesHom}
+\end{equation}
+For $u (t,x) = (u_0 x_2 (H - x_2), 0)^T$ with $u_0 \in \mathbb{R}$, $x = (x_ 1, x_2) \in \Omega = \mathbb{R} \times (0, H)$, and $t \in (0, \infty)$, the partial differentiations result
+\begin{align}
+	\frac{\partial u}{\partial t} = (0,0)^T \label{eq:du_dt}   \\
+	\nabla u = (0,0)^T  					\label{eq:grad_u} \\
+	\nabla^2 u = (0,0)^T  					\label{eq:div_grad_u}
+\end{align}
+%
+since $u$ is not $t$-dependent and $u_1$ and $u_2$ are not effected by $x_1$ and $x_2$, respectively.
+Equations \ref{eq:du_dt}, \ref{eq:grad_u} and \ref{eq:div_grad_u} show that $u$ is a twice differentiable function, satisfying the homogenous Navier-Stokes PDE with a boundary condition in a domain $\Omega \in \mathbb{R}^2$, which is reffered to as the classical solution for second order PDEs.
+%
+For the given conditions, \EQ{NavStokesHom} can be expressed as
+\begin{equation}
+	\nabla p = 0
+\end{equation}
+This can be referred to a 2D-flow model of a fluid in a tube with a width of $H$ at any certain height, which is observed along the gravity axis. Therefore, the pressure in the domain $\Omega$ is described as $p = const. \in [0, \infty)$.
+%
+% EXERCISE 2
+% --------------------------------------------------------------------------------------------------------------------
+\addExercise{2}{Ex2}
 Given is the Toeplitz-Matrix
 \begin{equation}
 	\MAT{K_4} = \BMAT{2 & -1 & 0 & 0\\
