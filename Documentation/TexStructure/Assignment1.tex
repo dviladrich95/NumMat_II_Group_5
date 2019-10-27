@@ -8,27 +8,29 @@
 \addExercise{1}{Ex1}
 \addSubExercise{a \& b}
 \begin{itemize}
-	\item Common PDE: Kaup-Kupershmidt equation
+	\item \underline{Common PDE}: Benjamin–Bona–Mahony equation
 		\begin{equation}
-			\frac{\partial u }{\partial t} = \frac{\partial ^5 u}{\partial x^5} + 10 \frac{\partial ^3 u}{\partial x^3} u + 25 \frac{\partial ^2 u}{\partial x^2} \frac{\partial u}{\partial x} + 20 u^2 \frac{\partial u}{\partial x}
+			\frac{\partial u}{\partial t} + \frac{\partial u}{\partial x} + u \frac{\partial u}{\partial x} - \frac{\partial ^3 u}{\partial x^2 \partial t} = 0
 		\end{equation}
-		\hspace{2.4cm} is a PDE fifth order.
+		is a third order nonlinear PDE, also known as the regularized long wave equation, which was studied as an improvement of Korteweg–de Vries equation for modeling long surface gravity waves of small amplitude by Thomas Brook Benjamin, Jerry Lloyd Bona and John Joseph Mahony in 1972.
 	
-	\item Navneet's PDE: Hunter-Saxton equation
+	\item \underline{Kagan's PDE}: Hunter-Saxton equation
 		\begin{equation}
 			\frac{\partial}{\partial x} \left( \frac{\partial u }{\partial t} + u \frac{\partial u}{\partial x} \right) = \frac{1}{2} \frac{\partial ^2 u}{\partial x^2}
 		\end{equation}
-		\hspace{2.4cm} is a PDE second order.
-	\item Kagan's PDE: Liouville equation
+		is a second order nonlinear PDE that takes place in the field of nematic liquid crystals. This equation studies the certain aspects of orientation waves, that arise when the molecules in the liquid crystal are initially not aligned.
+		
+	\item \underline{Navneet's PDE}: Dym Equation
 		\begin{equation}
-			\nabla ^2 u + e ^{\lambda u} = 0
+			\frac{\partial u}{\partial t} = u^3 \frac{\partial^3 u}{\partial x^3}
 		\end{equation}
-		\hspace{2.4cm} is a PDE second order.
-	\item Daniel's PDE: Korteweg–de Vries equation
+		is a third order PDE, named after Harry Dym, that represents a system, where dispersion and nonlinearity are coupled and may be solved through inverse scattering transform. 
+		
+	\item \underline{Daniel's PDE}: Korteweg–de Vries equation
 		\begin{equation}
 			\partial_t\phi+\partial_x^3\phi-6\phi\partial_x\phi=0
 		\end{equation}
-		\hspace{2.4cm} is a third order nonlinear PDE that has the nice propertiess of still being exactly solvable, being one of the first differential equations used to describe solitons and being discovered when John Scott Russell saw solitary water waves travelling through the Union Canal in Scotland.
+		is a third order nonlinear PDE that has the nice properties of still being exactly solvable, being one of the first differential equations used to describe solutions and being discovered when John Scott Russell saw solitary water waves traveling through the Union Canal in Scotland.
 		
 \end{itemize}
 %
@@ -40,7 +42,7 @@ The Navier-Stokes-Equation describes the motion of the viscous fluid substances 
 	\label{eq:NavStokes}
 \end{equation}
 with $\rho$ the density, $u$ velocity vector, $p$ pressure, and $\mu$ kinematic viscosity of the fluid.
-\EQ{NavStokes} is expressed in homogenous form by setting $f = 0$ as follows
+\EQ{NavStokes} is expressed in homogeneous form by setting $f = 0$ as follows
 \begin{equation}
 	\rho(\partial_t u + u \cdot \nabla u) + \nabla p - \mu \nabla ^2 u = 0
 	\label{eq:NavStokesHom}
@@ -53,7 +55,7 @@ For $u (t,x) = (u_0 x_2 (H - x_2), 0)^T$ with $u_0 \in \mathbb{R}$, $x = (x_ 1, 
 \end{align}
 %
 since $u$ is not $t$-dependent and $u_1$ and $u_2$ are not effected by $x_1$ and $x_2$, respectively.
-Equations \ref{eq:du_dt}, \ref{eq:grad_u} and \ref{eq:div_grad_u} show that $u$ is a twice differentiable function, satisfying the homogenous Navier-Stokes PDE with a boundary condition in a domain $\Omega \in \mathbb{R}^2$, which is reffered to as the classical solution for second order PDEs.
+Equations \ref{eq:du_dt}, \ref{eq:grad_u} and \ref{eq:div_grad_u} show that $u$ is a twice differentiable function, satisfying the homogeneous Navier-Stokes PDE with a boundary condition in a domain $\Omega \in \mathbb{R}^2$, which is referred to as the classical solution for second order PDEs.
 %
 For the given conditions, \EQ{NavStokesHom} can be expressed as
 \begin{equation}
@@ -117,7 +119,7 @@ Hence, the statement $\nabla f(x) = \MAT{K_4} \VECT{x}$ is verified, since \EQ{g
 %
 % -----------------
 \addSubExercise{b}
-A real symmetric matrix $\MAT{K_n} \in \mathbb{R}^{n \times n}$ is considered as positive definite, if $\VECT{x}^T \MAT{K_n} \VECT{x} > 0, \forall x \in \mathbb{R}^n \backslash \{0\}$. $f(x)$ is a good example for fulfilment of this condition, since the $\VECT{x}^T \MAT{K_4} \VECT{x}$ is already expanded in \EQ{fx_detail} that consists of sum of square terms, and therefore non-negative for all $x \in \mathbb{R}^n \backslash \{0\}$.
+A real symmetric matrix $\MAT{K_n} \in \mathbb{R}^{n \times n}$ is considered as positive definite, if $\VECT{x}^T \MAT{K_n} \VECT{x} > 0, \forall x \in \mathbb{R}^n \backslash \{0\}$. $f(x)$ is a good example for fulfillment of this condition, since the $\VECT{x}^T \MAT{K_4} \VECT{x}$ is already expanded in \EQ{fx_detail} that consists of sum of square terms, and therefore non-negative for all $x \in \mathbb{R}^n \backslash \{0\}$.
 %
 % -----------------
 \addSubExercise{c}

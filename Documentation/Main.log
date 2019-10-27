@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  27 OCT 2019 02:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  27 OCT 2019 21:30
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2384,46 +2384,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 {C:/Users/ATCI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Reference `eq:NavStokes' on page 2 undefined on input line 43.
-
-
-LaTeX Warning: Reference `eq:du_dt' on page 2 undefined on input line 56.
-
-
-LaTeX Warning: Reference `eq:grad_u' on page 2 undefined on input line 56.
-
-
-LaTeX Warning: Reference `eq:div_grad_u' on page 2 undefined on input line 56.
-
-
-LaTeX Warning: Reference `eq:NavStokesHom' on page 2 undefined on input line 58
-.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [2]
-
-LaTeX Warning: Reference `eq:gradf' on page 3 undefined on input line 116.
-
-
-LaTeX Warning: Reference `eq:k4x' on page 3 undefined on input line 116.
-
-
-LaTeX Warning: Reference `eq:fx_detail' on page 3 undefined on input line 120.
-
-
-Overfull \hbox (4.35176pt too wide) in paragraph at lines 120--123
+Overfull \hbox (4.35176pt too wide) in paragraph at lines 122--125
  \T1/lmr/b/n/12 b) \T1/lmr/m/n/12 A re-al sym-me-tric ma-trix $[] \OMS/lmsy/m/n
 /12 2 \U/msb/m/n/12 R[]$ \T1/lmr/m/n/12 is con-si-de-red as po-si-ti-ve de-fi-n
 i-te, if $[][][][] \OML/lmm/m/it/12 >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--132
+Underfull \hbox (badness 10000) in paragraph at lines 129--134
 
  []
 
@@ -2433,19 +2407,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3]
-
-LaTeX Warning: Reference `eq:laplaceExp' on page 4 undefined on input line 167.
-
-
-
-LaTeX Warning: Reference `eq:term2exp' on page 4 undefined on input line 189.
-
-
-LaTeX Warning: Reference `eq:laplaceExp' on page 4 undefined on input line 189.
-
-
-)
+[3])
 
 Package caption Warning: Unused \captionsetup[figure] on input line 49.
 See the caption package documentation for explanation.
@@ -2466,12 +2428,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4] (Main.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
@@ -2479,7 +2435,7 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 Here is how much of TeX's memory you used:
  45197 strings out of 493323
  914928 string characters out of 3139069
- 1525758 words of memory out of 3000000
+ 1523759 words of memory out of 3000000
  47913 multiletter control sequences out of 15000+200000
  564588 words of font info for 49 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2499,7 +2455,7 @@ s/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
 lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb>
-Output written on Main.pdf (4 pages, 203269 bytes).
+Output written on Main.pdf (4 pages, 205267 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
