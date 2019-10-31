@@ -7,11 +7,100 @@
 % EXERCISE 1
 % --------------------------------------------------------------------------------------------------------------------
 \addExercise{1}{Ex1}
-
+Given is the following boundary problem of an annulus
+\begin{equation}
+	\begin{cases}
+		-\Delta u = 0, &\text{in } \Omega = \{(x,y) \in \mathbb{R}^2 : 1 \leq \sqrt{x^2 + y^2} < 2 \} \subset \mathbb{R}^2, \\
+		u = g, &\text{on } \partial \Omega,
+	\end{cases}
+	\label{eq:annulus1}
+\end{equation}
+with the boundary condition
+\begin{equation}
+	g(x,y) = 
+	\begin{cases}
+		x &\text{for } x^2 +y^2 = 2^2\\
+		0 &\text{otherwise}
+	\end{cases}
+\end{equation}
 %
 % ----------------
 \addSubExercise{a}
-
+$(x,y) \in \Omega$ is transformed to polar coordinates $(r, \varphi) \in \Omega_r$ using
+\begin{align}
+	x &= r \cos{(\varphi)},\\
+	y &= r \sin{(\varphi)}
+\end{align}
+with $r \in (1,2]$ and $\varphi \in (0, 2 \pi]$. Let $v:\Omega_r \to \mathbb{R}$ defined by $v(r,\varphi) = v(x,y)$.
+In this case, the partial derivatives $v_x$ and $v_y$ are expressed using chain rule as follows
+\begin{align}
+	%\frac{}{}
+	\label{eq:chainX}
+	\frac{\partial v}{\partial x} &= \frac{\partial v}{\partial r} \frac{\partial r}{\partial x} +
+									\frac{\partial v}{\partial \varphi} \frac{\partial \varphi}{\partial x}, \text{also denoted as } u_x = u_r r_x + v_\varphi \varphi_x\\
+	%
+	\label{eq:chainY}
+	\frac{\partial v}{\partial x} &= \frac{\partial v}{\partial r} \frac{\partial r}{\partial x} +
+									\frac{\partial v}{\partial \varphi} \frac{\partial \varphi}{\partial x}, \text{also denoted as } u_y= u_r r_y + v_\varphi \varphi_y
+\end{align}
+%
+The second partial derivative of $v$ with respect to $x$ is obtained using product rule
+\begin{equation}
+	v_{xx} = u_r r_{xx} + (u_r)_x r_x + v_\varphi \varphi_{xx} + (v_\varphi)_x \varphi_x
+	\label{eq:uXX}
+\end{equation}
+%
+By applying the chain rule from \EQ{chainX} and \EQ{chainY} into  \EQ{uXX}, $v_{xx}$ is written in the following form
+%
+\begin{equation}
+	v_{xx} = u_r r_{xx} + v_{rr} r_{x}^2 + 2 v_{r\varphi} r_x \varphi_x + v_\varphi \varphi_{xx} + v_{\varphi \varphi} \varphi_x^2
+	\label{eq:uXX_chain}
+\end{equation}
+%
+where a similar expression is obtained for y
+\begin{equation}
+	v_{yy} = u_r r_{yy} + v_{rr} r_{y}^2 + 2 v_{r\varphi} r_y \varphi_y + v_\varphi \varphi_{yy} + v_{\varphi \varphi} \varphi_y^2
+	\label{eq:uYY_chain}
+\end{equation}
+%
+The laplace equation $\Delta v = v_{xx} + v_{yy}$ can be written in a proper semi-polar coordinate form by adding \EQ{uXX_chain} and \EQ{uYY_chain} and collecting the like terms
+\begin{align}
+	\nonumber
+	\Delta v &= v_{xx} + v_{yy}\\
+	\label{eq:laplaceExpanded}
+			 &= u_r(r_{xx} + r_{yy}) + v_{rr} (r_x^2 + r_y^2) + 2 v_{r\varphi} (r_x \varphi_{x} + r_y \varphi_y) + v_\varphi (\varphi_{xx} + \varphi_{yy}) + v_{\varphi\varphi} (\varphi_x^2 + \varphi_y^2)
+\end{align}
+%
+Now, expressions in parentheses are to be elaborated in the partial derivations with respect to polar coordinates.
+For this purpose, the relationship $x^2 + y^2 = r^2$ is differentiated with respect to x and y.
+Accordingly, the partial differentiation of $r$ terms with respect Cartesian terms up to second order are obtained as
+\begin{align}
+	\label{eq:r_x}	
+	r_x    &= \frac{x}{r},\\
+	r_{xx} &= \frac{y^2}{r^3},\\
+	r_{y}  &= \frac{y}{r},\\
+	r_{yy} &= \frac{x^2}{r^3}\text{.}
+\end{align}
+%
+Similarly, the partial differentiation of $\varphi$ terms with respect to x and y are obtained as
+\begin{align}
+	\varphi_x    &= -\frac{y}{r^2},\\
+	\varphi_{xx} &= \frac{2xy}{r^4},\\
+	\varphi_{y}  &= \frac{x}{r^2},\\
+	\label{eq:phi_yy}
+	\varphi_{yy} &= -\frac{2xy}{r^4}\text{.}
+\end{align}
+%
+Employing the Equations \ref{eq:r_x} to \ref{eq:phi_yy} in \EQ{laplaceExpanded} gives
+\begin{align*}
+	\Delta v &= u_r\left(\frac{y^2}{r^3} + \frac{x^2}{r^3}\right) + v_{rr} \left(\left(\frac{x}{r} \right)^2+ \left(\frac{y}{r} \right)^2\right) + 2 v_{r\varphi} \left(\frac{-xy}{r^3}+\frac{yx}{r^3}\right) + \hdots\\
+			 &v_\varphi \left(\frac{2xy}{r^4} - \frac{2xy}{r^4}\right) + v_{\varphi\varphi} \left(\left(-\frac{x^2}{r^3}\right) ^2 + \left(\frac{x^2}{r^3}\right)^2 \right)\\
+			 &= \frac{1}{r} u_r + v_{rr} + 0 + 0 + \frac{1}{r^2} v_{\varphi\varphi}.
+\end{align*}
+Thus, for any $v$ satisfying the Laplace equation $-\Delta v = 0$, $v$ satisfies in polar coordinates the equation
+\begin{equation}
+	-\left(v_{rr} + \frac{1}{r} v_r + \frac{1}{r^2} v_{\varphi\varphi}\right)=0
+\end{equation}
 %
 % ----------------
 \addSubExercise{b}
