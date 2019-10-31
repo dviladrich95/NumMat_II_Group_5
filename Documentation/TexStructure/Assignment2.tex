@@ -10,7 +10,7 @@
 Given is the following boundary problem of an annulus
 \begin{equation}
 	\begin{cases}
-		-\Delta u = 0, &\text{in } \Omega = \{(x,y) \in \mathbb{R}^2 : 1 \leq \sqrt{x^2 + y^2} < 2 \} \subset \mathbb{R}^2, \\
+		-\Delta u = 0, &\text{in } \Omega = \{(x,y) \in \mathbb{R}^2 \colon 1 \leq \sqrt{x^2 + y^2} < 2 \} \subset \mathbb{R}^2, \\
 		u = g, &\text{on } \partial \Omega,
 	\end{cases}
 	\label{eq:annulus1}
@@ -104,7 +104,18 @@ Thus, for any $v$ satisfying the Laplace equation $-\Delta v = 0$, $v$ satisfies
 %
 % ----------------
 \addSubExercise{b}
-
+For any $v$ defined in a), the domain $\Omega_v$ is defined as
+\begin{equation}
+	\Omega_v = \{(r,\varphi) \in \mathbb{R}^2 \colon r \in (1,2), \varphi \in (0, 2\pi]\}
+\end{equation}
+with the boundary condition 
+\begin{equation}
+	\partial \Omega_v =
+	\begin{cases}
+		2\cos{(\varphi)} &\text{ for } r = 2,  \varphi \in (0, 2\pi] \\
+		0 &\text{otherwise}
+	\end{cases}
+\end{equation}
 %
 % ----------------
 \addSubExercise{c}
