@@ -111,7 +111,7 @@ For any $v$ defined in a), the domain $\Omega_v$ is defined as
 \end{equation}
 with the boundary condition 
 \begin{equation}
-	\partial \Omega_v =
+	h(r, \varphi) =
 	\begin{cases}
 		2\cos{(\varphi)} &\text{ for } r = 2,  \varphi \in (0, 2\pi] \\
 		0 &\text{otherwise}
@@ -137,8 +137,8 @@ where $\constFac$ represent a constant real factor.
 \EQ{laplaceSep2} enables $v(r,\varphi)$ to be considered as two different ODE's, as both $R$ and $\Phi$ terms are equated with $\constFac$ separately
 %
 \begin{align}
-	\frac{\Phi_{\varphi\varphi}}{\Phi} &= \constFac \Rightarrow    \Phi_{\varphi\varphi} = \Phi \constFac \\ 
-	-\frac{r^2 R_{rr} + r R_r}{R} &= \constFac      \Rightarrow   -\left(r^2 R_{rr} + r R_r \right) = R \constFac
+	\frac{\Phi_{\varphi\varphi}}{\Phi} &= \constFac \iff    \Phi_{\varphi\varphi} = \Phi \constFac \\ 
+	-\frac{r^2 R_{rr} + r R_r}{R} &= \constFac      \iff   -\left(r^2 R_{rr} + r R_r \right) = R \constFac
 	\text{.}
 \end{align}
 %
