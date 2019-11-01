@@ -99,6 +99,7 @@ Employing the Equations \ref{eq:r_x} to \ref{eq:phi_yy} in \EQ{laplaceExpanded} 
 \end{align*}
 Thus, for any $v$ satisfying the Laplace equation $-\Delta v = 0$, $v$ satisfies in polar coordinates the equation
 \begin{equation}
+	\label{eq:laplacePolar}
 	-\left(v_{rr} + \frac{1}{r} v_r + \frac{1}{r^2} v_{\varphi\varphi}\right)=0
 \end{equation}
 %
@@ -118,20 +119,44 @@ with the boundary condition
 \end{equation}
 %
 % ----------------
+\newcommand{\constFac}{\lambda}
 \addSubExercise{c}
+Assuming that $v(r,\varphi) = R(r)\Phi(\varphi) \text{, } \forall r \in (0,1] \text{, } \forall \varphi \in (0,2\pi]$.
+If $v(r,\varphi)$ satisfies \EQ{laplacePolar}, then this equation can be expressed in the following form
+\begin{equation}
+	\label{eq:laplaceSep}
+	\left(R_{rr} \Phi + \frac{1}{r} R_r \Phi + \frac{R}{r^2} \Phi_{\varphi\varphi}\right) = 0
+	\text{.}
+\end{equation}
+Placing the functions depended of $r$ and $\varphi$ in separate terms, \EQ{laplaceSep} is written as
+\begin{equation}
+	\label{eq:laplaceSep2}
+	-\frac{r^2 R_{rr} + r R_r}{R} = \frac{\Phi_{\varphi\varphi}}{\Phi} = \constFac
+\end{equation}
+where $\constFac$ represent a constant real factor.
+\EQ{laplaceSep2} enables $v(r,\varphi)$ to be considered as two different ODE's, as both $R$ and $\Phi$ terms are equated with $\constFac$ separately
+%
+\begin{align}
+	\frac{\Phi_{\varphi\varphi}}{\Phi} &= \constFac \Rightarrow    \Phi_{\varphi\varphi} = \Phi \constFac \\ 
+	-\frac{r^2 R_{rr} + r R_r}{R} &= \constFac      \Rightarrow   -\left(r^2 R_{rr} + r R_r \right) = R \constFac
+	\text{.}
+\end{align}
+%
+% ----------------
+\addSubExercise{d}
 
 %
 % EXERCISE 2
 % --------------------------------------------------------------------------------------------------------------------
-\addExercise{2}{Ex2}
+%\addExercise{2}{Ex2}
 %
 % ----------------
-\addSubExercise{a}
+%\addSubExercise{a}
 
 %
 % ----------------
-\addSubExercise{b}
+%\addSubExercise{b}
 
 %
 % ----------------
-\addSubExercise{c}
+%\addSubExercise{c}
