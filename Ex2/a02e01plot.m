@@ -38,7 +38,11 @@ surfID = surf(XX                    ,...
 % Surface plot settings
 % ---------------------
 axis equal
-xlabel('X')
-ylabel('Y')
-zlabel('U(x,y)')
-set(surfID, 'EdgeAlpha', .2)
+xlabel('X', 'FontSize', 15)
+ylabel('Y', 'FontSize', 15)
+zlabel('U(x,y)', 'FontSize', 15)
+set(gcf, 'Color', 'white')
+set(gca, 'FontSize', 15)
+set(surfID, 'LineWidth', 0.5)
+set(surfID, 'EdgeAlpha',  .2)
+view([140,50])

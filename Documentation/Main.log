@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  1 NOV 2019 11:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  2 NOV 2019 16:57
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2388,11 +2388,83 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2])
+[2]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 152.
 
-Package caption Warning: Unused \captionsetup[figure] on input line 49.
-See the caption package documentation for explanation.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3] <Figures/a02e01plot_XY.png, id=64, 548.80031pt x 453.19313pt>
+File: Figures/a02e01plot_XY.png Graphic file (type png)
+
+<use Figures/a02e01plot_XY.png>
+Package pdftex.def Info: Figures/a02e01plot_XY.png used on input line 221.
+(pdftex.def)             Requested size: 220.0pt x 181.6682pt.
+
+Overfull \hbox (6.60432pt too wide) in paragraph at lines 221--222
+ [][] 
+ []
+
+<Figures/a02e01plot_XZ.png, id=65, 548.80031pt x 453.19313pt>
+File: Figures/a02e01plot_XZ.png Graphic file (type png)
+
+<use Figures/a02e01plot_XZ.png>
+Package pdftex.def Info: Figures/a02e01plot_XZ.png used on input line 227.
+(pdftex.def)             Requested size: 220.0pt x 181.6682pt.
+
+Overfull \hbox (6.60432pt too wide) in paragraph at lines 227--228
+ [][] 
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 219--231
+[]$[]$ $[]$ 
+ []
+
+<Figures/a02e01plot_YZ.png, id=66, 548.80031pt x 453.19313pt>
+File: Figures/a02e01plot_YZ.png Graphic file (type png)
+
+<use Figures/a02e01plot_YZ.png>
+Package pdftex.def Info: Figures/a02e01plot_YZ.png used on input line 234.
+(pdftex.def)             Requested size: 220.0pt x 181.6682pt.
+
+Overfull \hbox (6.60432pt too wide) in paragraph at lines 234--235
+ [][] 
+ []
+
+<Figures/a02e01plot_Iso.png, id=67, 548.80031pt x 453.19313pt>
+File: Figures/a02e01plot_Iso.png Graphic file (type png)
+
+<use Figures/a02e01plot_Iso.png>
+Package pdftex.def Info: Figures/a02e01plot_Iso.png used on input line 240.
+(pdftex.def)             Requested size: 220.0pt x 181.6682pt.
+
+Overfull \hbox (6.60432pt too wide) in paragraph at lines 240--241
+ [][] 
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 232--244
+[]$[]$ $[]$ 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4])
 
 Package caption Warning: Unused \captionsetup[table] on input line 51.
 See the caption package documentation for explanation.
@@ -2408,34 +2480,44 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3] (Main.aux)
+[5 <./Figures/a02e01plot_XY.png (PNG copy)> <./Figures/a02e01plot_XZ.png (PNG c
+opy)> <./Figures/a02e01plot_YZ.png (PNG copy)> <./Figures/a02e01plot_Iso.png (P
+NG copy)>] (Main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45168 strings out of 493323
- 914135 string characters out of 3139069
+ 45304 strings out of 493323
+ 916737 string characters out of 3139069
  1512759 words of memory out of 3000000
- 47886 multiletter control sequences out of 15000+200000
- 570193 words of font info for 50 fonts, out of 3000000 for 9000
+ 48002 multiletter control sequences out of 15000+200000
+ 595887 words of font info for 64 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 65i,12n,101p,10407b,1863s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Fil
-es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
-nc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
-thex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/lm/lmb10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy1
-0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Main.pdf (3 pages, 178805 bytes).
+ 65i,12n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit
+.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Fil
+es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/lm/lmb10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm
+/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmib
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Main.pdf (5 pages, 486704 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
+ 131 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 

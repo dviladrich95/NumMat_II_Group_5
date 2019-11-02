@@ -111,6 +111,7 @@ For any $v$ defined in a), the domain $\Omega_v$ is defined as
 \end{equation}
 with the boundary condition 
 \begin{equation}
+	\label{eq:boundaryPolar}
 	h(r, \varphi) =
 	\begin{cases}
 		2\cos{(\varphi)} &\text{ for } r = 2,  \varphi \in (0, 2\pi] \\
@@ -137,18 +138,116 @@ where $\constFac$ represent a constant real factor.
 \EQ{laplaceSep2} enables $v(r,\varphi)$ to be considered as two different ODE's, as both $R$ and $\Phi$ terms are equated with $\constFac$ separately
 %
 \begin{align}
+	\label{eq:odePhi}
 	\frac{\Phi_{\varphi\varphi}}{\Phi} &= \constFac \iff    \Phi_{\varphi\varphi} = \Phi \constFac \\ 
+	\label{eq:odeR}
 	-\frac{r^2 R_{rr} + r R_r}{R} &= \constFac      \iff   -\left(r^2 R_{rr} + r R_r \right) = R \constFac
 	\text{.}
 \end{align}
 %
 % ----------------
 \addSubExercise{d}
-
+The solution of $v(r,\varphi)$ consists of the superposition of \EQ{odePhi} and \EQ{odeR} solutions, which are studied in three different cases for $\lambda$:
+\begin{itemize}
+	\item {\boldmath$\lambda = 0$}: \\
+		In this case, possible solutions are given by\\
+		\begin{align}
+			\Phi(\varphi)&= a \varphi + b\\
+			R(r)         &= c \ln{r} + d
+			\text{.}
+		\end{align}
+		Since $\Phi$ has to be a periodic equation, $a = 0$, and $c = 0$, as the solution has to remain finite, as $r$ goes to 0.
+		With the applied conditions, the ansatz gives
+		\begin{equation}
+			\label{eq:vLambda1}
+			v(r, \varphi) = b d = g = const.
+		\end{equation}
 %
+	\item {\boldmath$\lambda < 0$}: \\
+		Let $\lambda = -k^2$.
+		Possible solutions for $R$ and $\Phi$ are given by
+		\begin{align}
+		\label{eq:phiLambda2}
+			\Phi(\varphi)&= a_k \cosh{(k\varphi)} + b_k \sinh{(k\varphi)}\\
+			R(r)         &= c_k r^{-k} + d_k r^{k}
+		\end{align}
+		$v(r,\varphi)$ holds no solutions for this case, because \EQ{phiLambda2} implies a periodic function in neither terms, thus remains zero for $\Phi$.
+%
+	\item {\boldmath$\lambda > 0$}: \\
+		Let $\lambda = k^2$.
+		Possible solutions are given by
+		\begin{align}
+		\label{eq:phiLambda3}
+			\Phi(\varphi)&= a_k \cos{(k\varphi)} + b_k \sinh{(k\varphi)}\\
+			R(r)         &= c_k r^{k} + d_k r^{-k}
+		\end{align}
+		In this case, $\Phi$ shows a well periodic function with period $2\pi$.
+		Furthermore $d_k$ must be 0, in order to keep $R$ finite, as $r$ goes to zero
+		\begin{equation}
+		\label{eq:vLambda3}
+			v(r, \varphi) = r^k \left( A_k \cos{(k \varphi)} + B_k \sin(k \varphi)\right)
+		\end{equation}
+		where $A_k = a_k c_k$ and $B_k = b_k c_k$.
+\end{itemize}
+The solution for $v(r, \varphi)$ is expressed as the superposition of \EQ{vLambda1} and \EQ{vLambda3}
+\begin{equation}
+	v(r, \varphi) = g + \sum_{k=1}^{} r^k \left( A_k \cos{(k \varphi)} + B_k \sin(k \varphi)\right)
+\end{equation}
+for $A_k$ and $B_k \in \mathbb{R}$ are obtained by the Fourier expansion.
+\par
+The solution of $v(r, \varphi)$ is to be investigated on the boundary with $r = 2$.
+So gives
+\begin{equation}
+	\label{eq:vBoundary}
+	v(2, \varphi) = g + \sum_{k=1}^{} 2^k \left( A_k \cos{(k \varphi)} + B_k \sin(k \varphi)\right)
+\end{equation}
+As \EQ{vBoundary} implies, the boundary condition is already given in the Fourier-series form, so that the only solution exists for $k = 1$, $A_1 = 0$, $B_1 = 0$ and $g=0$.
+Hence the solution, that satisfies \EQ{laplacePolar} and \EQ{boundaryPolar} in $\Omega_v$ is
+\begin{equation}
+	\label{eq:vSol}
+	v(r, \varphi) = r \cos{(\varphi)}
+	\text{.}
+\end{equation}
+%
+% ----------------
+\addSubExercise{e \& f}
+The solution code can be found in \texttt{a02e01solution.m} and the plot code in \texttt{a02e01plot.m}.
+The surface plot of the \EQ{vSol} solution is illustrated in \FIG{a02e01plot}.
+\begin{figure}[H]
+\vspace*{\FigUpperVSpace}
+\def\MeshFigWidth{220pt}
+	\begin{subfigure}{0.5\hsize}
+		\centering
+		\includegraphics[width=\MeshFigWidth]{a02e01plot_XY.png} 
+		\caption{X-Y Plane}
+		\label{fig:a02e01plot_XY}
+	\end{subfigure}
+	\begin{subfigure}{0.5\hsize}
+		\centering
+		\includegraphics[width=\MeshFigWidth]{a02e01plot_XZ.png} 
+		\caption{X-U Plane}
+		\label{fig:a02e01plot_XZ}
+	\end{subfigure}
+	\vfill
+	\begin{subfigure}{0.5\hsize}
+		\centering
+		\includegraphics[width=\MeshFigWidth]{a02e01plot_YZ.png} 
+		\caption{Y-U Plane}
+		\label{fig:a02e01plot_YZ}
+	\end{subfigure}
+	\begin{subfigure}{0.5\hsize}
+		\centering
+		\includegraphics[width=\MeshFigWidth]{a02e01plot_Iso.png} 
+		\caption{Isometric View}
+		\label{fig:a02e01plot_Iso}
+	\end{subfigure}
+	\caption{Surface Plot of the Solution}
+	\label{fig:a02e01plot}
+\end{figure}
+
 % EXERCISE 2
 % --------------------------------------------------------------------------------------------------------------------
-%\addExercise{2}{Ex2}
+\addExercise{2}{Ex2}
 %
 % ----------------
 %\addSubExercise{a}
