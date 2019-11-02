@@ -3,7 +3,6 @@ import scipy
 from scipy.sparse import diags
 import timeit
 import numpy as np
-import matplotlib.pyplot as plt
 import scipy.sparse.linalg
 import random
 
@@ -23,7 +22,6 @@ def a01e03sparse(n):
 
 
 # b)
-
 
 code1='scipy.sparse.linalg.spsolve(Kn,b)'
 code2='np.linalg.solve(Kn.todense(),b)'
@@ -53,7 +51,7 @@ Kn=a01e03sparse(n)
 
 	for j,code in enumerate(codelist):
 		print('code {}'.format(j+1))
-		time=timeit.timeit(setup=setup,stmt =code, number = 10)
+		time=timeit.timeit(setup=setup,stmt =code,number=10)
 
 		if j==0:
 			first=time
@@ -71,14 +69,18 @@ for i,n in enumerate((10,100,1000)):
 	Kn=a01e03sparse(n)
 
 
-	x1=scipy.sparse.linalg.spsolve(Kn,b)
+	x1=scipy.sparse.linalg.spsolve(Kn,b).reshape(n,1)
 	x2=code2=np.linalg.solve(Kn.todense(),b)
 	x3=code3=np.linalg.inv(Kn.todense()).dot(b)
+	res=Kn.dot(x1)-b
 
 	residual_matrix[i][0]=linalg.norm(Kn.dot(x1)-b)
 	residual_matrix[i][1]=linalg.norm(Kn.dot(x2)-b)
 	residual_matrix[i][2]=linalg.norm(Kn.dot(x3)-b)
 
-
+'''
+As the residual matrix of the three methods for different n shows, the error of all methods
+is very small and similar in absolute terms
+'''
 print('residual_matrix\n',residual_matrix)
 print('time_ratio_matrix\n',time_ratio_matrix)
