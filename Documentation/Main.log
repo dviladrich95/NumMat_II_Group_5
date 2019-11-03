@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  3 NOV 2019 20:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  3 NOV 2019 20:22
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2494,12 +2494,12 @@ Overfull \hbox (2.61107pt too wide) in paragraph at lines 232--244
 []$[]$ $[]$ 
  []
 
-<Figures/a02e02plot.png, id=72, 769.37437pt x 542.77782pt>
+<Figures/a02e02plot.png, id=72, 719.68875pt x 520.19344pt>
 File: Figures/a02e02plot.png Graphic file (type png)
 
 <use Figures/a02e02plot.png>
 Package pdftex.def Info: Figures/a02e02plot.png used on input line 262.
-(pdftex.def)             Requested size: 426.79135pt x 301.09618pt.
+(pdftex.def)             Requested size: 426.79135pt x 308.49896pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2551,6 +2551,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9] (Main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
@@ -2582,7 +2585,7 @@ ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb>
-Output written on Main.pdf (9 pages, 712749 bytes).
+Output written on Main.pdf (9 pages, 717358 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
