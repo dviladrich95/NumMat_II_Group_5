@@ -13,20 +13,25 @@ function V = a02e01solution(X, Y)
 %                                                                 Solution
 % -------------------------------------------------------------------------
 % Calculate the radius
-R = sqrt(X.^2 + Y.^2);
+Radius = sqrt(X.^2 + Y.^2);
 
 % Adjust the edge data
 % --------------------
-R (:,  1) = 1;
-R (:,end) = 2;
+Radius (:,  1) = 1;
+Radius (:,end) = 2;
 
 % Condition for all radius elements within the range of [1,2]
-if isempty(find(R<1, 1)) && isempty(find(2<R, 1))
+if isempty(find(Radius<1, 1)) && isempty(find(2<Radius, 1))
     % Calculate the angle
-    PHI = atand(Y./X);
+    Angle = atan2d(Y,X);
+    
+    % Calculate the partial terms
+    % ---------------------------
+    R   = (Radius - 1./Radius);
+    PHI = 4/3 * cosd(Angle);
     
     % Calculate solution of the PDE
-    V = R .* cosd(PHI);
+    V = R .* PHI;
 
 % Exceptional conditions
 else

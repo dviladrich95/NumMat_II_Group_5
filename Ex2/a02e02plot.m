@@ -31,9 +31,7 @@ InputCase = [ 1,  0,  1;
 
 % Loop over all cases
 for caseIdx = 1 : size(InputCase, 1)
-    % Open and configure new figure
-    % -----------------------------
-    figure(caseIdx)
+    subplot(2, 2, caseIdx)
     hold all
     grid on
     
@@ -56,15 +54,11 @@ for caseIdx = 1 : size(InputCase, 1)
     title(['Mode:' num2str(InputCase(caseIdx, 3)) ', ' ...
            'a='    num2str(InputCase(caseIdx, 1)) ', ' ...
            'c='   num2str(InputCase(caseIdx, 2))      ], 'FontSize', 15)
-    legend('t = 0', 't = 0.001', 't = 0.01', 't = 0.1', 't = 1')
     xlabel('x', 'FontSize', 15)
     ylabel('u(x,t)', 'FontSize', 15)
     set(gcf, 'Color', 'white')
     set(gca, 'FontSize', 15)
     
+    if caseIdx == 2; legend('t = 0', 't = 0.001', 't = 0.01', 't = 0.1', 't = 1'); end
+    
 end % of loop over all cases
-
-%{
-InputCase  = [ -1,  0,  1;
-               -1,  0,  2];
-%}
