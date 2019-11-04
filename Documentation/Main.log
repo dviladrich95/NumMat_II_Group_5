@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  3 NOV 2019 20:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  4 NOV 2019 16:34
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2275,32 +2275,6 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 Package caption Info: rotating package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package caption Info: We need package `ragged2e' on input line 24.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
-Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
-Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
-
-ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 126.
-)
-\CenteringLeftskip=\skip172
-\RaggedLeftLeftskip=\skip173
-\RaggedRightLeftskip=\skip174
-\CenteringRightskip=\skip175
-\RaggedLeftRightskip=\skip176
-\RaggedRightRightskip=\skip177
-\CenteringParfillskip=\skip178
-\RaggedLeftParfillskip=\skip179
-\RaggedRightParfillskip=\skip180
-\JustifyingParfillskip=\skip181
-\CenteringParindent=\skip182
-\RaggedLeftParindent=\skip183
-\RaggedRightParindent=\skip184
-\JustifyingParindent=\skip185
-)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -2356,7 +2330,7 @@ ABD: EveryShipout initializing macros
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-(TexStructure/Assignment2.tex (TexStructure/Title.tex
+(TexStructure/Assignment3.tex (TexStructure/Title.tex
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 2.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
@@ -2397,144 +2371,11 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 24.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-))
+)))
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+Package caption Warning: Unused \captionsetup[figure] on input line 49.
+See the caption package documentation for explanation.
 
-[1
-
-{C:/Users/ATCI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (44.69026pt too wide) in paragraph at lines 72--72
-[] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 152.
-
- ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 152--154
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[4] <Figures/a02e01plot_XY.png, id=68, 615.0478pt x 453.94594pt>
-File: Figures/a02e01plot_XY.png Graphic file (type png)
-
-<use Figures/a02e01plot_XY.png>
-Package pdftex.def Info: Figures/a02e01plot_XY.png used on input line 221.
-(pdftex.def)             Requested size: 220.0pt x 162.37448pt.
-
-Overfull \hbox (6.60432pt too wide) in paragraph at lines 221--222
- [][] 
- []
-
-<Figures/a02e01plot_XZ.png, id=69, 615.0478pt x 453.94594pt>
-File: Figures/a02e01plot_XZ.png Graphic file (type png)
-
-<use Figures/a02e01plot_XZ.png>
-Package pdftex.def Info: Figures/a02e01plot_XZ.png used on input line 227.
-(pdftex.def)             Requested size: 220.0pt x 162.37448pt.
-
-Overfull \hbox (6.60432pt too wide) in paragraph at lines 227--228
- [][] 
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 219--231
-[]$[]$ $[]$ 
- []
-
-<Figures/a02e01plot_YZ.png, id=70, 615.0478pt x 453.94594pt>
-File: Figures/a02e01plot_YZ.png Graphic file (type png)
-
-<use Figures/a02e01plot_YZ.png>
-Package pdftex.def Info: Figures/a02e01plot_YZ.png used on input line 234.
-(pdftex.def)             Requested size: 220.0pt x 162.37448pt.
-
-Overfull \hbox (6.60432pt too wide) in paragraph at lines 234--235
- [][] 
- []
-
-<Figures/a02e01plot_Iso.png, id=71, 615.0478pt x 453.94594pt>
-File: Figures/a02e01plot_Iso.png Graphic file (type png)
-
-<use Figures/a02e01plot_Iso.png>
-Package pdftex.def Info: Figures/a02e01plot_Iso.png used on input line 240.
-(pdftex.def)             Requested size: 220.0pt x 162.37448pt.
-
-Overfull \hbox (6.60432pt too wide) in paragraph at lines 240--241
- [][] 
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 232--244
-[]$[]$ $[]$ 
- []
-
-<Figures/a02e02plot.png, id=72, 719.68875pt x 520.19344pt>
-File: Figures/a02e02plot.png Graphic file (type png)
-
-<use Figures/a02e02plot.png>
-Package pdftex.def Info: Figures/a02e02plot.png used on input line 262.
-(pdftex.def)             Requested size: 426.79135pt x 308.49896pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5 <./Figures/a02e01plot_XY.png (PNG copy)> <./Figures/a02e01plot_XZ.png (PNG c
-opy)> <./Figures/a02e01plot_YZ.png (PNG copy)> <./Figures/a02e01plot_Iso.png (P
-NG copy)>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6 <./Figures/a02e02plot.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[7]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[8])
 
 Package caption Warning: Unused \captionsetup[table] on input line 51.
 See the caption package documentation for explanation.
@@ -2550,41 +2391,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9] (Main.aux)
+[1
+
+{C:/Users/ATCI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Main.aux)
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45431 strings out of 493323
- 918991 string characters out of 3139069
- 1518441 words of memory out of 3000000
- 48118 multiletter control sequences out of 15000+200000
- 595887 words of font info for 64 fonts, out of 3000000 for 9000
+ 45169 strings out of 493323
+ 914201 string characters out of 3139069
+ 1506441 words of memory out of 3000000
+ 47885 multiletter control sequences out of 15000+200000
+ 564213 words of font info for 48 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 65i,18n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/M
-iKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/d
-vips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit
-.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Fil
-es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/latxfont/line10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/lm/lmb10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
-mbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmib10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
-lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb>
-Output written on Main.pdf (9 pages, 717358 bytes).
+ 65i,11n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/lm/lmb10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+r12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Main.pdf (1 page, 115109 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 182 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
