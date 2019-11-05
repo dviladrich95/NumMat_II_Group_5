@@ -15,11 +15,11 @@ function [Xh, Lh] = a03ex01getLaplace(M,N)
 % Set number of points
 numberPoints = N + 1;
 
-% One dimensional coordinate vector
-Xh = linspace(0, 1, numberPoints);
-
 % Step size
 h = 1 / numberPoints;
+
+% One dimensional coordinate vector
+Xh = linspace(0, N*h, numberPoints);
 
 % Stencil matrix
 S = a03ex01getstencil(M);

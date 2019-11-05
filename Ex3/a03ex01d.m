@@ -22,8 +22,10 @@ legendData = {};
 % Number of neighbour points
 M = 1:4;
 
-% Vector for difference resolution
+% Vectors for difference resolution
+% ---------------------------------
 N = 2.^(2:15) - 1;
+H = 1 ./ (N + 1);
 
 % Loop over all M
 for m = M
@@ -40,17 +42,34 @@ for m = M
         
         % Calculate the infinity norm of the error between numerical and  analytical derivatives
         DiffErr(end + 1) = max(abs(Lh * sin(2*pi*Xh)' - U2d));
-        
+
     end % of loop over all p
     
     % Plot error over difference resolution
-    plot(N,DiffErr)
+    plot(H, DiffErr, 'LineWidth', 2)
     
     % Add legend data for current m
-    legendData{end +1} = ['M = ' num2str(m)];
+    legendData{end +1} = ['m = ' num2str(m)];
         
 end % of loop over all M
 
 % Plot settings
 % -------------
+figScaleFac = 0.75;
+grid on
 legend(legendData)
+xlabel('h', 'FontSize', 15)
+ylabel('Error', 'FontSize', 15)
+set(gca, 'FontSize', 15       ,...
+         'XScale'  , 'log'    ,...
+         'YScale'  , 'log'    ,...
+         'XDir'    , 'reverse')
+set(gcf, 'Color'            , 'white'                                      ,...
+         'PaperSize'        , [34, 34]                                     ,...
+         'PaperPositionMode', 'auto'                                       ,...
+         'Position'         , [0, 0, 1280 * figScaleFac, 768 * figScaleFac])
+
+%{
+    addpath('C:\exportFig\')
+    export_fig('../Documentation/Figures/a03e01DiffError')
+%}

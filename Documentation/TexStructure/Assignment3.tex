@@ -5,32 +5,63 @@
 
 % EXERCISE 1
 % --------------------------------------------------------------------------------------------------------------------
+\newcommand{\Sk}{\MAT{S}}
 \addExercise{1}{Ex1}
+Given is $m \in \mathbb{N}_0$, assuming $\bar{\Omega} = [0,1]$ and $\bar{\Omega}_h = \{0,h,\dots,(N+1)h\}$ with $h = \frac{1}{N + 1}$ the corresponding grid.
+Considering that $x_n = nh \in \bar{\Omega}_h$ with sufficiently many neighbors to either side, for any $j$ with $n-m \leq j \leq n+m$, requiring $x_j = jh \in \bar{\Omega}_h $, and $u_n = u(x_n)$ with $u \colon \bar{\Omega} \rightarrow \mathbb{R}$ is $r$ times continuously differentiable.
 
 %
 % ----------------
 \addSubExercise{a}
+$u$ values on neighbor points with above mentioned conditions are expressed in Taylor expansion form about the $x_n$
+\begin{align}
+	u_h(x_n + j h) = u_h(x_n) + u^\prime(x_n)\frac{(jh)^1}{1!} + u_h^{\prime\prime}\frac{(jh)^2}{2!} + \cdots + u_h(x_n) \frac{(jh)^k}{k!} + R
+\end{align}
+with $k$ the derivative order and $R$ the remainder.
+Applying this for each neighbor point, a linear equation system between the $u$ and their derivatives is built up
+\begin{equation}
+	\BMAT{u_h(x_{n-m})     \\
+		  \vdots 		   \\
+		  u_h(x_{n+ m})}
+	= \Sk \;
+	\BMAT{u(x_n)     \\
+		  \vdots 		   \\
+		  h^{k}u^{(k)}(x_n)}
+	\text{ where } \Sk \in \mathbb{R}^{k \times k} \text{ with } s_{j,k} = \frac{j^k}{k!} \text{.}
+\end{equation}
+In this case, the symmetric stencils for spatial differentiations $\Delta_{h,r}$ up to $k$-th order are obtained by inverting $\Sk$, where the remainders are neglected.
+\begin{equation}
+	\Sk^-1 \;
+	\BMAT{u_h(x_{n-m})     \\
+		  \vdots 		   \\
+		  u_h(x_{n+ m})}
+	=
+	\BMAT{u(x_n)     \\
+		  \vdots 		   \\
+		  h^{k}u^{(k)}(x_n)}
+\end{equation}
+Since the $\Sk^{-1}$ must be a symmetric matrix, applying the Taylor expansion procedure to $m$ neighbor points on either sides limits the derivative order at $k=2m + 1$ for $u$ being $r=2m + 2$ differentiable.
+Hence, the remainder can also be written in the matrix form as
+\begin{equation}
+	\MAT{R} \in \mathbb{R}^{k \times k} \text{ with } r_{j,k} = \frac{(jh)^{r}}{r!}u^{(r)}(\xi)$ \text{ for } $\xi \in [x_n -kh, x_n + kh]\text{.}
+\end{equation}
 
 %
 % ----------------
-\addSubExercise{b}
+\addSubExercise{b} Please refer to online submitted \texttt{a03ex01getstencil.m} file.
 
 %
 % ----------------
-\addSubExercise{c}
-
-%
-% EXERCISE 2
-% --------------------------------------------------------------------------------------------------------------------
-\addExercise{2}{Ex2}
-%
-% ----------------
-\addSubExercise{a}
+\addSubExercise{c} Please refer to online submitted \texttt{a03ex01getLaplace.m} file.
 
 %
 % ----------------
-\addSubExercise{b}
-
-%
-% ----------------
-\addSubExercise{c}
+\addSubExercise{d}
+For $u(x) = \sin{(2\pi x)}, $\text{ }\FIG{a03e01DiffError} illustrates the maximum error magnitude between the finite difference method with four different level of stencils and the analytical method applied on $u^{\prime\prime}$.
+\begin{figure}[H]
+\vspace*{\FigUpperVSpace}
+	\includegraphics[width=\textwidth]{a03e01DiffError.png} 
+	\caption{Error of the finite difference stencils as a function of $h$ with respect to $m$}
+	\label{fig:a03e01DiffError}
+\end{figure}
+It revals
