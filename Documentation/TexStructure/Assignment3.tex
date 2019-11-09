@@ -61,7 +61,13 @@ For $u(x) = \sin{(2\pi x)}, $\text{ }\FIG{a03e01DiffError} illustrates the maxim
 \begin{figure}[H]
 \vspace*{\FigUpperVSpace}
 	\includegraphics[width=\textwidth]{a03e01DiffError.png} 
-	\caption{Error of the finite difference stencils as a function of $h$ with respect to $m$}
+	\caption{Maximum error $\max_j|L_h(x_j)u_h(x_j)-u^{\prime\prime}(x_j)|$ of the finite difference stencils as a function of $h$ with respect to $m$}
 	\label{fig:a03e01DiffError}
 \end{figure}
-It revals
+Accordingly, a straight conclusion regarding to an exponential error reduction by increasing the mesh resolution (deceasing $h$) can be made in the first place.
+This is also considered as an improvement in convergence.
+Furthermore, increasing the number of neighbor points in constructing the finite difference stencil leads to the improvement of convergence at even higher rates.
+However, the error, which in theory is supposed to go to 0 continuously for $\lim_{h\rightarrow0}$, stops this behavior at a certain $h$ for every $m$.
+This is issue is associated with the rounding error of the computer.
+The more neighbor points are used for the stencil, the sooner can this limit be reached.
+Therefore, this limiting fact must be taken into account during geometry meshing.

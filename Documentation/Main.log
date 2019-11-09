@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  5 NOV 2019 19:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  6 NOV 2019 12:54
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2415,6 +2415,13 @@ Package pdftex.def Info: Figures/a03e01DiffError.png used on input line 63.
 (pdftex.def)             Requested size: 426.79135pt x 275.10481pt.
 )
 
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2 <./Figures/a03e01DiffError.png (PNG copy)>]
+
 Package caption Warning: Unused \captionsetup[table] on input line 51.
 See the caption package documentation for explanation.
 
@@ -2429,7 +2436,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./Figures/a03e01DiffError.png (PNG copy)>] (Main.aux)
+[3] (Main.aux)
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
@@ -2456,9 +2463,9 @@ pe1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri1
  Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/symbols/msbm10.pfb>
-Output written on Main.pdf (2 pages, 266303 bytes).
+Output written on Main.pdf (3 pages, 270098 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  162 words of extra memory for PDF output out of 10000 (max. 10000000)
 
