@@ -1,5 +1,6 @@
+function Error = a03ex03solve()
 % ------------------------------------------------------------------------\
-% Assignment 3, Exercise 1c                                               |
+% Assignment 3, Exercise 2c                                               |
 %                                                             submitted by|
 %                                                                         |
 %                        Kagan Atci | 338131 | Physical Engineering, M.Sc.|
@@ -10,55 +11,33 @@
 %                                                        in  MATLAB R2014a|
 % ------------------------------------------------------------------------/
 close all
-clear
-clc
 %                                                                 Solution
 % -------------------------------------------------------------------------
-% Set initial figure data
-% -----------------------
-figure(1)
-hold all
-legendData = {};
+Error = [];
+H     = [];
 
-% Number of neighbour points
-M = 1:4;
+% Set array for power value in determining n
+P = 1:15;
 
-% Vectors for difference resolution
-% ---------------------------------
-N = 2.^(2:15) - 1;
-H = 1 ./ (N + 1);
+% Loop over all P
+for p = P
+    % Get boundary value problem
+    [Xh, Lh, Fh] = a03ex03getBVP(p);
 
-% Loop over all M
-for m = M
-    % Set initial error vector
-    DiffErr = [];
+    % Calculate max. norm of the error and add to vector
+    Error(end + 1) = max(abs(Lh \ Fh -...
+                             1 + 4 * Xh.^2 - 3 * Xh.^3));
+                         
+    % Calculate step size and add to vector
+    H(end + 1) = 1 / length(Xh);
     
-    % Loop over all P
-    for n = N        
-        % Get X and laplace matrix for the second order derivative
-        [Xh, Lh] = a03ex01getLaplace(m, n);
-                
-        % Calculate second order derivative analyticaly
-        U2d = - (2*pi)^2 * sin(2*pi*Xh)';
-        
-        % Calculate the infinity norm of the error between numerical and  analytical derivatives
-        DiffErr(end + 1) = max(abs(Lh * sin(2*pi*Xh)' - U2d));
-
-    end % of loop over all p
-    
-    % Plot error over difference resolution
-    plot(H, DiffErr, 'LineWidth', 2)
-    
-    % Add legend data for current m
-    legendData{end +1} = ['m = ' num2str(m)];
-        
-end % of loop over all M
+end % of loop over all p
 
 % Plot settings
 % -------------
+plot(H, Error)
 figScaleFac = 0.75;
 grid on
-legend(legendData)
 xlabel('h', 'FontSize', 15)
 ylabel('Error', 'FontSize', 15)
 set(gca, 'FontSize', 15       ,...
@@ -69,8 +48,3 @@ set(gcf, 'Color'            , 'white'                                      ,...
          'PaperSize'        , [34, 34]                                     ,...
          'PaperPositionMode', 'auto'                                       ,...
          'Position'         , [0, 0, 1280 * figScaleFac, 768 * figScaleFac])
-
-%{
-    addpath('C:\exportFig\')
-    export_fig('../Documentation/Figures/a03e01DiffError')
-%}

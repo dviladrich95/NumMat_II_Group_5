@@ -25,13 +25,13 @@ beta  =  2;
 n = 2.^P - 1;
 
 % Set number of points
-numberPoints = n + 2;
+numberPoints = n + 1;
 
 % Caclulate the step size
-h = 1 / (n+1);
+h = 1 / numberPoints;
 
 % One dimensional coordinate vector
-Xh = linspace(0, 1, numberPoints)';
+Xh = linspace(0, 1, numberPoints)' * h;
 
 % Get F.D. stencils for m = 1
 S = a03ex01getstencil(1);
@@ -73,9 +73,8 @@ Fh(1)   = Fh(1)   + alpha * (a / h^2 + b / (2*h));
 Fh(end) = Fh(end) + beta  * (a / h^2 - b / (2*h));
 %}
 
-%{
+
 figure(5)
 hold all
 plot(Xh, Fh, 'r*')
 plot(Xh, 1 + 4 * Xh.^2 - 3 * Xh.^3)
-%}
