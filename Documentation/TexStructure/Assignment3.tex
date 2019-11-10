@@ -71,3 +71,39 @@ However, the error, which in theory is supposed to go to 0 continuously for $\li
 This is issue is associated with the rounding error of the computer.
 The more neighbor points are used for the stencil, the sooner can this limit be reached.
 Therefore, this limiting fact must be taken into account during geometry meshing.
+
+% EXERCISE 2
+% --------------------------------------------------------------------------------------------------------------------
+\addExercise{2}{Ex2}
+%
+% ----------------
+\addSubExercise{a, b \& c} See the handwritten solutions.
+
+% EXERCISE 3
+% --------------------------------------------------------------------------------------------------------------------
+\addExercise{3}{Ex3}
+Considered is the boundary value problem (BVP)
+\begin{equation}
+	\begin{cases}
+		-u^{\prime\prime}(x) - 4u^\prime(x) + u(x) = f(x), \text{ for all } x \in \Omega = (0,1) \\
+		u(0)=1, u(1) = 2 \text{ .}
+	\end{cases}
+\end{equation}
+
+%
+% ----------------
+\addSubExercise{a}
+Assuming that the exact solution is $1 + 4x^2 - 3x^3$, the analytical solution of the BVP's right hand side is
+\begin{equation}
+	f(x) = -3x^3 + 40x^2 - 14x -7
+\end{equation}
+
+%
+% ----------------
+\addSubExercise{b}
+Please refer to online submitted \texttt{a03ex03getBVP.m} file.
+
+%
+% ----------------
+\addSubExercise{c}
+For the programming solution, please refer to online submitted \texttt{a03ex03solve.m} file.

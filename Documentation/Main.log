@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  6 NOV 2019 12:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  10 NOV 2019 11:52
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2413,14 +2413,14 @@ File: Figures/a03e01DiffError.png Graphic file (type png)
 <use Figures/a03e01DiffError.png>
 Package pdftex.def Info: Figures/a03e01DiffError.png used on input line 63.
 (pdftex.def)             Requested size: 426.79135pt x 275.10481pt.
-)
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./Figures/a03e01DiffError.png (PNG copy)>]
+[2 <./Figures/a03e01DiffError.png (PNG copy)>])
 
 Package caption Warning: Unused \captionsetup[table] on input line 51.
 See the caption package documentation for explanation.
@@ -2442,10 +2442,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45267 strings out of 493323
- 916119 string characters out of 3139069
+ 45271 strings out of 493323
+ 916155 string characters out of 3139069
  1515441 words of memory out of 3000000
- 47971 multiletter control sequences out of 15000+200000
+ 47975 multiletter control sequences out of 15000+200000
  574455 words of font info for 51 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  65i,12n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2463,7 +2463,7 @@ pe1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri1
  Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/symbols/msbm10.pfb>
-Output written on Main.pdf (3 pages, 270098 bytes).
+Output written on Main.pdf (3 pages, 274197 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
