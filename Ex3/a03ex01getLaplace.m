@@ -5,6 +5,7 @@ function [Xh, Lh] = a03ex01getLaplace(M,N)
 %                                                                         |
 %                        Kagan Atci | 338131 | Physical Engineering, M.Sc.|
 %                     Navneet Singh | 380443 | Scientific Computing, M.Sc.|
+%                   Riccardo Parise | 412524 | Scientific Computing, M.Sc.|
 %        Daniel V. Herrmannsdoerfer | 412543 | Scientific Computing, M.Sc.|
 %                                                                         |
 %                                                        in  MATLAB R2014a|

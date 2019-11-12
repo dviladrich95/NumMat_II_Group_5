@@ -107,3 +107,10 @@ Please refer to online submitted \texttt{a03ex03getBVP.m} file.
 % ----------------
 \addSubExercise{c}
 For the programming solution, please refer to online submitted \texttt{a03ex03solve.m} file.
+The error between the approximation and the restricted exact solution is illustrated in \FIG{a03ex03error} in the form of maximum norm.
+Accordingly, $error(p)$ goes with a near constant exponential rate towards 0, as $h \rightarrow 0$.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{a03ex03error.png} 
+	\caption{Maximum error $\max_i|u_h (ih)-u(ih)|$ between the approximation and the exact solution}
+	\label{fig:a03ex03error}
+\end{figure}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  10 NOV 2019 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  11 NOV 2019 01:31
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2420,7 +2420,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./Figures/a03e01DiffError.png (PNG copy)>])
+[2 <./Figures/a03e01DiffError.png (PNG copy)>]
+<Figures/a03ex03error.png, id=61, 619.56468pt x 402.75468pt>
+File: Figures/a03ex03error.png Graphic file (type png)
+
+<use Figures/a03ex03error.png>
+Package pdftex.def Info: Figures/a03ex03error.png used on input line 113.
+(pdftex.def)             Requested size: 426.79135pt x 277.44011pt.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]
 
 Package caption Warning: Unused \captionsetup[table] on input line 51.
 See the caption package documentation for explanation.
@@ -2436,16 +2450,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3] (Main.aux)
+[4 <./Figures/a03ex03error.png (PNG copy)>] (Main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45271 strings out of 493323
- 916155 string characters out of 3139069
- 1515441 words of memory out of 3000000
- 47975 multiletter control sequences out of 15000+200000
+ 45278 strings out of 493323
+ 916322 string characters out of 3139069
+ 1515448 words of memory out of 3000000
+ 47981 multiletter control sequences out of 15000+200000
  574455 words of font info for 51 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  65i,12n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2463,9 +2480,9 @@ pe1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri1
  Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/symbols/msbm10.pfb>
-Output written on Main.pdf (3 pages, 274197 bytes).
+Output written on Main.pdf (4 pages, 343057 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
+ 111 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

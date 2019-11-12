@@ -5,6 +5,7 @@ function [Xh, Lh, Fh] = a03ex03getBVP(P)
 %                                                                         |
 %                        Kagan Atci | 338131 | Physical Engineering, M.Sc.|
 %                     Navneet Singh | 380443 | Scientific Computing, M.Sc.|
+%                   Riccardo Parise | 412524 | Scientific Computing, M.Sc.|
 %        Daniel V. Herrmannsdoerfer | 412543 | Scientific Computing, M.Sc.|
 %                                                                         |
 %                                                        in  MATLAB R2014a|
@@ -24,13 +25,13 @@ beta  =  2;
 n = 2.^P - 1;
 
 % Set number of points
-numberPoints = n + 1;
+numberPoints = n + 2;
 
 % Caclulate the step size
-h = 1 / numberPoints;
+h = 1 / (n+1);
 
 % One dimensional coordinate vector
-Xh = linspace(0, 1, numberPoints)' * h;
+Xh = linspace(0, 1, numberPoints)';
 
 % Get F.D. stencils for m = 1
 S = a03ex01getstencil(1);
@@ -60,14 +61,21 @@ L2 = -a / h^2 * spdiags(repmat(diff2ndOrd, numberPoints, 1),... Row data of the 
                         numberPoints                       ); % Number of matrix columns
 
 % Generate the difference matrix
-Lh = L1 + L2 + L0;
+Lh = L0 + L1 + L2;
 
 % Calculate the right hand side
-Fh = Lh * ( 1 + 4 * Xh.^2 - 3 * Xh.^3 );
+Fh = -3 * Xh.^3 + 40 * Xh.^2  - 14 * Xh - 7;
 
 % Apply boundary conditions
 % -------------------------
-%{
+%{-
 Fh(1)   = Fh(1)   + alpha * (a / h^2 + b / (2*h));
 Fh(end) = Fh(end) + beta  * (a / h^2 - b / (2*h));
+%}
+
+%{
+figure(5)
+hold all
+plot(Xh, Fh, 'r*')
+plot(Xh, 1 + 4 * Xh.^2 - 3 * Xh.^3)
 %}
