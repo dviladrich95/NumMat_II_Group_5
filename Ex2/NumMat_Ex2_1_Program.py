@@ -23,7 +23,7 @@ def a02e01plot():
 	y=np.arange(-2,2,0.005)
 	
 	X,Y=np.meshgrid(x, y)
-	R=X**2+Y**2
+	R=np.sqrt(X**2+Y**2)
 	PHI=np.arctan2(Y,X)
 
 	cmap=sns.palettes.diverging_palette(240,10,n=51)
