@@ -23,10 +23,6 @@ def get_x_list(N):
 		print(x)
 	return x
 
-
-
-
-
 def a04ex02getPDE(x,f,consts,flag):
 	
 	a=consts[0]
@@ -34,7 +30,6 @@ def a04ex02getPDE(x,f,consts,flag):
 	c=consts[2]
 	alpha=consts[3]
 	beta=consts[4]
-	print(x,'x')
 	h=np.diff(x)
 	h=[x[i]-x[i-1] for i in range(1,len(x))]
 
@@ -48,18 +43,13 @@ def a04ex02getPDE(x,f,consts,flag):
 	N=len(h)-1
 
 	dd_m1=[f_dd_m1(i) for i in range(1,N)]
-	print(dd_m1,'dd_m1')
 	dd_0=[f_dd_0(i) for i in range(N)]
-	print(dd_0,'dd_0')
 	dd_p1=[f_dd_p1(i) for i in range(N-1)]
-	print(dd_p1,'dd_p1')
 	dd=np.diag(dd_m1,k=-1)+np.diag(dd_0,k=0)+np.diag(dd_p1,k=1)
-	print(dd,'dd')
 	i=sps.eye(N)
 
 	if flag=='-':
 		d_1=[f_d_1(i) for i in range(1,N)]
-		print(d_1,'d_1')
 		d_2=[f_d_2(i) for i in range(N)]
 
 		d=np.diag(d_1,k=-1)+np.diag(d_2,k=0)
@@ -71,9 +61,7 @@ def a04ex02getPDE(x,f,consts,flag):
 		d_1=[f_d_1(i) for i in range(1,N)]
 		d_2=[f_d_2(i) for i in range(N-1)]
 		d=np.diag(d_1,k=-1)+np.diag(d_2,k=1)
-		print(d,'d')
 	l=-a*dd+b*d+c*i
-	print(l)
 
 	if flag=='-':
 		f[0]=f[0]+(a*f_dd_m1(0)-b*f_d_1(0))*alpha
@@ -89,8 +77,7 @@ def a04ex02getPDE(x,f,consts,flag):
 
 def a04ex02solve(x,f,consts,flag):
 
-	l_h,f_h=a04ex02getPDE(x,f,consts,flag)	
-	print(l_h,f_h)
+	l_h,f_h=a04ex02getPDE(x,f,consts,flag)
 	u_h=sps.linalg.spsolve(l_h,f_h)
 	
 	alpha=consts[3]
@@ -100,11 +87,9 @@ def a04ex02solve(x,f,consts,flag):
 	u_h=np.append(u_h,beta)
 	return u_h
 
+'''
 N=10
-#consts=[a,b,c,alpha,beta]
 consts=[1,-4,1,1,2]
-#consts=[1,0,-1,0,0]
-#x=get_x_list(N)
 x=np.linspace(0,1,num=N+2)
 ax=sns.scatterplot(x,analytical_u(x))
 for noise in np.linspace(0,1,num=2):
@@ -112,9 +97,9 @@ for noise in np.linspace(0,1,num=2):
 	x[0]=0
 	x[-1]=1
 	f=analytical_f(x)[1:-1]
-	#f=np.ones(N)
 	flag='0'
 	u_h=a04ex02solve(x,f,consts,flag)
 	ax=sns.scatterplot(x,u_h)
 ax.set(xlabel='x', ylabel='u_h')
 plt.show()
+'''
