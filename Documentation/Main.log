@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  11 NOV 2019 01:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  15 NOV 2019 14:53
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2275,32 +2275,6 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 Package caption Info: rotating package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package caption Info: We need package `ragged2e' on input line 24.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
-Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
-Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
-
-ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 126.
-)
-\CenteringLeftskip=\skip172
-\RaggedLeftLeftskip=\skip173
-\RaggedRightLeftskip=\skip174
-\CenteringRightskip=\skip175
-\RaggedLeftRightskip=\skip176
-\RaggedRightRightskip=\skip177
-\CenteringParfillskip=\skip178
-\RaggedLeftParfillskip=\skip179
-\RaggedRightParfillskip=\skip180
-\JustifyingParfillskip=\skip181
-\CenteringParindent=\skip182
-\RaggedLeftParindent=\skip183
-\RaggedRightParindent=\skip184
-\JustifyingParindent=\skip185
-)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -2356,7 +2330,7 @@ ABD: EveryShipout initializing macros
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-(TexStructure/Assignment3.tex (TexStructure/Title.tex
+(TexStructure/Assignment4.tex (TexStructure/Title.tex
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 2.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
@@ -2407,12 +2381,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 {C:/Users/ATCI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<Figures/a03e01DiffError.png, id=56, 624.83438pt x 402.75468pt>
-File: Figures/a03e01DiffError.png Graphic file (type png)
 
-<use Figures/a03e01DiffError.png>
-Package pdftex.def Info: Figures/a03e01DiffError.png used on input line 63.
-(pdftex.def)             Requested size: 426.79135pt x 275.10481pt.
+LaTeX Warning: File `a04ex01Laplace.png' not found on input line 43.
+
+
+! Package pdftex.def Error: File `a04ex01Laplace.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ...hics[width=\textwidth]{a04ex01Laplace.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (23.08324pt too wide) in paragraph at lines 43--46
+ \T1/lmr/b/n/12 d) []
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2420,21 +2408,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./Figures/a03e01DiffError.png (PNG copy)>]
-<Figures/a03ex03error.png, id=61, 619.56468pt x 402.75468pt>
-File: Figures/a03ex03error.png Graphic file (type png)
-
-<use Figures/a03ex03error.png>
-Package pdftex.def Info: Figures/a03ex03error.png used on input line 113.
-(pdftex.def)             Requested size: 426.79135pt x 277.44011pt.
-)
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3]
+[2])
 
 Package caption Warning: Unused \captionsetup[table] on input line 51.
 See the caption package documentation for explanation.
@@ -2450,39 +2424,33 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4 <./Figures/a03ex03error.png (PNG copy)>] (Main.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+[3] (Main.aux)
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45278 strings out of 493323
- 916322 string characters out of 3139069
- 1515448 words of memory out of 3000000
- 47981 multiletter control sequences out of 15000+200000
- 574455 words of font info for 51 fonts, out of 3000000 for 9000
+ 45197 strings out of 493323
+ 914513 string characters out of 3139069
+ 1509449 words of memory out of 3000000
+ 47908 multiletter control sequences out of 15000+200000
+ 570193 words of font info for 50 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 65i,12n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
-iKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
-nc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
-thit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}<C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/lm/lmb10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri1
-2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/symbols/msbm10.pfb>
-Output written on Main.pdf (4 pages, 343057 bytes).
+ 65i,11n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
+es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fon
+ts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec
+.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmb10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12
+.pfb>
+Output written on Main.pdf (3 pages, 165923 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
+ 93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
