@@ -64,10 +64,41 @@ It reveals that the error in both methods remain same, whereas the number of DOF
 % ----------------
 \addSubExercise{a}
 
-The right handside $f_h$ is now defined by the restriction of f to the grid points, which now can be  non uniform, and thus we can better write $f_h=f_{x}=(f(x_1),...,f(x_N))^T$. We then have to add the vector $(a\frac{2}{\alpha(h_0(h_0+h_{1})}-b\frac{-1}{h_0+h_1}),0,..,0,\beta(a\frac{2}{h_{N+1}(h_N+h_{N+1})}-b\frac{1}{h_0+h_1}))^T$
+The right handside $f_h$ is now defined by the restriction of f to the grid points, which now can be  non uniform, and thus we can better write $f_h=f_{x}=(f(x_1),...,f(x_N))^T$. We then have to add the vector
+$$
+(\alpha(a\frac{2}{h_0(h_0+h_{1})}-b\frac{-1}{h_0+h_1}),0,..,0,\beta(a\frac{2}{h_{N+1}(h_N+h_{N+1})}-b\frac{1}{h_0+h_1}))^T
+$$
+
+If we use the $D^+$ stencil the middle summand of the expression of $L_h$ turns into:
+
+$$
+b(0,\frac{-1}{h_{i+1}},\frac{1}{h_{i+1}})
+$$
+
+with right hand side a sum of $f_h$ and the boundary term:
+
+$$
+(\alpha(a\frac{2}{h_0(h_0+h_{1})}),0,..,0,\beta(a\frac{2}{h_{N+1}(h_N+h_{N+1})}-b\frac{1}{h_{N+1}}))^T
+$$
+
+
+If we use $D^-$:
+
+$$
+b(\frac{-1}{h_{i}},\frac{1}{h_{i}},0)
+$$
+
+with right handside a sum of $f_h$ and the boundary term:
+
+$$
+(\alpha(a\frac{2}{h_0(h_0)}-b\frac{-1}{h_0+h_1}),0,..,0,\beta(a\frac{2}{h_{N+1}(h_N+h_{N+1})}))^T
+$$
+
 
 If we 
 \addSubExercise{b}
+
+Please refer to the online submitted \texttt{a04ex02getPDE.py} file. Figure \ref{fig:a04e02PDE_solve}
 
 %
 % EXERCISE 3
