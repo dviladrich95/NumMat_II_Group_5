@@ -51,15 +51,22 @@ aa = [ones((k-2)^2,1) *(+4)/h^2;... % u(x,y)
 Lh = sparse(ii,jj,aa);
 
 rhs = sin(pi*x).*sin(pi*y);
-u   = Lh\rhs;
-u   = reshape(u,[N+2 N+2]);
-
-surf(xh,yh,u, 'EdgeAlpha', 0.1);
-title(sprintf('dofs %i, error %e',(N+2)^2,max(max(abs(u-sin(pi*xh).*sin(pi*yh)/(2*pi^2))))));
+% u   = Lh\rhs;
+% u   = reshape(u,[N+2 N+2]);
+% 
+% surf(xh,yh,u, 'EdgeAlpha', 0.1);
+% title(sprintf('dofs %i, error %e',(N+2)^2,max(max(abs(u-sin(pi*xh).*sin(pi*yh)/(2*pi^2))))));
 %}
+%% Reduced
+U = zeros(length(x),1);
 
+ActiveDOF = setdiff((1:length(x)), ix_BD)';
 
+u2 = Lh(ActiveDOF, ActiveDOF)\rhs(ActiveDOF);
 
+U(ActiveDOF,1) = u2;
+U   = reshape(U,[N+2 N+2]);
 
-
+surf(xh,yh,U, 'EdgeAlpha', 0.1);
+title(sprintf('dofs %i, error %e',(N+2)^2,max(max(abs(U-sin(pi*xh).*sin(pi*yh)/(2*pi^2))))));
 
