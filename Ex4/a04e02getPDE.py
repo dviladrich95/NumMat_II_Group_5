@@ -37,8 +37,15 @@ def a04ex02getPDE(x,f,consts,flag):
 	f_dd_0= lambda i: -2/(h[i]*h[i+1])
 	f_dd_p1= lambda i: 2/(h[i+1]*(h[i]+h[i+1]))
 
-	f_d_1= lambda i: -1/(h[i]+h[i+1])
-	f_d_2= lambda i: 1/(h[i]+h[i+1])
+	f_d_0_1= lambda i: -1/(h[i]+h[i+1])
+	f_d_0_2= lambda i: 1/(h[i]+h[i+1])
+
+	f_d_p_1= lambda i: -1/h[i+1]
+	f_d_p_2= lambda i: 1/h[i+1]
+
+	f_d_m_1= lambda i: -1/h[i]
+	f_d_m_2= lambda i: 1/h[i]
+
 
 	N=len(h)-1
 
@@ -49,29 +56,29 @@ def a04ex02getPDE(x,f,consts,flag):
 	i=sps.eye(N)
 
 	if flag=='-':
-		d_1=[f_d_1(i) for i in range(1,N)]
-		d_2=[f_d_2(i) for i in range(N)]
+		d_1=[f_d_m_1(i) for i in range(1,N)]
+		d_2=[f_d_m_2(i) for i in range(N)]
 
 		d=np.diag(d_1,k=-1)+np.diag(d_2,k=0)
 	elif flag=='+':
-		d_1=[f_d_1(i) for i in range(N)]
-		d_2=[f_d_2(i) for i in range(N-1)]
+		d_1=[f_d_p_1(i) for i in range(N)]
+		d_2=[f_d_p_2(i) for i in range(N-1)]
 		d=np.diag(d_1,k=0)+np.diag(d_2,k=1)
 	elif flag=='0':
-		d_1=[f_d_1(i) for i in range(1,N)]
-		d_2=[f_d_2(i) for i in range(N-1)]
+		d_1=[f_d_0_1(i) for i in range(1,N)]
+		d_2=[f_d_0_2(i) for i in range(N-1)]
 		d=np.diag(d_1,k=-1)+np.diag(d_2,k=1)
 	l=-a*dd+b*d+c*i
 
 	if flag=='-':
-		f[0]=f[0]+(a*f_dd_m1(0)-b*f_d_1(0))*alpha
+		f[0]=f[0]+(a*f_dd_m1(0)-b*f_d_m_1(0))*alpha
 		f[-1]=f[-1]+a*f_dd_p1(N-1)*beta
 	elif flag=='+':
 		f[0]=f[0]+a*f_dd_m1(0)
-		f[-1]=f[-1]+(a*f_dd_p1(N-1)-b*f_d_2(N-1))*beta
+		f[-1]=f[-1]+(a*f_dd_p1(N-1)-b*f_d_p_2(N-1))*beta
 	elif flag=='0':
-		f[0]=f[0]+(a*f_dd_m1(0)-b*f_d_1(0))*alpha
-		f[-1]=f[-1]+(a*f_dd_p1(N-1)-b*f_d_2(N-1))*beta
+		f[0]=f[0]+(a*f_dd_m1(0)-b*f_d_0_1(0))*alpha
+		f[-1]=f[-1]+(a*f_dd_p1(N-1)-b*f_d_0_2(N-1))*beta
 	
 	return l,f
 

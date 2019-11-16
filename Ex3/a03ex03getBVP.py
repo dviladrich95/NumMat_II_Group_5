@@ -4,37 +4,21 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy import stats
 
+
 def analytical_u(x):
 	return 1+4*x**2-3*x**3
 
 def analytical_f(x):
 	return -3*x**3+40*x**2-14*x-7
 
-def get_x_list(N):
-	x=[]
-	while len(x)!=N
-		x_=np.random.uniform(size=N-2)
-		x.insert(0,0)
-		x.insert(-1,1)
-		x=numpy.unique(x)
-	return x
+def a03ex03getBVP(p):
 
-def get_h_list(x):
+	N=2**p-1
+	h=1/(N+1)
 
-
-def a04ex02getPDE(x):
-	h=numpy.diff(x)
-	N=len(h)-1
-	dd_m1=[2/(h[i]*(h[i]+h[i+1])) for i in range(N)]
-	dd_0=[-2/(h[i]*h[i+1]) for i in range(N)]
-	dd_p1=[2/(h[i+1]*(h[i]+h[i+1])) for i in range(N)]
-
-	d0_m1=[-1/(h[i]+h[i+1]) for i in range(N)]
-	d0_p1=[1/(h[i]+h[i+1]) for i in range(N)]
-
-	dd=a*(np.diags(dd_m1)+np.diags(dd_0)+np.diags(dd_p1))
-	d0=b*(np.diags(d0_m1)+np.diags(d0_p1))
-	i=c*(scipy.sparse.eye(N)
+	dd=scipy.sparse.diags([1,-2,1],[-1,0,1],shape=[N,N])
+	d0=scipy.sparse.diags([-1/2,0,1/2],[-1,0,1],shape=[N,N])
+	i=scipy.sparse.diags([0,1,0],[-1,0,1],shape=[N,N])
 
 	l=-1/(h**2)*dd-4/h*d0+i
 	x=h*np.asarray(range(1,N+1))
