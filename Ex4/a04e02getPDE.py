@@ -68,7 +68,7 @@ def a04ex02getPDE(x,f,consts,flag):
 		d_1=[f_d_0_1(i) for i in range(1,N)]
 		d_2=[f_d_0_2(i) for i in range(N-1)]
 		d=np.diag(d_1,k=-1)+np.diag(d_2,k=1)
-	l=-a*dd+b*d+c*i
+	l=sps.csr_matrix(-a*dd+b*d+c*i)
 
 	if flag=='-':
 		f[0]=f[0]+(a*f_dd_m1(0)-b*f_d_m_1(0))*alpha
@@ -99,14 +99,15 @@ N=10
 consts=[1,-4,1,1,2]
 x=np.linspace(0,1,num=N+2)
 ax=sns.scatterplot(x,analytical_u(x))
-for noise in np.linspace(0,1,num=2):
-	x=np.linspace(0,1,num=N+2)+noise/2*np.random.uniform(-1/(N+2),1/(N+2),N+2)
-	x[0]=0
-	x[-1]=1
-	f=analytical_f(x)[1:-1]
-	flag='0'
-	u_h=a04ex02solve(x,f,consts,flag)
-	ax=sns.scatterplot(x,u_h)
+
+x=np.linspace(0,1,num=N+2)**2
+x[0]=0
+x[-1]=1
+f=analytical_f(x)[1:-1]
+flag='0'
+u_h=a04ex02solve(x,f,consts,flag)
+ax=sns.scatterplot(x,u_h)
+
 ax.set(xlabel='x', ylabel='u_h')
 plt.show()
 '''
