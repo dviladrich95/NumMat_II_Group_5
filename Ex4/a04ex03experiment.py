@@ -21,31 +21,47 @@ def a04ex03solve(eps,xh,flag):
     N = len(h) - 1          # number of equation (not included the BC)
     fh = np.ones(len(h)-1)  # RHS of equation
 
+
+    f_dd_m1 = lambda i: 2 / (h[i] * (h[i] + h[i + 1]))
+    f_dd_0 = lambda i: -2 / (h[i] * h[i + 1])
+    f_dd_p1 = lambda i: 2 / (h[i + 1] * (h[i] + h[i + 1]))
+
+    f_d_0_1 = lambda i: -1 / (h[i] + h[i + 1])
+    f_d_0_2 = lambda i: 1 / (h[i] + h[i + 1])
+
+    f_d_p_1 = lambda i: -1 / h[i + 1]
+    f_d_p_2 = lambda i: 1 / h[i + 1]
+
+    f_d_m_1 = lambda i: -1 / h[i]
+    f_d_m_2 = lambda i: 1 / h[i]
+
     # Second derivative matrix
-    dd_m1 = [2 / (h[i] * (h[i] + h[i + 1])) for i in range(N - 1)]
-    dd_0 = [-2 / (h[i] * h[i + 1]) for i in range(N)]
-    dd_p1 = [2 / (h[i + 1] * (h[i] + h[i + 1])) for i in range(N - 1)]
+    dd_m1 = [f_dd_m1(i) for i in range(1, N)]
+    dd_0 = [f_dd_0(i) for i in range(N)]
+    dd_p1 = [f_dd_p1(i) for i in range(N - 1)]
     dd = np.diag(dd_m1, k=-1) + np.diag(dd_0, k=0) + np.diag(dd_p1, k=1)
 
     # First derivartive matrix
     if flag == '-':
-        d_1 = [-1 / h[i] for i in range(N - 1)]
-        d_2 = [1 / h[i] for i in range(N)]
+        d_1 = [f_d_m_1(i) for i in range(1, N)]
+        d_2 = [f_d_m_2(i) for i in range(N)]
+
         d = np.diag(d_1, k=-1) + np.diag(d_2, k=0)
     elif flag == '+':
-        d_1 = [-1 / h[i + 1] for i in range(N)]
-        d_2 = [1 / h[i + 1] for i in range(N - 1)]
+        d_1 = [f_d_p_1(i) for i in range(N)]
+        d_2 = [f_d_p_2(i) for i in range(N - 1)]
         d = np.diag(d_1, k=0) + np.diag(d_2, k=1)
     elif flag == '0':
-        d_1 = [-1 / (h[i] + h[i + 1]) for i in range(N - 1)]
-        d_2 = [1 / (h[i] + h[i + 1]) for i in range(N - 1)]
+        d_1 = [f_d_0_1(i) for i in range(1, N)]
+        d_2 = [f_d_0_2(i) for i in range(N - 1)]
         d = np.diag(d_1, k=-1) + np.diag(d_2, k=1)
 
+
     # Set up the equation in the matrix form
-    l_h = -eps * dd + d
+    l_h = sps.csr_matrix(-eps * dd + d)
 
     # Solve
-    uh = sps.linalg.spsolve(sps.csr_matrix(l_h), fh)
+    uh = sps.linalg.spsolve(l_h, fh)
 
     # Add the boundary conditions
     uh = np.concatenate(([0], uh, [0]))
@@ -72,14 +88,16 @@ def a04ex03shishkin(N, sigma):
 ## Program Start
 
 # User defined Variables
-eps = 0.01
-sigma = 0.1
+eps = 0.001
 exps = ['i', 'ii', 'iii', 'iv']   # Experiment title
 Ns = [5, 50, 500, 5000]           # Mesh size
 exps_mesh = ['u', 'u', 'u', 's']  # Mesh type:  'u' = uniform, s = shishkin
 exps_flag = ['+', '0', '-', '0']  # First derivative flag:  '+' = D^+, '-' = D^-, '0' = D^0,
 
+
 for i in range(len(exps)):
+    sigma = 4 * eps * np.log(2 * Ns[i])
+
     # Initialize plot
     fig = plt.figure()
     fig.suptitle('Experiment ' + exps[i] + ') - Mesh type: ' + exps_mesh[i] + '   Flag: ' + exps_flag[i])
@@ -100,8 +118,8 @@ for i in range(len(exps)):
 
         # Plots
         ax = fig.add_subplot(2, 2, i+1)
-        ax = sns.lineplot(xa, ua)
-        ax = sns.scatterplot(xh, uh)
+        ax = sns.lineplot(xa, ua, color='black')
+        ax = sns.scatterplot(xh, uh, linewidth=0.1, edgecolor='black', color=(0.333, 0.659, 0.408))
         ax.set(xlabel='x', ylabel='u')
         ax.title.set_text('N = %d, Err = %3.1e' % (Ns[i], err))
 plt.show()
