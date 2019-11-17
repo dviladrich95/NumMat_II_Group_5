@@ -47,19 +47,41 @@ The function is called with a single input parameter \texttt{FLAG} that refers t
 	\item \texttt{FULL}: Solves the problem with full matrix,
 	\item \texttt{RED}: Solves the problem with reduced differentiation matrix and accordingly modified right hand side.
 \end{itemize}
-\begin{figure}[H]
-	\includegraphics[width=\textwidth]{a04ex01Laplace.png} 
-	\caption{Solution of $L_h u_h = \sin{(\pi x)} \sin{(\pi y)}$ with remarking the active dof number, maximum error $\max_{x,y \in \Omega_h} |u_h (x,y) - u(x,y)|$ and process duration for both flags. Since the error is same in both flags, the plot of the latter flag is omitted and the remark title is added instead.}
+
+\begin{figure}[p]
+\vspace*{\FigUpperVSpace}
+	\begin{subfigure}[t]{0.9\hsize}
+		\centering
+		\includegraphics[width=\linewidth]{a04ex01Laplace.png} 
+		\caption{$L_h u_h = \sin{(\pi x)} \sin{(\pi y)} $}
+		\label{fig:a04ex01Laplace1}
+		\vspace*{8mm}
+	\end{subfigure}
+\par\bigskip % maximise vertical space here instead
+	\begin{subfigure}[b]{0.9\hsize}
+		\centering
+		\includegraphics[width=\linewidth]{a04ex01Laplace2.png} 
+		\caption{$L_h u_h = \sin{(\pi x + \pi/8)} \sin{(\pi y)} $}
+		\label{fig:a04ex01Laplace2}
+		\vspace*{5mm}
+	\end{subfigure}
+	\caption{Solutions of two different $L_h u_h = f(x,y)$ problems with remarks regarding the active dof number, maximum error $\max_{x,y \in \Omega_h} |u_h (x,y) - u(x,y)|$ and process duration for both flags. Since the error is same in both flags, the plot of the latter flag is omitted and the remark title is added instead.}
 	\label{fig:a04ex01Laplace}
 \end{figure}
 
-The solution of $L_h u_h = \sin{(\pi x)} \sin{(\pi y)} $ with homogeneous Dirichlet boundary conditions with either differentiation forms was simulated with $512 \times 512$ points.
-The result is illustrated in \FIG{a04ex01Laplace}.
-It reveals that the error in both methods remain same, whereas the number of DOFs dropped significantly in the reduced method, thus nearly halving the process duration.
+The solutions of the boundary value problems $L_h u_h = \sin{(\pi x)} \sin{(\pi y)} $ and $L_h u_h = \sin{(\pi x + \pi/8)} \sin{(\pi y)} $ with homogeneous Dirichlet boundary conditions utilizing either differentiation forms was simulated with $512 \times 512$ points.
+The result is illustrated in \FIG{a04ex01Laplace}, where \FIG{a04ex01Laplace1} is showcasing a zero condition on the entire boundary, and \FIG{a04ex01Laplace2} is showcasing a non-zero condition on two edges of the boundary.
+It reveals that the error in both methods remain same, whereas the number of DOFs dropped significantly in the reduced method, thus nearly halving the process duration in the former problem, whereas reducing the process duration by 61\% in the latter problem.
 %
 % EXERCISE 2
 % --------------------------------------------------------------------------------------------------------------------
 \addExercise{2}{Ex2}
+Given is the boundary value problem
+\begin{align}
+	-&au^{\prime \prime}(x) + bu^\prime(x)+cu(x) = f(x), \; x\in(0,1), \\
+	&u(0)=\alpha, \; u(1)=\beta
+\end{align}
+for a non-uniform mesh $\bar{\Omega}_h$ with constants $a, b, c, d, \alpha, \beta \in \mathbb{R}$.
 %
 % ----------------
 \addSubExercise{a}
@@ -88,21 +110,23 @@ $$
 b(\frac{-1}{h_{i}},\frac{1}{h_{i}},0)
 $$
 
-with right handside a sum of $f_h$ and the boundary term:
+with right hand side a sum of $f_h$ and the boundary term:
 
 $$
 (\alpha(a\frac{2}{h_0(h_0)}-b\frac{-1}{h_0+h_1}),0,..,0,\beta(a\frac{2}{h_{N+1}(h_N+h_{N+1})}))^T
 $$
 
 
-If we 
+%If we 
 \addSubExercise{b}
 
-Please refer to the online submitted \texttt{a04ex02getPDE.py} file. Figure \ref{fig:a04e02PDE_solve} shows the graph produced if the last section of the program is uncommented, which is the analytical solution from a03ex03 restricted to a uniform grid compared to the numerical solution on a uniform grid vector transformed by the function $T(x_i)=x_i^2$. We can see that the two curves are quite similar to each other, and the difference grows smaller the bigger the number of gridpoints. 
+Please refer to the online submitted \texttt{a04ex02getPDE.py} file. \FIG{a04e02PDE_solve} shows the graph produced if the last section of the program is uncommented, which is the analytical solution from a03ex03 restricted to a uniform grid compared to the numerical solution on a uniform grid vector transformed by the function $T(x_i)=x_i^2$.
+We can see that the two curves are quite similar to each other, and the difference grows smaller the bigger the number of grid points. 
 
-\begin{figure}[H]
-	\includegraphics[width=\textwidth]{Documentation/Figures/a04ex02PDE_solved.png} 
-	\caption{}
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{a04ex02PDE_solved.png} 
+	\caption{Solution of the BVP with uniform and non-uniform meshes}
 	\label{fig:a04e02PDE_solve}
 \end{figure}
 
@@ -113,15 +137,19 @@ Please refer to the online submitted \texttt{a04ex02getPDE.py} file. Figure \ref
 %
 % ----------------
 \addSubExercise{a}
+Please refer to \texttt{a04ex03solve(eps,xh,flag)} function in the online submitted \texttt{a04ex03experiment.py} file.
 
 %
 % ----------------
 \addSubExercise{b}
+Please refer to \texttt{a04ex03error(eps,xh,uh)} function in the online submitted \texttt{a04ex03experiment.py} file.
 
 %
 % ----------------
 \addSubExercise{c}
+Please refer to \texttt{a04ex03shiskin(N, sigma)} function in the online submitted \texttt{a04ex03experiment.py} file.
 
 %
 % ----------------
 \addSubExercise{d}
+Please refer to online submitted \texttt{a04ex03experiment.py} file.
