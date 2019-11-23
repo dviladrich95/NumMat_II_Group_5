@@ -29,7 +29,7 @@ L = 1;
 [Lh, Xh, Yh, Idx_Bd] = a04ex01_Lh5(L, N);
 
 % Determine the right hand side
-RHS = sin(pi*Xh(:)+pi/8).*sin(pi*Yh(:));
+RHS = sin(pi*Xh(:)).*sin(pi*Yh(:));
 
 % Start time count 
 tic;

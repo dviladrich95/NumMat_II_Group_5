@@ -44,8 +44,15 @@
 
 % CAPTION SETUP
 % -------------------------
-%\DeclareCaptionLabelSeparator{quad}{ \textbf{|} }
+\DeclareCaptionLabelSeparator{barsep}{\textbf{ | }}
+
 % Figure setup
-\captionsetup[figure]{textfont = it, labelformat=simple, justification=RaggedRight}
+\captionsetup[figure]{textfont  	= md 		 ,
+					  labelformat   = simple 	 ,
+					  justification = RaggedRight,
+					  labelsep  	= barsep     }
 % Table setup
-\captionsetup[table]{textfont = it, labelformat=simple, justification=RaggedRight}
+\captionsetup[table]{textfont      = it,
+					 labelformat   = simple,
+					 justification = RaggedRight,
+					 labelsep      = barsep}
