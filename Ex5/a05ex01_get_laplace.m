@@ -97,6 +97,7 @@ end % of loop over all matrix columns
 
 % Plot domain
 % -----------
+%{
 figure(1)
 hold on
 plot(XX(~BarOmega_h),YY(~BarOmega_h),'o', 'MarkerFaceColor','w', 'MarkerEdgeColor', 'k')
@@ -113,6 +114,7 @@ set(gcf, 'Color'            , 'white'                                      ,...
          'PaperSize'        , [34, 34]                                     ,...
          'PaperPositionMode', 'auto'                                       ,...
          'Position'         , [0, 0, 1280 * figScaleFac, 768 * figScaleFac])
+%}
 
 %                                                   DIFFERENTIATION MATRIX
 % -------------------------------------------------------------------------

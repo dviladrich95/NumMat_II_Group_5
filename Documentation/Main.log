@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  23 NOV 2019 22:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  24 NOV 2019 23:19
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2492,7 +2492,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4 <./Figures/a05ex01domain2.png (PNG copy)> <./Figures/a05ex01domain2bound1.pn
-g> <./Figures/a05ex01domain2bound2.png>])
+g> <./Figures/a05ex01domain2bound2.png>]
+
+LaTeX Warning: Reference `eq:e3eq1' on page 5 undefined on input line 173.
+
+)
 
 Package caption Warning: Unused \captionsetup[table] on input line 58.
 See the caption package documentation for explanation.
@@ -2510,6 +2514,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5] (Main.aux)
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package logreq Info: Writing requests to 'Main.run.xml'.
@@ -2517,10 +2524,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45413 strings out of 493323
- 918614 string characters out of 3139069
+ 45416 strings out of 493323
+ 918638 string characters out of 3139069
  1511699 words of memory out of 3000000
- 48107 multiletter control sequences out of 15000+200000
+ 48110 multiletter control sequences out of 15000+200000
  580447 words of font info for 53 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  65i,12n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2539,7 +2546,7 @@ Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
 /msbm10.pfb>
-Output written on Main.pdf (5 pages, 1057125 bytes).
+Output written on Main.pdf (5 pages, 1060073 bytes).
 PDF statistics:
  125 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

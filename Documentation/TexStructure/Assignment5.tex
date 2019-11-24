@@ -115,7 +115,7 @@ Two types of problems are to be considered for this topology:
 	\label{eq:problem1}
 	&f = 1, \;    	 & g = & \;0 \\
 	\label{eq:problem2}
-	&f = 5x + 3y, \; & g = & \; 0.2 \cdot \sin(6\cdot \pi \cdot x/L) \cdot sin(6 \cdot \pi \cdot y) + 0.5 \cdot \sin(2\cdot x/L)
+	&f = 5x + 3y, \; & g = & \; 0.2 \cdot \sin(6\cdot \pi \cdot x/L) \cdot \sin(6 \cdot \pi \cdot y) + 0.5 \cdot \sin(2\cdot x/L)
 \end{align}
 The former problem is chosen exactly same in \textbf{d)} for checking the quality of the solution, while the latter problem refers more complex boundary conditions.
 The surface plots of the solutions are displayed in \FIG{a05ex01f}.
@@ -162,7 +162,17 @@ The surface plots of the solutions are displayed in \FIG{a05ex01f}.
 %
 % ----------------
 \addSubExercise{a}
+The discrete maximum principle states that if the operator is positive for every $x_0$, than the maximum must be on the boundary. Substituting the operator in the inequality, we have:
+\begin{gather}
+    \Delta_h u_h \ge 0 \nonumber\\
+    -8 u(x_0) + \sum_{n=1}^{8} u(x_n) \ge 0 \nonumber\\
+    u(x_0) \le  \frac{1}{8} \sum_{n=1}^{8} u(x_n)
+    \label{e3eq1}
+\end{gather}
 
+Where $x_n$ are the neighboring points of $x_0$. By the \EQ{e3eq1} we know that $x_0$ must be less or equal than the average of the points on its neighborhood.
+
+This implies that for every point $x_0$ in the domain i) either at least one neighbor $x_n$ is larger than $x_0$, or ii)  all neighbors are equal to $x_0$. Therefore the maximum of the function must lay on the boundary of the domain, since it is the only location where it could have a larger neighbor (outside the boundary) and still be the maximum of the domain.
 %
 % ----------------
 \addSubExercise{b}
