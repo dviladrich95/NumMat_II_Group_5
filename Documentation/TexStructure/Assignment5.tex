@@ -146,23 +146,34 @@ The surface plots of the solutions are displayed in \FIG{a05ex01f}.
 %
 % ----------------
 \addSubExercise{a}
-a)
 
 For type i) a solvability condition is required if $\alpha_i=c=0$, since in this case the problem coincides with a von Neumann condition which we know has a non- invertible matrix. As soon as an alpha component is added, the Robin condition is well conditioned, as it is a linear combination of the von Neumann condition and the well conditioned Dirichlet boundary condition.
 
 for ii) we need a boundary condition in any case
 
-b)
-Please refer to the program a05e02solvePDE.py to see an implementation of the BVP. Analogously as with the symmetric difference stencil for the von Neumann boundary seen in class, we have chosen to use a symmetric difference stencil here too, since it leads to a better convergernce rate than asymmetric stencils $D^+$ or $D^-$
-The 
+\addSubExercise{b}
+Please refer to the program a05e02solvePDE.py to see an implementation of the BVP. Analogously as with the symmetric difference stencil for the von Neumann boundary seen in class, we have chosen to use a symmetric difference stencil here too, since it leads to a better convergence rate than asymmetric stencils $D^+$ or $D^-$
+As we can see in the plot, the resulting function with the von Neumann boundary conditions has a positive curvature, which coincides with the value $q=1.497$ from the last entry in the expanded column vector. The value coincides with the curvature of the function over the domain and also the difference $g_1-g_0$, which gives a more concrete meaning to the equation II.26 seen in the lecture.
 
-%
-% ----------------
 \addSubExercise{b}
 
-%
-% ----------------
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.68\textwidth]{Documentation/Figures/a05ex02c.png} 
+	\caption{Plot of the BVP. Notice the upwards curve that indictes that a positive second order derivative is needed }
+	\label{fig:a05ex01domain2}
+\end{figure}
+
 \addSubExercise{c}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.68\textwidth]{Documentation/Figures/a05ex02d.png} 
+	\caption{Plot of the BVP. Notice the upwards curve that indictes that a positive second order derivative is needed }
+	\label{fig:a05ex01domain2}
+\end{figure}
+
 
 %
 % EXERCISE 3
