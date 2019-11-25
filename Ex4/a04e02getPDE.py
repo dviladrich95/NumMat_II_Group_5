@@ -110,4 +110,4 @@ ax=sns.scatterplot(x,u_h)
 
 ax.set(xlabel='x', ylabel='u_h')
 plt.show()
-'''
+''' 
