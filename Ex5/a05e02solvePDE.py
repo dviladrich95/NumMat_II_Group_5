@@ -7,7 +7,7 @@ np.set_printoptions(precision=3)
 
 
 def f_function(x):
-	return 0*np.sin(2*np.pi*x)
+	return 1*np.sin(2*np.pi*x)+1
 #q value: -1.35020909
 
 
@@ -124,30 +124,31 @@ x,u_h_final=a05ex02solvePDE(N,f,data,flag)
 
 error_list=[]
 h_list=[]
-for p in range(8,9):
-	N=500
+for p in range(3,8):
+	N=2**p
 	h=1/(N+1)
 	h_list.append(h)
 	x=np.linspace(0,1,num=N+2)
 	f=f_function(x)
 	#data=[c, g0, g1, alpha0,alpha1, beta0, beta1]
-	data=[0,-0.5,2,0,0,1,1]
-	flag=1
+	data=[1,0,0,0,0,0,0]
+	flag=2
 	x,u_h=a05ex02solvePDE(N,f,data,flag)
-	#error_list.append(sum(abs(u_h_final[::2**(10-p)]-u_h)))
+	error_list.append(sum(abs(u_h_final[::2**(10-p)]-u_h)))
 	#print(x.shape,u_h.shape,'len x and uh')
-	ax=sns.lineplot(x,u_h)
+	with sns.cubehelix_palette(8, start=2, rot=0, dark=0, light=.95, reverse=True):
+		ax=sns.lineplot(x,u_h)
 
 
 #print(error_list)
 #print(h_list,'hlist')
-#error_list=np.log(np.asarray(error_list))
-#h_list=np.log(np.asarray(h_list))
-#ax=sns.scatterplot(x[0:N],np.diff(np.diff(u_h))/h**2)
-#slope, intercept, r_value, p_value, std_err=stats.linregress(h_list,error_list)
+error_list=np.log(np.asarray(error_list))
+h_list=np.log(np.asarray(h_list))
+slope, intercept, r_value, p_value, std_err=stats.linregress(h_list,error_list)
 
 ax.set(xlabel='x', ylabel='u_h')
 plt.show()
-#print(slope,'slope')
-#ax=sns.scatterplot(h_list,error_list)
-#plt.show()
+print(slope,'slope')
+ax=sns.scatterplot(h_list,error_list)
+ax.set(xlabel='log(h)', ylabel='log(error)')
+plt.show()
