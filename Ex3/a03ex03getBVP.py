@@ -24,7 +24,7 @@ def a03ex03getBVP(p):
 	x=h*np.asarray(range(1,N+1))
 	f=analytical_f(x)
 	f[0]=f[0]+(-2*h+1)/h**2
-	f[-1]=f[-1]+(2*h+2)/h**2
+	f[-1] = f[-1] + 2 * (1 / h ** 2 + 2 / h)
 	return x,l,f
 
 
