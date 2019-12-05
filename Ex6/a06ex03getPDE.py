@@ -36,7 +36,7 @@ def main():
     for exp in range(len(eps)):
         def f(x): return 0 * x + 1
 
-        def k(x): return 2 + np.tanh(1 / eps[exp] * (x - 1 / 2))
+        def k(x): return 2 + 2.1* np.tanh(1 / eps[exp] * (x - 1 / 2))
 
         def g(x): return 0 * x
 
@@ -64,9 +64,9 @@ def a06ex03getPDE(k, f, g, N):
     print("\nPRE-CALCULATIONS:")
     h = 1 / (N + 1)
     xh = h * np.asarray(range(1, N + 1))  # grid domain xh
-
     print("h: step size\n", h)
     print("xh: domain\n", xh)
+
     dd = scipy.sparse.diags([1, -2, 1], [-1, 0, 1], shape=[N, N])
     print("dd: standard stencil matrix d+d-\n", dd.todense())
     d0 = scipy.sparse.diags([-1 / 2, 0, 1 / 2], [-1, 0, 1], shape=[N, N])
