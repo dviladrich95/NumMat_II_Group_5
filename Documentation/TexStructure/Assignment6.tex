@@ -96,27 +96,7 @@ For the implementation, please refer to online submitted \texttt{a06ex01\_solveE
 % EXERCISE 2
 % --------------------------------------------------------------------------------------------------------------------
 \addExercise{2}{Ex2}
-%
-% ----------------
-\addSubExercise{a}
 
-%
-% ----------------
-\addSubExercise{b}
-
-%
-% ----------------
-\addSubExercise{c}
-
-%
-% ----------------
-\addSubExercise{d}
-
-% EXERCISE 3
-% --------------------------------------------------------------------------------------------------------------------
-\addExercise{3}{Ex3}
-
-%
 % ----------------
 \addSubExercise{a}
 The discrete algorithm is implemented in a similar fashion to the one for section $II.5$ in the script, changing the lexicographic indexing to have the angle $\varphi$ vary over $i$ and $r$ over $j$. The operators are constructed in blocks by using Kronecker products of matrices containing the inverse radius coefficients for $\frac{1}{r_{ij}}\partial_{r}u_{ij}$ and $\frac{1}{r_{ij}^2}\partial_{\varphi\varphi}u_{ij}$. Multiplied with the corresponding adjacency matrices. The part a) and c) are thus jointly implemented in the program \listinline{a06ex02\_getPDE.py}
@@ -161,10 +141,12 @@ Since we have the $r_{ij}\geq 1$ we can again bound by dropping the inverse fact
 	\centering
 	\includegraphics[width=0.9\textwidth]{Documentation/Figures/a06ex02c_uh.png} 
 	\caption{}
-	\label{fig:a05ex02b}
+	\label{fig:a06ex02c_uh}
 \end{figure}
 
-The max error for the given $N_1$ and $N_2$ is 0.111, as 
+Figure \ref{fig:a06ex02c_uh} shows the plot of the anulus represented as a square in polar coordinates. Notice how the boundary values are satisfied at the upper and lower horizontal edges and how the periodicity condition holds across the left and right vertical ones.
+
+The max error for the given $N_1$ and $N_2$ is 0.111
 
 \begin{figure}[H]
 	\centering
@@ -172,6 +154,10 @@ The max error for the given $N_1$ and $N_2$ is 0.111, as
 	\caption{Error between the exact solution and the one obtained by the method in a). Notice the change in scale of the heat map}
 	\label{fig:a05ex02b}
 \end{figure}
+
+\addSubExercise{d}
+
+The error of this method is around 0.15 and does not seem to decrease with further refinement of the mesh. Another difference with respect to the method used in c is that here the discrete method consistently underestimates the solution, while in c) it is bot under and overestimated 
 
 \begin{figure}[H]
 	\centering
@@ -186,3 +172,22 @@ The max error for the given $N_1$ and $N_2$ is 0.111, as
 	\caption{Error between the exact solution and the one obtained using a modified version of the program from a05ex01. Notice the change in scale of the vertical axis}
 	\label{fig:a05ex02b}
 \end{figure}
+% EXERCISE 3
+% --------------------------------------------------------------------------------------------------------------------
+\addExercise{3}{Ex3}
+
+\addSubExercise{a}
+Please refer to the online submitted \texttt{a06e03getPDE.py} file.
+
+\addSubExercise{b and c}
+
+The grid size was empirically defined as $N = 20 + 10\sqrt{\varepsilon^{-1}}$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.68\textwidth]{a06e03plot.png}
+	\caption{Functions $f(x)$, $k(x)$ and $u_h$ evaluated for $\varepsilon = 0.1, 0.01, 0.001, 0.0001$}
+	\label{fig:a06e03plot}
+\end{figure}
+
+The function $k(x)$ will behave as a Heaviside step function for $\varepsilon \to 0$.
