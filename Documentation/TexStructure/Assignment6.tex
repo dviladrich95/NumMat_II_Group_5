@@ -34,3 +34,24 @@
 %
 % ----------------
 \addSubExercise{c}
+
+%
+% EXERCISE 3
+% --------------------------------------------------------------------------------------------------------------------
+\addExercise{3}{Ex3}
+
+\addSubExercise{a}
+Please refer to the online submitted \texttt{a06e03getPDE.py} file.
+
+\addSubExercise{b and c}
+
+The grid size was empirically defined as $N = 20 + 10\sqrt{\varepsilon^{-1}}$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.68\textwidth]{a06e03plot.png}
+	\caption{Functions $f(x)$, $k(x)$ and $u_h$ evaluated for $\varepsilon = 0.1, 0.01, 0.001, 0.0001$}
+	\label{fig:a06e03plot}
+\end{figure}
+
+The function $k(x)$ will behave as a Heaviside step function for $\varepsilon \to 0$.
