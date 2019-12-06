@@ -1,12 +1,101 @@
-\newcommand{\assignmentDate}{December 2nd, 2019}
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 % Add title
 \input{./TexStructure/Title}
 
 % EXERCISE 1
 % --------------------------------------------------------------------------------------------------------------------
 \addExercise{1}{Ex1}
+Considered is the elliptic eigenvalue problem of finding an eigenfunction / eigenvector pair $(u, \lambda)$ such that $L u = \lambda u$ in $\Omega$ supplemented with suitable boundary conditions on $\partial \Omega$.
+%
+% ----------------
+\addSubExercise{a}
+Taking $L u = -u^{\prime \prime} + u$ in $\Omega = (0,1)$, the discrete eigenvalues yielded through
+%
+\begin{align}
+	u(x) 	   &= \\
+	\lambda _k &= \frac{4}{h^2} \sin{\left( \frac{h \pi k}{2}\right)} + 1
+\end{align}
+%
+for the k-th eigenvalue.
+%
+In following, the eigenvalues are derived from $L_h$ using non-compact 3 point stencil with $N = 200$ and $h = 1/(N+1)$ respectively for
+%
+\begin{itemize}
+	\item Homogeneous Dirichlet boundary conditions,
+	\item Homogeneous Neumann boundary conditions,
+	\item Periodic boundary conditions.
+\end{itemize}
+%
+The list of the first 20 Eigenvalues  are stated in \TAB{a06ex01a}, while the eigenvectors of the second and the 20th eigenvalues are compared in \FIG{a06ex01a}.
+%
+\par
+For the implementation, please refer to the online submitted \texttt{a06ex01\_solveEVPa.m} file.
+\addTable{H}
+		 {a06ex01a}
+		 {List of the first 20 Eigenvalues ordered by magnitude.
+		  2nd and 20th Eigenvalues are written in bold to be distinguished easily.}
 
+\begin{figure}[H]
+\vspace*{\FigUpperVSpace}
+\def\MeshFigWidth{210pt}
+	\begin{subfigure}[b]{0.5\hsize}
+		\centering
+		\includegraphics[width=\MeshFigWidth]{a06ex01EV2.png} 
+		\caption{2nd Eigenvalue}
+		\label{fig:a06ex01EV2}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\hsize}
+		\centering
+		\includegraphics[width=\MeshFigWidth]{a06ex01EV20.png} 
+		\caption{20th Eigenvalue}
+		\label{fig:a06ex01EV20}
+	\end{subfigure}
+	\caption{Comparison of the Eigenvectors between discretized EV (black dashed), Dirichlet B.C. (red), Neumann B.C. (blue) and Periodic B.C. (green) for the 2nd and 20th Eigenvalue respectively.}
+	\label{fig:a06ex01a}
+\end{figure}
+%
+% ----------------
+\addSubExercise{b}
+Considering
+\begin{align}
+	-\Delta v &= \lambda v \;\text{ in } \Omega, \\
+			v &= 0 		   \;\text{ on } \partial\Omega
+\end{align}
+with $\Omega = \{(x,y) \in \mathbb{R}^2 \colon \left(x-L/2\right)^2 + \left(y-L/2\right)^2 < R\}$ for given $L, R \in \mathbb{R}$ and $R>0$.
+The Eigenvalues of such problem can be solved analytically utilizing the Bessel function of first kind $J_n(\xi)$ with $\xi = \sqrt{\lambda} R$ at its zero.
+Taking the corresponding k-th zeros form the lecture notes, the first six Eigenvalues for $R=1$ and $R=2$  are stated in \TAB{a06ex01b}.
+%
+\vspace*{2\FigUpperVSpace}
+\addTable{H}
+		 {a06ex01b}
+		 {First six Eigenvalues of the disc problem with respect to $R=1$ and $R=2$}
+%
+The solution was implemented in the form of a function submitted in \texttt{a06ex01\_solveEVPb.m}.
+The function takes an arbitrary radius $R>0$ as input and gives the first six Eigenvalues and their $n$ values. 
+%
+% ----------------
+\addSubExercise{c}
+In this exercise, the domain $\Omega$ from assignment 5, exercise 1 has been discretized with respect to the disc problem in lecture notes with $L=2.2$ and $R=1$ and the the Laplace Operator $L_h$ has been built accordingly.
+The numerical Eigenvalues have been numerically computed via reduced matrix $L_h$ for $h=1/(N+1)$ applied on three mesh resolutions with $N=7$, $N=63$, and $N=511$.
+A comparison between the numerical and the exact Eigenvalues from \textbf{b)} is listed in \TAB{a06ex01c}.
+The first four distinct eigenfunctions are demonstrated in \FIG{a06ex01c}.
+For the implementation, please refer to online submitted \texttt{a06ex01\_solveEVPc.m} file.
+%
+\vspace*{2\FigUpperVSpace}
+\addTable{H}
+		 {a06ex01c}
+		 {List of the first 6 Eigenvalues ordered by magnitude for different mesh resolution and the discretized analytical solution.}
+%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{a06ex01c.png} 
+	\caption{Eigenfunctions of the first 4 distinct eigenvalues.
+			 The value of the data has been respectively labeled with the color bar next to the plot.}
+	\label{fig:a06ex01c}
+\end{figure}
+%
+% EXERCISE 2
+% --------------------------------------------------------------------------------------------------------------------
+\addExercise{2}{Ex2}
 %
 % ----------------
 \addSubExercise{a}
@@ -20,9 +109,13 @@
 \addSubExercise{c}
 
 %
-% EXERCISE 2
+% ----------------
+\addSubExercise{d}
+
+% EXERCISE 3
 % --------------------------------------------------------------------------------------------------------------------
-\addExercise{2}{Ex2}
+\addExercise{3}{Ex3}
+
 %
 % ----------------
 \addSubExercise{a}
@@ -64,32 +157,3 @@ Since we have the $r_{ij}\geq 1$ we can again bound by dropping the inverse fact
 %
 % ----------------
 \addSubExercise{c}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{Documentation/Figures/a06ex02c_uh.png} 
-	\caption{}
-	\label{fig:a05ex02b}
-\end{figure}
-
-The max error for the given $N_1$ and $N_2$ is 0.111, as 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{Documentation/Figures/a06ex02c_error.png} 
-	\caption{Error between the exact solution and the one obtained by the method in a). Notice the change in scale of the heat map}
-	\label{fig:a05ex02b}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{Documentation/Figures/a06ex02d_uh.png} 
-	\caption{Plot of the function values obtained using a modified version of the program from a05ex01}
-	\label{fig:a05ex02b}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{Documentation/Figures/a06ex02d_error.png} 
-	\caption{Error between the exact solution and the one obtained using a modified version of the program from a05ex01. Notice the change in scale of the vertical axis}
-	\label{fig:a05ex02b}
-\end{figure}

@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 
 def main():
     # Solving for the fuctions on exercise b
-    eps = [1e-1, 1e-2, 1e-3, 1e-3]
+    eps = [1e-1, 1e-2, 1e-3, 1e-4]
     sns.set(style="white", palette="muted", color_codes=True)
 
     # Setting subplots and titles
@@ -41,7 +41,6 @@ def main():
         def g(x): return 0 * x
 
         n = int(20 + 10 * np.sqrt(1 / eps[exp]))  # number of grid points. empirically chosen
-
         # function
         [Lh, xh, fh] = a06ex03getPDE(k, f, g, n)
         u_h = a06ex03solvePDE(Lh, fh)
@@ -64,9 +63,9 @@ def a06ex03getPDE(k, f, g, N):
     print("\nPRE-CALCULATIONS:")
     h = 1 / (N + 1)
     xh = h * np.asarray(range(1, N + 1))  # grid domain xh
-
     print("h: step size\n", h)
     print("xh: domain\n", xh)
+
     dd = scipy.sparse.diags([1, -2, 1], [-1, 0, 1], shape=[N, N])
     print("dd: standard stencil matrix d+d-\n", dd.todense())
     d0 = scipy.sparse.diags([-1 / 2, 0, 1 / 2], [-1, 0, 1], shape=[N, N])
@@ -80,13 +79,13 @@ def a06ex03getPDE(k, f, g, N):
     fh = f(xh)
     print("fh: vectors of inhomogeneity f(x):\n", fh)
 
-    kx = k(xh)
+    kx = k(xh)  # vector with k(x)
     mk = scipy.sparse.diags([kx], [0], shape=[N, N])
     print("mk: matrix of coefficients k(x)\n", mk.todense())
 
-    dk = 1 / h * d0 * kx
-    dk[0] = dk[0] + k(0) * (1 / 2 / h)
-    dk[-1] = dk[-1] + k(1) * (1 / 2 / h)
+    dk = 1 / h * d0 * kx  # vector with derivative of k(x)
+    dk[0] = dk[0] + k(0) * (1 / 2 / h)  # correct the value in the boundary
+    dk[-1] = dk[-1] + k(1) * (1 / 2 / h)  # correct the value in the boundary
     mkdx = scipy.sparse.diags([dk], [0], shape=[N, N])
     print("mkdx: matrix of coefficients k'(x) (mkdx = 1/h*d0 * kx + BC):\n", mkdx.todense())
 
