@@ -16,7 +16,7 @@ clc
 %                                                                 Solution
 % -------------------------------------------------------------------------
 n = 200;
-m = 1;
+m = 2; % Number of the neighbour points in one direction. WARNING: Taking m = 2 (5 point stencil) leads to flip of the numerical eigenlavues of the printed lists.
 a = 1;
 b = 0;
 c = 1;
@@ -37,90 +37,104 @@ h = 1 / (n+1);
 Lh = getLaplaceDirichlet(n, m, h, a, b, c);
                   
 % Calculate the first 20 numerical eigenvalues
-[EVec1, EV1] = eigs(Lh(ActiveDOF, ActiveDOF), M(ActiveDOF, ActiveDOF), nEV, 'sm');
+[EVec1, EV1_Num] = eigs(Lh(ActiveDOF, ActiveDOF), nEV, 'sm');
+
+% ANalytical solution
+EV1_Exact = ([1:n]*pi).^2 + 1;
 
 %                                                  a.2) Homogenous Neumann
 % -------------------------------------------------------------------------
 % Get laplace for Neumann boundary conditions
-Lh = getLaplaceNeumann(Lh);
+Lh = getLaplaceNeumann(Lh, ActiveDOF, h);
                    
 % Calculate the first 20 eigenvalues
-[EVec2, EV2] = eigs(Lh(ActiveDOF, ActiveDOF), M(ActiveDOF, ActiveDOF), nEV, 'sm');
+[EVec2, EV2_Num] = eigs(Lh, nEV, 'sm');
+
+% Analytical solution
+EV2_Exact = ([0:n]*pi).^2 + 1;
 
 %                                                            a.3) Periodic
-% -------------------------------------------------------------------------
+% -------------------------------------------------------------------------""
 % Get laplace for periodic boundary conditions
 Lh = getLaplacePeriodic(n, m, h, a, b, c);
 
 % Calculate the first 20 eigenvalues
-[EVec3, EV3] = eigs(Lh(ActiveDOF, ActiveDOF), M(ActiveDOF, ActiveDOF), nEV, 'sm');
+[EVec3, EV3_Num] = eigs(Lh, 2*nEV, 'sm');
 
-%                                                      Analytical Solution
-% -------------------------------------------------------------------------
-% Calculate the first 20 analytical eigenvalues
-EV_ana= 4 / (h^2) * sin([fliplr(1:nEV)]' * h *  pi / 2).^2 + 1;
+% Anaytical solution
+EV3_Exact = (2 * [0:n-1] * pi).^2 + 1;
 
 %                                                        Plot eigenvectors
 % -------------------------------------------------------------------------
-% 2nd Eigenvalue
-% --------------
+%{-
+% Some text paramters
+% -------------------
+labelFont = 20;
+axisFont  = 15;
+
 figure(1)
-plot(h*ActiveDOF,        EVec1(:,end-1), '-r',...
-     h*ActiveDOF,        EVec2(:,end-1), '-b',...
-     h*ActiveDOF,        EVec3(:,end-1), '-g',...
-     h*ActiveDOF, sin(2*pi*h*ActiveDOF),'--k',...
+subplot(1,3,1)
+plot(h*[1:n],   EVec1(:,end-1)', '-r',...
+     h*[1:n], sin(2*pi*[1:n]*h),'--k',...
      'LineWidth', 2)
+ 
 grid on
+title('Dirichlet', 'FontSize', labelFont)
+xlabel('x', 'FontSize', labelFont)
+ylabel('u', 'FontSize', labelFont)
+
+subplot(1,3,2)
+plot(h*[1:n],   EVec2(:,end-2)', '-r',...
+     h*[1:n], cos(2*pi*[1:n]*h),'--k',...
+     'LineWidth', 2)
+
+grid on
+title('Neumann', 'FontSize', labelFont)
+xlabel('x', 'FontSize', labelFont)
+ylabel('u', 'FontSize', labelFont)
+ 
+subplot(1,3,3)
+plot(h*[0:n],   EVec3(:,end-4)', '-r',...
+     h*[1:n], cos(2*2*pi*[1:n]*h),'--k',...
+     'LineWidth', 2)
+ 
+grid on
+title('Periodic', 'FontSize', labelFont)
+xlabel('x', 'FontSize', labelFont)
+ylabel('u', 'FontSize', labelFont)
+ 
 figScaleFac = 0.75;
-xlabel('x', 'FontSize', 25)
-ylabel('u', 'FontSize', 25)
 set(gca, 'FontSize', 15)
 set(gcf, 'Color'            , 'white'                                      ,...
          'PaperSize'        , [34, 34]                                     ,...
          'PaperPositionMode', 'auto'                                       ,...
          'Position'         , [0, 0, 1280 * figScaleFac, 768 * figScaleFac])
 %export_fig('../Documentation/Figures/a06ex01EV2.png')
- 
-% 20th Eigenvalue
-% ---------------
-figure(2)
-plot(h*ActiveDOF,             EVec1(:,1), '-r',...
-     h*ActiveDOF,             EVec2(:,1), '-b',...
-     h*ActiveDOF,             EVec3(:,1), '-g',...
-     h*ActiveDOF, sin(20*pi*h*ActiveDOF),'--k',...
-     'LineWidth', 2)
-grid on
-figScaleFac = 0.75;
-xlabel('x', 'FontSize', 25)
-ylabel('u', 'FontSize', 25)
-set(gca, 'FontSize', 15)
-set(gcf, 'Color'            , 'white'                                      ,...
-         'PaperSize'        , [34, 34]                                     ,...
-         'PaperPositionMode', 'auto'                                       ,...
-         'Position'         , [0, 0, 1280 * figScaleFac, 768 * figScaleFac])
-%export_fig('../Documentation/Figures/a06ex01EV20.png')
+%}
 
 %                                                        Print eigenvalues
 % -------------------------------------------------------------------------
 % Print header of the table
 % -------------------------
-fprintf('/-----------------------------------------------------------------------\\\n')
-fprintf('|\t # |\t Analytical |\t  Dirichlet |\t    Neumann |\t   Periodic |\n')
-fprintf('|-----------------------------------------------------------------------|\n')
+fprintf('/-------------------------------------------------------------------------------------------------------\\\n')
+fprintf('|\t # |\t  Dir. Num. |\t Dir. Exact |\t  Neu. Num. |\t Neu. Exact |\tPrdic. Num. |\tPrdic. Exact|\n')
+fprintf('|-------------------------------------------------------------------------------------------------------|\n')
 
 % Loop over all eigen values
 for evCount = 1 : nEV
     % Print eigenvalues
-    fprintf('|\t%2i |\t%d|\t%d|\t%d|\t%d|\n', nEV - evCount + 1    ,...
-                                              EV_ana(evCount)      ,...
-                                              EV1(evCount, evCount),...
-                                              EV2(evCount, evCount),...
-                                              EV3(evCount, evCount));
+    fprintf('|\t%2i |\t%e|\t%e|\t%e|\t%e|\t%e|\t%e|\n', nEV - evCount + 1    ,...
+                                              EV1_Num(evCount, evCount),...
+                                              EV1_Exact(nEV - evCount + 1),...
+                                              EV2_Num(evCount, evCount),...
+                                              EV2_Exact(nEV - evCount + 1),...
+                                              EV3_Num(2*evCount, 2*evCount),...
+                                              EV3_Exact(nEV - evCount + 1));
     
 end % of loop over all eigenvalues
 
 % End table
-fprintf('\\-----------------------------------------------------------------------/\n')
+fprintf('\\-------------------------------------------------------------------------------------------------------/\n')
 
 %                                                FUNCTION FOR DIFF STENCIL
 % -------------------------------------------------------------------------
@@ -166,18 +180,20 @@ Lh = L0 + L1 + L2;
 
 %                                           FUNCTION FOR LAPLACE - NEUMANN
 % -------------------------------------------------------------------------
-function [Lh] = getLaplaceNeumann(Lh)
+function [Lh] = getLaplaceNeumann(Lh, ACTIVE_DOF, H)
 % Adjust Lh for Neumann
 % ---------------------
-Lh          = [Lh; ones(1, length(Lh))];
-Lh          = [Lh, ones(length(Lh), 1)];
-Lh(end,end) = 0;
+Lh = Lh(ACTIVE_DOF, ACTIVE_DOF);
+
+Lh(1,1) = 1/H^2; Lh(1,2) = -1/H^2;
+Lh(end,end-1) = -1/H^2; Lh(end,end) = 1/H^2;
+
 
 %                                           FUNCTION FOR LAPLCE - PERIODIC
 % -------------------------------------------------------------------------
 function [Lh] = getLaplacePeriodic(N, M, H, A, B, C)
 % Set number of points
-numberPoints = N + 1;
+numberPoints = N+1;
 
 % Stencil matrix
 S = getStencil(M);

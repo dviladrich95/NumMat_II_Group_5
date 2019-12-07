@@ -17,7 +17,7 @@ clc
 % -------------------------------------------------------------------------
 % Control parameters
 % ------------------
-N =  2.^([3, 6, 9]) - 1;
+N =  2.^([4, 6, 9]) - 1;
 l =  2.2;
 r =    1;
 nEV     = 6;
@@ -30,7 +30,7 @@ XX = XX' - l/2;
 YY = YY' - l/2;
 RR = sqrt(XX.^2 + YY.^2);
 PHIPHI = atan2(YY,XX);
-VV = zeros(N(end),N(end));
+VV = nan(N(end),N(end));
 
 % Get analytical eigen values
 [EV(:,1), Nu] = a06ex01_solveEVPb(1);
@@ -38,7 +38,7 @@ VV = zeros(N(end),N(end));
 % Loop over all meshes
 for n = N
     % Get reduced laplace matrix for Dirichlet boundary conditions
-    [Lh, ActiveDOFs] = getLaplaceDirichlet(l, n, r);
+    [Lh, ActiveDOFs, BarOmega_h] = getLaplaceDirichlet(l, n, r);
     
     % Calculate numerical eigen values
     EV(:, end + 1) = eigs(Lh(ActiveDOFs, ActiveDOFs), nEV, 'sm');
@@ -74,7 +74,7 @@ fprintf('\\---------------------------------------------------------------------
 for evIdx = [1, 2, 4, 6];
     plotIdx = plotIdx + 1;
     subplot(2,2, plotIdx)
-    VV = cos(Nu(evIdx) * PHIPHI) .* besselj(Nu(evIdx), RR * sqrt(EV(evIdx,1)));
+    VV(BarOmega_h) = cos(Nu(evIdx) * PHIPHI(BarOmega_h)) .* besselj(Nu(evIdx), RR(BarOmega_h) * sqrt(EV(evIdx,1)));
     surf(XX,YY,VV, 'EdgeAlpha', 0)
     title(['$\lambda_' num2str(evIdx) ' = ' num2str(EV(7 - evIdx,1)) '$'], 'FontSize', 13, 'Interpreter','latex')
     axis tight equal
@@ -90,11 +90,11 @@ set(gcf, 'Color'            , 'white'                                      ,...
          'PaperSize'        , [34, 34]                                     ,...
          'PaperPositionMode', 'auto'                                       ,...
          'Position'         , [0, 0, 1280 * figScaleFac, 768 * figScaleFac])
-export_fig('../Documentation/Figures/a06ex01c.png')
+%export_fig('../Documentation/Figures/a06ex01c.png')
 
 %                                         FUNCTION FOR LAPLACE - DIRICHLET
 % -------------------------------------------------------------------------
-function [Lh, ActiveDOFs] = getLaplaceDirichlet(L, N, R)
+function [Lh, ActiveDOFs, BarOmega_h] = getLaplaceDirichlet(L, N, R)
 % Generate coordinates and grid spacing
 % -------------------------------------
 [XX,YY] = meshgrid(linspace(0,L,N));

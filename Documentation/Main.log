@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  6 DEC 2019 11:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  7 DEC 2019 17:07
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2241,7 +2241,14 @@ Package csquotes Info: Redefining alias 'default' -> 'german'.
 LaTeX Warning: Unused global option(s):
     [numbers=noenddot].
 
-(Main.aux)
+(Main.aux
+
+LaTeX Warning: Label `fig:a05ex02b' multiply defined.
+
+
+LaTeX Warning: Label `fig:a05ex02b' multiply defined.
+
+)
 \openout1 = `Main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -2324,8 +2331,9 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `Main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Main.bbl' found.
- (Main.bbl)
+Package biblatex Info: ... file 'Main.bbl' not found.
+
+No file Main.bbl.
 Package biblatex Info: Reference section=0 on input line 24.
 Package biblatex Info: Reference segment=0 on input line 24.
 \AtBeginShipoutBox=\box116
@@ -2333,7 +2341,6 @@ Package biblatex Info: Reference segment=0 on input line 24.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 24.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -2415,11 +2422,11 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 24.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 25.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 15.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (Tables/a06ex01a.tex)
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2429,23 +2436,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 {C:/Users/ATCI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<Figures/a06ex01EV2.png, id=56, 613.54219pt x 399.74344pt>
+(Tables/a06ex01a.tex)
+<Figures/a06ex01EV2.png, id=56, 584.93532pt x 298.86656pt>
 File: Figures/a06ex01EV2.png Graphic file (type png)
 
 <use Figures/a06ex01EV2.png>
-Package pdftex.def Info: Figures/a06ex01EV2.png used on input line 44.
-(pdftex.def)             Requested size: 210.0pt x 136.8198pt.
-
-<Figures/a06ex01EV20.png, id=57, 613.54219pt x 399.74344pt>
-File: Figures/a06ex01EV20.png Graphic file (type png)
-
-<use Figures/a06ex01EV20.png>
-Package pdftex.def Info: Figures/a06ex01EV20.png used on input line 50.
-(pdftex.def)             Requested size: 210.0pt x 136.8198pt.
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 42--54
-[][] [] 
- []
+Package pdftex.def Info: Figures/a06ex01EV2.png used on input line 51.
+(pdftex.def)             Requested size: 426.79135pt x 218.07043pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2453,18 +2450,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./Figures/a06ex01EV2.png (PNG copy)> <./Figures/a06ex01EV20.png (PNG copy)>
-] (Tables/a06ex01b.tex)
-Overfull \hbox (39.0386pt too wide) in paragraph at lines 74--78
+[2 <./Figures/a06ex01EV2.png (PNG copy)>] (Tables/a06ex01b.tex)
+Overfull \hbox (39.0386pt too wide) in paragraph at lines 78--82
 []\T1/lmr/m/n/12 The so-lu-tion was im-ple-mented in the form of a func-tion su
 b-mit-ted in \T1/lmtt/m/n/12 a06ex01_solveEVPb.m\T1/lmr/m/n/12 .
  []
 
-(Tables/a06ex01c.tex) <Figures/a06ex01c.png, id=62, 575.14874pt x 409.53pt>
+(Tables/a06ex01c.tex) <Figures/a06ex01c.png, id=60, 575.14874pt x 409.53pt>
 File: Figures/a06ex01c.png Graphic file (type png)
 
 <use Figures/a06ex01c.png>
-Package pdftex.def Info: Figures/a06ex01c.png used on input line 92.
+Package pdftex.def Info: Figures/a06ex01c.png used on input line 96.
 (pdftex.def)             Requested size: 384.1096pt x 273.50882pt.
 
 
@@ -2473,7 +2469,63 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3])
+[3]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4 <./Figures/a06ex01c.png (PNG copy)>]
+<Figures/a06ex02c_uh.png, id=69, 462.528pt x 346.896pt>
+File: Figures/a06ex02c_uh.png Graphic file (type png)
+
+<use Figures/a06ex02c_uh.png>
+Package pdftex.def Info: Figures/a06ex02c_uh.png used on input line 152.
+(pdftex.def)             Requested size: 426.79135pt x 320.11154pt.
+
+<Figures/a06ex02c_error.png, id=71, 462.528pt x 346.896pt>
+File: Figures/a06ex02c_error.png Graphic file (type png)
+
+<use Figures/a06ex02c_error.png>
+Package pdftex.def Info: Figures/a06ex02c_error.png used on input line 159.
+(pdftex.def)             Requested size: 426.79135pt x 320.11154pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5 <./Figures/a06ex02c_uh.png>]
+<Figures/a06ex02d_uh.png, id=76, 192.72pt x 151.767pt>
+File: Figures/a06ex02d_uh.png Graphic file (type png)
+
+<use Figures/a06ex02d_uh.png>
+Package pdftex.def Info: Figures/a06ex02d_uh.png used on input line 172.
+(pdftex.def)             Requested size: 298.75264pt x 235.2665pt.
+
+<Figures/a06ex02d_error.png, id=77, 192.72pt x 151.767pt>
+File: Figures/a06ex02d_error.png Graphic file (type png)
+
+<use Figures/a06ex02d_error.png>
+Package pdftex.def Info: Figures/a06ex02d_error.png used on input line 179.
+(pdftex.def)             Requested size: 298.75264pt x 235.2665pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6 <./Figures/a06ex02c_error.png> <./Figures/a06ex02d_uh.png>]
+<Figures/a06e03plot.png, id=83, 642.4pt x 481.8pt>
+File: Figures/a06e03plot.png Graphic file (type png)
+
+<use Figures/a06e03plot.png>
+Package pdftex.def Info: Figures/a06e03plot.png used on input line 197.
+(pdftex.def)             Requested size: 290.21498pt x 217.66814pt.
+)
 \tf@thm=\write8
 \openout8 = `Main.thm'.
 
@@ -2485,44 +2537,40 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4 <./Figures/a06ex01c.png (PNG copy)>]
+[7 <./Figures/a06ex02d_error.png> <./Figures/a06e03plot.png (PNG copy)>]
+(Main.aux)
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: There were multiply-defined labels.
 
-[5] (Main.aux)
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45497 strings out of 493323
- 919724 string characters out of 3139069
- 1518963 words of memory out of 3000000
- 48177 multiletter control sequences out of 15000+200000
- 576560 words of font info for 53 fonts, out of 3000000 for 9000
+ 45397 strings out of 493323
+ 916328 string characters out of 3139069
+ 1515963 words of memory out of 3000000
+ 48076 multiletter control sequences out of 15000+200000
+ 570568 words of font info for 51 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 65i,12n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
-iKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/
-dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
-c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Fil
-es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/lm/lmb10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm
-/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm
-/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
-bm10.pfb>
-Output written on Main.pdf (5 pages, 514535 bytes).
+ 65i,13n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-maths
+y.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/lm/lmb10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
+m/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb>
+Output written on Main.pdf (7 pages, 545197 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
+ 134 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 172 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 
