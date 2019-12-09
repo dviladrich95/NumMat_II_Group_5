@@ -1,0 +1,163 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{$\Delta$}]\begingroup Difference operator between two values \nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\epsilon$}]\begingroup Normal strain\nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\eta$}]\begingroup Relative chordwise coordinate \nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\eta$}]\begingroup Relative spanwise coordinate \nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\gamma$}]\begingroup Shear strain\nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\lambda$}]\begingroup Eigenvalue \nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\nu$}]\begingroup Poisson's ratio\nomunit{$Pa$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\rho$}]\begingroup Density \nomunit{$\frac{kg}{m^3}$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\sigma$}]\begingroup Normal stress\nomunit{$Pa$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\sigma_M$}]\begingroup Mises stress\nomunit{$Pa$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\sigma_{yield}$}]\begingroup Yield stress\nomunit{$Pa$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\tau$}]\begingroup Shear stress\nomunit{$Pa$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$a$}]\begingroup Speed of sound \nomunit{$\frac{m}{s}$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$c$}]\begingroup Aerodynamic coefficient \nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$c_L$}]\begingroup Lift coefficient at the \acs{ica} \nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$E$}]\begingroup Young's modulus\nomunit{$Pa$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$F$}]\begingroup Concentrated load, Force \nomunit{$N$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$G$}]\begingroup Shear modulus\nomunit{$Pa$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$g$}]\begingroup Gravitational acceleration \nomunit{$\frac{m}{s^2}$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$k$}]\begingroup Factor \nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$m$}]\begingroup Mass \nomunit{$kg$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$Ma$}]\begingroup Mach-Number \nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$N_{elem}$}]\begingroup Number of elements \nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$n_{LC}$}]\begingroup Load factor of the load case \nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$N_{size}$}]\begingroup Iteration limit of the sizing optimization \nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$N_{topol}$}]\begingroup Iteration limit of the topology optimization  \nomunit{$-$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$P$}]\begingroup Pressure \nomunit{$Pa$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$T$}]\begingroup Temperature \nomunit{$K$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$t$}]\begingroup Thickness \nomunit{$m$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$u$}]\begingroup Elastic displacement\nomunit{$m$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$V$}]\begingroup Volume \nomunit{$m^3$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$v$}]\begingroup Velocity \nomunit{$\frac{m}{s}$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$W$}]\begingroup Work \nomunit{$J$}\nomeqref {0}
+		\nompageref{xi}
+  \item [{$X,\, Y,\, Z$}]\begingroup Cartesian coordinates \nomunit{$m$}\nomeqref {0}
+		\nompageref{xi}
+
+ \nomgroup{B}
+
+  \item [{$\VECT{\epsilon}$}]\begingroup Strain vector\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\VECT{\sigma}$}]\begingroup Stress vector\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\VECT{d}$}]\begingroup Nodal displacement vector\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\VECT{d}_B$}]\begingroup Nodal displacement vector of the buckle analysis\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\VECT{F}$}]\begingroup Concentrated load vector\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\VECT{f}$}]\begingroup Nodal load vector\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\VECT{p}$}]\begingroup Volume load vector\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\VECT{q}$}]\begingroup Surface load vector\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\VECT{u}$}]\begingroup Elastic displacement vector\nomeqref {0}
+		\nompageref{xi}
+
+ \nomgroup{C}
+
+  \item [{$\MAT{D}$}]\begingroup Differential tensor\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\MAT{E}$}]\begingroup Linear elasticity tensor\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\MAT{G}$}]\begingroup Shape functions tensor\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\MAT{I}$}]\begingroup Unit matrix\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\MAT{K}$}]\begingroup Element stiffness matrix\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\MAT{k}$}]\begingroup Analytical stiffness matrix\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\MAT{K}_G$}]\begingroup Geometric element stiffness matrix\nomeqref {0}
+		\nompageref{xi}
+
+ \nomgroup{D}
+
+  \item [{$1, \,2, \,3$}]\begingroup Directional indices with respect to Cartesian coordinates\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\lambda$}]\begingroup Stability sizing value\nomeqref {0}
+		\nompageref{xi}
+  \item [{$\sigma$}]\begingroup Stress sizing value\nomeqref {0}
+		\nompageref{xi}
+  \item [{$air$}]\begingroup Value the air at an altitude\nomeqref {0}
+		\nompageref{xi}
+  \item [{$bf$}]\begingroup Block Fuel\nomeqref {0}\nompageref{xi}
+  \item [{$climb$}]\begingroup climb Fuel\nomeqref {0}\nompageref{xi}
+  \item [{$col$}]\begingroup Value of an element column\nomeqref {0}
+		\nompageref{xi}
+  \item [{$crit$}]\begingroup Critical value\nomeqref {0}
+		\nompageref{xi}
+  \item [{$cs$}]\begingroup Value of a component segment\nomeqref {0}
+		\nompageref{xi}
+  \item [{$elem$}]\begingroup Value of an element\nomeqref {0}
+		\nompageref{xi}
+  \item [{$ext$}]\begingroup External\nomeqref {0}\nompageref{xi}
+  \item [{$fuel$}]\begingroup Value of a fuel type\nomeqref {0}
+		\nompageref{xi}
+  \item [{$i$}]\begingroup Counter index\nomeqref {0}\nompageref{xi}
+  \item [{$ica$}]\begingroup Values regarding initial cruise altitude\nomeqref {0}
+		\nompageref{xi}
+  \item [{$int$}]\begingroup Internal\nomeqref {0}\nompageref{xi}
+  \item [{$mat$}]\begingroup Value of a material type\nomeqref {0}
+		\nompageref{xi}
+  \item [{$max$}]\begingroup Maximum value\nomeqref {0}\nompageref{xi}
+  \item [{$new$}]\begingroup Modified value\nomeqref {0}\nompageref{xi}
+  \item [{$part$}]\begingroup Value of a structural part\nomeqref {0}
+		\nompageref{xi}
+  \item [{$rel$}]\begingroup Relaxation value\nomeqref {0}
+		\nompageref{xi}
+  \item [{$s$}]\begingroup Value of a segment\nomeqref {0}
+		\nompageref{xi}
+  \item [{$safe$}]\begingroup Safety margin value\nomeqref {0}
+		\nompageref{xi}
+  \item [{$struc$}]\begingroup Value of the entire wing box structure\nomeqref {0}
+		\nompageref{xi}
+  \item [{$targ$}]\begingroup Targeted value\nomeqref {0}
+		\nompageref{xi}
+  \item [{$thr$}]\begingroup Threshold value\nomeqref {0}
+		\nompageref{xi}
+  \item [{$tol$}]\begingroup Tolerance value\nomeqref {0}
+		\nompageref{xi}
+  \item [{$txf$}]\begingroup Taxi Fuel\nomeqref {0}\nompageref{xi}
+  \item [{$wing$}]\begingroup Value of a wing\nomeqref {0}
+		\nompageref{xi}
+
+\end{thenomenclature}
