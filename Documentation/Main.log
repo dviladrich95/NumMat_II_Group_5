@@ -1,88 +1,8 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.6)  4 DEC 2019 12:26
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  7 DEC 2019 17:07
->>>>>>> cba1738adb6d4f979a068ca05e01f9a997ca3b54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  10 DEC 2019 16:35
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**Main.tex
-(./Main.tex
+**./Main.tex
+(Main.tex
 LaTeX2e <2017-04-15>
-<<<<<<< HEAD
-Babel <3.18> and hyphenation patterns for 3 language(s) loaded.
-(./Main.aux)
-\openout1 = `Main.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-
-
-! LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Undefined control sequence.
-l.6 \section
-            *{1}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no * in font nullfont!
-Missing character: There is no 1 in font nullfont!
-
-! LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 \end{document}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[1] (./Main.aux) ) 
-Here is how much of TeX's memory you used:
- 11 strings out of 494923
- 170 string characters out of 6180742
- 45839 words of memory out of 5000000
- 3422 multiletter control sequences out of 15000+600000
- 3640 words of font info for 14 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 22i,4n,15p,67b,109s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on Main.pdf (1 page, 916 bytes).
-PDF statistics:
- 8 PDF objects out of 1000 (max. 8388607)
- 4 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
 Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -2321,14 +2241,7 @@ Package csquotes Info: Redefining alias 'default' -> 'german'.
 LaTeX Warning: Unused global option(s):
     [numbers=noenddot].
 
-(Main.aux
-
-LaTeX Warning: Label `fig:a05ex02b' multiply defined.
-
-
-LaTeX Warning: Label `fig:a05ex02b' multiply defined.
-
-)
+(Main.aux)
 \openout1 = `Main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -2379,32 +2292,6 @@ Package caption Info: rotating package is loaded.
 Package caption Info: sidecap package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package caption Info: We need package `ragged2e' on input line 24.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
-Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
-Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
-
-ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 126.
-)
-\CenteringLeftskip=\skip173
-\RaggedLeftLeftskip=\skip174
-\RaggedRightLeftskip=\skip175
-\CenteringRightskip=\skip176
-\RaggedLeftRightskip=\skip177
-\RaggedRightRightskip=\skip178
-\CenteringParfillskip=\skip179
-\RaggedLeftParfillskip=\skip180
-\RaggedRightParfillskip=\skip181
-\JustifyingParfillskip=\skip182
-\CenteringParindent=\skip183
-\RaggedLeftParindent=\skip184
-\RaggedRightParindent=\skip185
-\JustifyingParindent=\skip186
-)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -2460,10 +2347,33 @@ ABD: EveryShipout initializing macros
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-(TexStructure/Assignment6.tex (TexStructure/Title.tex
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 2.
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 126.
+)
+\CenteringLeftskip=\skip173
+\RaggedLeftLeftskip=\skip174
+\RaggedRightLeftskip=\skip175
+\CenteringRightskip=\skip176
+\RaggedLeftRightskip=\skip177
+\RaggedRightRightskip=\skip178
+\CenteringParfillskip=\skip179
+\RaggedLeftParfillskip=\skip180
+\RaggedRightParfillskip=\skip181
+\JustifyingParfillskip=\skip182
+\CenteringParindent=\skip183
+\RaggedLeftParindent=\skip184
+\RaggedRightParindent=\skip185
+\JustifyingParindent=\skip186
+) (TexStructure/Assignment7.tex
+(TexStructure/Title.tex
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 2.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 2.
@@ -2501,12 +2411,20 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 24.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-))
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 15.
+)))
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+Package caption Warning: Unused \captionsetup[figure] on input line 53.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[table] on input line 58.
+See the caption package documentation for explanation.
+
+\tf@thm=\write8
+\openout8 = `Main.thm'.
+
+
+AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2515,143 +2433,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1
 
-{C:/Users/ATCI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(Tables/a06ex01a.tex)
-<Figures/a06ex01EV2.png, id=56, 584.93532pt x 298.86656pt>
-File: Figures/a06ex01EV2.png Graphic file (type png)
-
-<use Figures/a06ex01EV2.png>
-Package pdftex.def Info: Figures/a06ex01EV2.png used on input line 51.
-(pdftex.def)             Requested size: 426.79135pt x 218.07043pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2 <./Figures/a06ex01EV2.png (PNG copy)>] (Tables/a06ex01b.tex)
-Overfull \hbox (39.0386pt too wide) in paragraph at lines 78--82
-[]\T1/lmr/m/n/12 The so-lu-tion was im-ple-mented in the form of a func-tion su
-b-mit-ted in \T1/lmtt/m/n/12 a06ex01_solveEVPb.m\T1/lmr/m/n/12 .
- []
-
-(Tables/a06ex01c.tex) <Figures/a06ex01c.png, id=60, 575.14874pt x 409.53pt>
-File: Figures/a06ex01c.png Graphic file (type png)
-
-<use Figures/a06ex01c.png>
-Package pdftex.def Info: Figures/a06ex01c.png used on input line 96.
-(pdftex.def)             Requested size: 384.1096pt x 273.50882pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[4 <./Figures/a06ex01c.png (PNG copy)>]
-<Figures/a06ex02c_uh.png, id=69, 462.528pt x 346.896pt>
-File: Figures/a06ex02c_uh.png Graphic file (type png)
-
-<use Figures/a06ex02c_uh.png>
-Package pdftex.def Info: Figures/a06ex02c_uh.png used on input line 152.
-(pdftex.def)             Requested size: 426.79135pt x 320.11154pt.
-
-<Figures/a06ex02c_error.png, id=71, 462.528pt x 346.896pt>
-File: Figures/a06ex02c_error.png Graphic file (type png)
-
-<use Figures/a06ex02c_error.png>
-Package pdftex.def Info: Figures/a06ex02c_error.png used on input line 159.
-(pdftex.def)             Requested size: 426.79135pt x 320.11154pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5 <./Figures/a06ex02c_uh.png>]
-<Figures/a06ex02d_uh.png, id=76, 192.72pt x 151.767pt>
-File: Figures/a06ex02d_uh.png Graphic file (type png)
-
-<use Figures/a06ex02d_uh.png>
-Package pdftex.def Info: Figures/a06ex02d_uh.png used on input line 172.
-(pdftex.def)             Requested size: 298.75264pt x 235.2665pt.
-
-<Figures/a06ex02d_error.png, id=77, 192.72pt x 151.767pt>
-File: Figures/a06ex02d_error.png Graphic file (type png)
-
-<use Figures/a06ex02d_error.png>
-Package pdftex.def Info: Figures/a06ex02d_error.png used on input line 179.
-(pdftex.def)             Requested size: 298.75264pt x 235.2665pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6 <./Figures/a06ex02c_error.png> <./Figures/a06ex02d_uh.png>]
-<Figures/a06e03plot.png, id=83, 642.4pt x 481.8pt>
-File: Figures/a06e03plot.png Graphic file (type png)
-
-<use Figures/a06e03plot.png>
-Package pdftex.def Info: Figures/a06e03plot.png used on input line 197.
-(pdftex.def)             Requested size: 290.21498pt x 217.66814pt.
-)
-\tf@thm=\write8
-\openout8 = `Main.thm'.
-
- 
-AED: lastpage setting LastPage
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[7 <./Figures/a06ex02d_error.png> <./Figures/a06e03plot.png (PNG copy)>]
-(Main.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
+{C:/Users/ATCI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Main.aux)
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45397 strings out of 493323
- 916328 string characters out of 3139069
- 1515963 words of memory out of 3000000
- 48076 multiletter control sequences out of 15000+200000
- 570568 words of font info for 51 fonts, out of 3000000 for 9000
+ 45281 strings out of 493323
+ 913956 string characters out of 3139069
+ 1509963 words of memory out of 3000000
+ 47985 multiletter control sequences out of 15000+200000
+ 564213 words of font info for 48 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 65i,13n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/M
-iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
-nc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-maths
-y.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/lm/lmb10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
-m/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb>
-Output written on Main.pdf (7 pages, 545197 bytes).
+ 65i,11n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/lm/lmb10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+r12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Main.pdf (1 page, 114323 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 192 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> cba1738adb6d4f979a068ca05e01f9a997ca3b54
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
