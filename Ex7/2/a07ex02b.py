@@ -19,7 +19,6 @@ def a07ex02b(N):
     yh = np.transpose(yh)
     zh = np.transpose(zh)
 
-
     ix = np.reshape(np.arange(0,k**3),(k,k,k)).T # create indices in lexic. ordering
 
     ixyz  = ix[1:-1,1:-1,1:-1].flatten()   # index (i,j,k)
@@ -51,7 +50,7 @@ def a07ex02b(N):
 
     ee  = np.ones(((k-2)**3,1))
     ee1 = np.ones((np.size(ix_BD),1))
-    aa  = np.concatenate((ee*(+6)/h**3,ee*(-1)/h**3,ee*(-1)/h**3,ee*(-1)/h**3,ee*(-1)/h**3,ee*(-1)/h**3,ee*(-1)/h**3,ee1))
+    aa  = np.concatenate((ee*(+6)/h**2,ee*(-1)/h**2,ee*(-1)/h**2,ee*(-1)/h**2,ee*(-1)/h**2,ee*(-1)/h**2,ee*(-1)/h**2,ee1))
 
     Lh  = sparse.csr_matrix((aa.flatten(),(ii.flatten(),jj.flatten())),shape=(k**3,k**3))
 

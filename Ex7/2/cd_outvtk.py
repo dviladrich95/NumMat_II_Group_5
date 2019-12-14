@@ -1,6 +1,5 @@
-import numpy as np
 from a07ex02getsola import a07ex02getsola
-from a07ex02b import func4b
+from a07ex02b import a07ex02b
 
 def outvtk_structured3d(fname, L, N, uh):
     h = L / (N + 1)
@@ -21,24 +20,21 @@ def outvtk_structured3d(fname, L, N, uh):
         f.write("\n".join(["{:.6f}".format(x) for x in uh]) + "\n")
 
 
-R   = 1
-
-L=1
+R   = 10
 
 N=30
+
+L=1.0
 
 Nx=N
 Ny=N
 Nz=N
 
-x=np.linspace(0,1,Nx+2)
-y=np.linspace(0,1,Ny+2)
-z=np.linspace(0,1,Nz+2)
-
-ua = a07ex02getsola(x,y,z,R)
-ub = func4b()
+ua = a07ex02getsola(Nx,Ny,Nz,R)
+ub = a07ex02b(N)
 
 udiff=ua-ub
+
 outvtk_structured3d('a07ex02vtk_a',L,N,ua.flatten(order="F"))
 outvtk_structured3d('a07ex02vtk_b',L,N,ub.flatten(order="F"))
 outvtk_structured3d('a07ex02vtk_diff',L,N,udiff.flatten(order="F"))

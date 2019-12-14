@@ -53,12 +53,12 @@ def a07ex02c(N,M,T):
 
     ee  = np.ones(((k-2)**3,1))
     ee1 = np.ones((np.size(ix_BD),1))
-    aa  = np.concatenate((ee*(+6)/h**3,ee*(-1)/h**3,ee*(-1)/h**3,ee*(-1)/h**3,ee*(-1)/h**3,ee*(-1)/h**3,ee*(-1)/h**3,ee1))
+    aa  = np.concatenate((ee*(+6)/h**2,ee*(-1)/h**2,ee*(-1)/h**2,ee*(-1)/h**2,ee*(-1)/h**2,ee*(-1)/h**2,ee*(-1)/h**2,ee1))
 
     Lh  = sparse.csr_matrix((aa.flatten(),(ii.flatten(),jj.flatten())),shape=(k**3,k**3))
 
     u0=np.zeros(k**3)
-    for t in np.linspace(0,T,l):
+    for t in np.linspace(0,T,l-1,endpoint=False):
 
         A=sparse.eye(k**3)+tau*Lh
 
@@ -66,15 +66,7 @@ def a07ex02c(N,M,T):
         rhs[ix_BD]=0
 
         u = spsolve(A, rhs)
-        sns.heatmap(np.reshape(u,(k,k,k))[:,:,5],vmin=0,vmax=0.005)
-        plt.show()
         u0=u
+
     u = np.reshape(u,(k,k,k))
-
     return u
-
-'''
-for slice in u:
-    sns.heatmap(slice)
-    plt.show()
-'''
