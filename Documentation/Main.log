@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  10 DEC 2019 16:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  15 DEC 2019 08:59
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2122,6 +2122,16 @@ Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
 \c@SC@C=\count479
 \SC@BOX=\box94
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\slashbox\slashbox.sty"
+slashbox style by K.Yasuoka, May 1993.
+\@slashboxa=\box95
+\@slashboxb=\box96
+\@slashboxc=\box97
+\@slashboxwd=\count480
+\@slashboxht=\count481
+\@slashsepl=\dimen353
+\@slashsepr=\dimen354
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\frontendlayer\libraries\tikzlibrary
 external.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
@@ -2133,7 +2143,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.code.t
 ex"
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen353
+\arrowsize=\dimen355
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 libraryshapes.code.tex"
@@ -2186,26 +2196,26 @@ File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
 .multipart.code.tex"
 File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 
-\pgfnodepartlowerbox=\box95
-\pgfnodeparttwobox=\box96
-\pgfnodepartthreebox=\box97
-\pgfnodepartfourbox=\box98
-\pgfnodeparttwentybox=\box99
-\pgfnodepartnineteenbox=\box100
-\pgfnodeparteighteenbox=\box101
-\pgfnodepartseventeenbox=\box102
-\pgfnodepartsixteenbox=\box103
-\pgfnodepartfifteenbox=\box104
-\pgfnodepartfourteenbox=\box105
-\pgfnodepartthirteenbox=\box106
-\pgfnodeparttwelvebox=\box107
-\pgfnodepartelevenbox=\box108
-\pgfnodeparttenbox=\box109
-\pgfnodepartninebox=\box110
-\pgfnodeparteightbox=\box111
-\pgfnodepartsevenbox=\box112
-\pgfnodepartsixbox=\box113
-\pgfnodepartfivebox=\box114
+\pgfnodepartlowerbox=\box98
+\pgfnodeparttwobox=\box99
+\pgfnodepartthreebox=\box100
+\pgfnodepartfourbox=\box101
+\pgfnodeparttwentybox=\box102
+\pgfnodepartnineteenbox=\box103
+\pgfnodeparteighteenbox=\box104
+\pgfnodepartseventeenbox=\box105
+\pgfnodepartsixteenbox=\box106
+\pgfnodepartfifteenbox=\box107
+\pgfnodepartfourteenbox=\box108
+\pgfnodepartthirteenbox=\box109
+\pgfnodeparttwelvebox=\box110
+\pgfnodepartelevenbox=\box111
+\pgfnodeparttenbox=\box112
+\pgfnodepartninebox=\box113
+\pgfnodeparteightbox=\box114
+\pgfnodepartsevenbox=\box115
+\pgfnodepartsixbox=\box116
+\pgfnodepartfivebox=\box117
 )))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 libraryshadows.code.tex"
@@ -2269,16 +2279,16 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count480
-\scratchdimen=\dimen354
-\scratchbox=\box115
-\nofMPsegments=\count481
-\nofMParguments=\count482
+\scratchcounter=\count482
+\scratchdimen=\dimen356
+\scratchbox=\box118
+\nofMPsegments=\count483
+\nofMParguments=\count484
 \everyMPshowfont=\toks74
-\MPscratchCnt=\count483
-\MPscratchDim=\dimen355
-\MPnumerator=\count484
-\makeMPintoPDFobject=\count485
+\MPscratchCnt=\count485
+\MPscratchDim=\dimen357
+\MPnumerator=\count486
+\makeMPintoPDFobject=\count487
 \everyMPtoPDFconversion=\toks75
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -2292,6 +2302,32 @@ Package caption Info: rotating package is loaded.
 Package caption Info: sidecap package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
+Package caption Info: We need package `ragged2e' on input line 24.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 126.
+)
+\CenteringLeftskip=\skip173
+\RaggedLeftLeftskip=\skip174
+\RaggedRightLeftskip=\skip175
+\CenteringRightskip=\skip176
+\RaggedLeftRightskip=\skip177
+\RaggedRightRightskip=\skip178
+\CenteringParfillskip=\skip179
+\RaggedLeftParfillskip=\skip180
+\RaggedRightParfillskip=\skip181
+\JustifyingParfillskip=\skip182
+\CenteringParindent=\skip183
+\RaggedLeftParindent=\skip184
+\RaggedRightParindent=\skip185
+\JustifyingParindent=\skip186
+)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -2303,8 +2339,8 @@ Package biblatex Info: ... file 'Main.bbl' not found.
 No file Main.bbl.
 Package biblatex Info: Reference section=0 on input line 24.
 Package biblatex Info: Reference segment=0 on input line 24.
-\AtBeginShipoutBox=\box116
-\c@lstlisting=\count486
+\AtBeginShipoutBox=\box119
+\c@lstlisting=\count488
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 24.
@@ -2347,33 +2383,10 @@ ABD: EveryShipout initializing macros
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
-Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
-Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
-
-ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 126.
-)
-\CenteringLeftskip=\skip173
-\RaggedLeftLeftskip=\skip174
-\RaggedRightLeftskip=\skip175
-\CenteringRightskip=\skip176
-\RaggedLeftRightskip=\skip177
-\RaggedRightRightskip=\skip178
-\CenteringParfillskip=\skip179
-\RaggedLeftParfillskip=\skip180
-\RaggedRightParfillskip=\skip181
-\JustifyingParfillskip=\skip182
-\CenteringParindent=\skip183
-\RaggedLeftParindent=\skip184
-\RaggedRightParindent=\skip185
-\JustifyingParindent=\skip186
-) (TexStructure/Assignment7.tex
-(TexStructure/Title.tex
+(TexStructure/Assignment7.tex (TexStructure/Title.tex
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 2.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 2.
@@ -2411,11 +2424,71 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 24.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)))
+))
 
-Package caption Warning: Unused \captionsetup[figure] on input line 53.
-See the caption package documentation for explanation.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
+[1
+
+{C:/Users/ATCI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2] <Figures/a07ex01d_Theta1.png, id=62, 789.70032pt x 514.92375pt>
+File: Figures/a07ex01d_Theta1.png Graphic file (type png)
+
+<use Figures/a07ex01d_Theta1.png>
+Package pdftex.def Info: Figures/a07ex01d_Theta1.png used on input line 110.
+(pdftex.def)             Requested size: 409.72255pt x 267.15689pt.
+
+<Figures/a07ex01d_Theta2.png, id=63, 793.46437pt x 514.92375pt>
+File: Figures/a07ex01d_Theta2.png Graphic file (type png)
+
+<use Figures/a07ex01d_Theta2.png>
+Package pdftex.def Info: Figures/a07ex01d_Theta2.png used on input line 117.
+(pdftex.def)             Requested size: 409.72255pt x 265.89975pt.
+
+<Figures/a07ex01d_Theta3.png, id=64, 793.46437pt x 514.92375pt>
+File: Figures/a07ex01d_Theta3.png Graphic file (type png)
+
+<use Figures/a07ex01d_Theta3.png>
+Package pdftex.def Info: Figures/a07ex01d_Theta3.png used on input line 126.
+(pdftex.def)             Requested size: 409.72255pt x 265.89975pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3 <./Figures/a07ex01d_Theta1.png (PNG copy)>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4 <./Figures/a07ex01d_Theta2.png (PNG copy)> <./Figures/a07ex01d_Theta3.png (P
+NG copy)>] <Figures/a07ex01f.png, id=71, 801.74532pt x 514.92375pt>
+File: Figures/a07ex01f.png Graphic file (type png)
+
+<use Figures/a07ex01f.png>
+Package pdftex.def Info: Figures/a07ex01f.png used on input line 148.
+(pdftex.def)             Requested size: 409.72255pt x 263.14977pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5 <./Figures/a07ex01f.png (PNG copy)>])
 
 Package caption Warning: Unused \captionsetup[table] on input line 58.
 See the caption package documentation for explanation.
@@ -2431,28 +2504,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[1
-
-{C:/Users/ATCI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Main.aux)
+[6] (Main.aux)
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45281 strings out of 493323
- 913956 string characters out of 3139069
- 1509963 words of memory out of 3000000
- 47985 multiletter control sequences out of 15000+200000
- 564213 words of font info for 48 fonts, out of 3000000 for 9000
+ 45362 strings out of 493323
+ 915389 string characters out of 3139069
+ 1516477 words of memory out of 3000000
+ 48054 multiletter control sequences out of 15000+200000
+ 570193 words of font info for 50 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 65i,11n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmb10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
-r12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Main.pdf (1 page, 114323 bytes).
+ 65i,15n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
+es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fon
+ts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
+thex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/lm/lmb10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
+m/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Main.pdf (6 pages, 598528 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
+ 127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 
