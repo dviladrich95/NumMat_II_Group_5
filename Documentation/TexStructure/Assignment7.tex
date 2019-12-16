@@ -157,117 +157,125 @@ Running the simulation with $N = 200$ improves the convergence of the solutions 
 % EXERCISE 2
 % --------------------------------------------------------------------------------------------------------------------
 \addExercise{2}{Ex2}
+
 %
-
-a)
+% ----------------
+\addSubExercise{a}
 Since the proposed function $u$ does not depend on t we have $\partial_t u = 0$ and so we have 
-
 \begin{align*}
-    -\Delta u \\
-    &=-(\partial_{xx}+\partial_{yy}+\partial_{zz})u\\
-    &= (k^2\pi^2+l^2\pi^2+m^2\pi^2)u\\
-    &= \lambda_{klm}u\\
+    -\Delta u &=-(\partial_{xx}+\partial_{yy}+\partial_{zz})u\\
+			  &= (k^2\pi^2+l^2\pi^2+m^2\pi^2)u\\
+			  &= \lambda_{klm}u\\
 \end{align*}
-
+%
 which is an eigenfunction with eigenvalue 
-
+%
 \begin{equation*}
     \lambda_{klm}=\pi^2(k^2+l^2+m^2)
 \end{equation*}
-
+%
 the normalization factor is given by
-
-\begin{align*}
-    1&=\\
-    &=\int_0^1 u^2 dV\\
-    &= a_{klm}^2\int_0^1 sin(k\pi x)^2 dx \int_0^1 sin(l\pi y)^2 dy \int_0^1 sin(k\pi x)^2 dz\\
-\end{align*}
-
+%
+\begin{equation*}
+    1=\int_0^1 u^2 dV 
+	 = a_{klm}^2\int_0^1 sin(k\pi x)^2 dx \int_0^1 sin(l\pi y)^2 dy \int_0^1 sin(k\pi x)^2 dz\\
+\end{equation*}
+%
 which for $k,l,m \in \mathbb{N}$ is
-
+%
 \begin{equation}
-         a_{klm}&= \sqrt{8}
+         a_{klm}= \sqrt{8}
 \end{equation}
-
+%
 We can rewrite the inner product between $u_{klm}$ and $u_{nop}$ as
-
-
+%
 \begin{equation}
 a_{klm}a_{nop}\int_0^1 sin(k\pi x)sin(n\pi x) dx \int_0^1 sin(l\pi y)sin(o\pi y) dy \int_0^1 sin(k\pi x)sin(p\pi x) dz
 \end{equation}
-
-The integral of the first term for $k\neqn$ with the corresponding normalization terms of $a_{klm}$ and $a_{nop}$ is of the form 
-
+%
+The integral of the first term for $k$ with the corresponding normalization terms of $a_{klm}$ and $a_{nop}$ is of the form 
+%
 \begin{equation}
-sin(\pi k) cos(\pi n) - cos(\pi k) sin(\pi n)
+	sin(\pi k) cos(\pi n) - cos(\pi k) sin(\pi n)
 \end{equation}
-
+%
 Which for $k,n \in \mathbb{N}$ is equal to $\delta_k^n$. We have a product of three of these kronecker deltas and obtain $\delta_{klm}^{nop}$ which is the definition of the function we wanted to show.
-
-to show that the weights $w_{klm}$ are given by the equation
-
+%
+To show that the weights $w_{klm}$ are given by the equation
+%
 \begin{equation}
     \frac{1}{\lambda_{klm}} \int_\Omega f(x)u_{klm}(x)dxdydz
 \end{equation}
-
-we just substitute into $Lu=f$ and note that since $u_{klm}$ is a basis we can also write $f(x)=\sum_{nop}w_{nop}u_{nop}$
+%
+we just substitute into $Lu=f$ and note that since $u_{klm}$ is a basis, we can also write $f(x)=\sum_{nop}w_{nop}u_{nop}$ as
 
 \begin{align*}
-    f&=Lu \\
-    &=-\Delta u\\
-    &=-\Delta \sum_{klm} w_{klm} u_{klm}   \\
-    &= \sum_{klm} w_{klm} (-\Delta u_{klm})   \\
-    &=\sum_{klm} \frac{1}{\lambda_{klm}} \int_\Omega f u_{klm} dxdydz (- \Delta u_{klm})\\
-    &=\sum_{klm} \int_\Omega \left ( \sum_{nop}w_{nop}u_{nop}\right ) u_{klm} dxdydz \cdot u_{klm} \\
-    &=\sum_{klm} \left ( \sum_{nop}   \int_\Omega  w_{nop}u_{nop} u_{klm} dxdydz \right ) \cdot u_{klm} \\
-    &=\sum_{klm} \left ( \sum_{nop}   w_{nop} \int_\Omega  u_{nop} u_{klm} dxdydz \right ) \cdot u_{klm} \\
+    f=Lu =-\Delta u =-\Delta \sum_{klm} w_{klm} u_{klm} &= \sum_{klm} w_{klm} (-\Delta u_{klm})   \\
+														&=\sum_{klm} \frac{1}{\lambda_{klm}} \int_\Omega f u_{klm} dxdydz (- \Delta u_{klm})\\
+														&=\sum_{klm} \int_\Omega \left ( \sum_{nop}w_{nop}u_{nop}\right ) u_{klm} dxdydz \cdot u_{klm} \\
+														&=\sum_{klm} \left ( \sum_{nop}   \int_\Omega  w_{nop}u_{nop} u_{klm} dxdydz \right ) \cdot u_{klm} \\
+														&=\sum_{klm} \left ( \sum_{nop}   w_{nop} \int_\Omega  u_{nop} u_{klm} dxdydz \right ) \cdot u_{klm} \\
+\text{.}
 \end{align*}
-
+%
 Given that $ \int_\Omega  u_{nop} u_{klm} dxdydz =\delta_{klm}^{nop}$ this cancels out the inner sum, so we have:
-
+%
 \begin{align*}
-    f&=Lu \\
-    &=\sum_{klm} \left w_{klm} \cdot u_{klm} \\
-    &=f\\
+    f=Lu =\sum_{klm} w_{klm} \cdot u_{klm}
 \end{align*}
-
-
+%
 For $f=1$ we have 
-
+%
 \begin{align*}
-    w_{klm}=\frac{1}{\lambda_{klm}} \int_\Omega u_{klm} dxdydz\\
-    &=\frac{a_{klm}}{\lambda_{klm}}  \int_0^1 sin(k\pi x) dx \int_0^1 sin(l\pi y) dy \int_0^1 sin(k\pi x) dz\\
-    &=\frac{a_{klm}}{\lambda_{klm}}  \frac{8}{\pi^3klm}\\
+    w_{klm}&=\frac{1}{\lambda_{klm}} \int_\Omega u_{klm} dxdydz\\
+		   &=\frac{a_{klm}}{\lambda_{klm}}  \int_0^1 sin(k\pi x) dx \int_0^1 sin(l\pi y) dy \int_0^1 sin(k\pi x) dz\\
+		   &=\frac{a_{klm}}{\lambda_{klm}}  \frac{8}{\pi^3klm}\\
 \end{align*}
-
+%
 which since $k,l,m \in \mathbb{N}$ reduces to:
+%
+\begin{equation}
+	w_{klm}=
+	\begin{cases}
+	\frac{a_{klm}}{\lambda_{klm}}  \frac{8}{\pi^3klm}, & \text{if}\ k,l,m \text{ all divisible by 2} \\
+	0, & \text{otherwise}
+	\end{cases}
+\end{equation}
+%
+% ----------------
+\addSubExercise{b}
+In this exercise, the sample code from assignment 4 was extended to $\Omega = (0,1)^3$ and the problem $-\Delta u = 1$ was solved with homogeneous Dirichlet boundary conditions.
+\FIG{heatb} illustrates the solution, whereas the error is plotted in \FIG{error2b}.
+For the implementation, please refer to the online submitted \texttt{a07ex02b.py} file.
+%
+% ----------------
+\addSubExercise{c}
+Please refer to the online submitted \texttt{a07ex02c.py} file.
+%
+% ----------------
+\addSubExercise{d}
+The error is plotted in \FIG{error_d}.
+Please refer to the online submitted \texttt{a07ex02d.py} and \texttt{a07ex02d\_error.py} files.
 
-  \begin{equation}
-    w_{klm}=
-    \begin{cases}
-      \frac{a_{klm}}{\lambda_{klm}}  \frac{8}{\pi^3klm}, & \text{if}\ k,l,m \text{ all divisible by 2} \\
-      0, & \text{otherwise}
-    \end{cases}
-  \end{equation}
-
-b)
-
-\begin{figure}[h]
-	\includegraphics[width=0.96\textwidth]{heatb.png} 
+% FIGURES
+% ---------------------------------------------
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{heatb.png} 
 	\caption{Solution from 2a, very similar as 2b}
+	\label{fig:heatb}
 \end{figure}
-
-
-\begin{figure}[h]
-	\includegraphics[width=0.96\textwidth]{error2b.png} 
+\vfill
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{error2b.png} 
 	\caption{Error between 2a an 2b. Note that the relative error is of about two orders of magnitude.}
+	\label{fig:error2b}
 \end{figure}
 
-c)
-
-d)
-You can find our code for part d) in the files \texttt{a07ex02d.py} and \texttt{a07ex02d\_error.py}
-\begin{figure}[h]
-	\includegraphics[width=0.96\textwidth]{error_d.png} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{error_d.png} 
 	\caption{Error between the exact solution and the one computed numerically using the implicit Euler method. Note that even though the error decreases, it stabilizes around a value of 0.000709, which was subtracted in order to better distinguish a possibly stable decreasing error rate }
+	\label{fig:error_d}
 \end{figure}

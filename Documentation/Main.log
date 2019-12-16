@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  15 DEC 2019 08:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.12)  16 DEC 2019 06:54
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -2488,7 +2488,52 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./Figures/a07ex01f.png (PNG copy)>])
+[5 <./Figures/a07ex01f.png (PNG copy)>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
+Overfull \hbox (6.35399pt too wide) in paragraph at lines 257--259
+ \T1/lmr/b/n/12 d) \T1/lmr/m/n/12 The er-ror is plot-ted in Fig-ure 7[]. Please
+ re-fer to the on-line sub-mit-ted \T1/lmtt/m/n/12 a07ex02d.py
+ []
+
+<Figures/heatb.png, id=78, 1153.30875pt x 811.03pt>
+File: Figures/heatb.png Graphic file (type png)
+ <use Figures/heatb.png>
+Package pdftex.def Info: Figures/heatb.png used on input line 264.
+(pdftex.def)             Requested size: 426.79135pt x 300.1259pt.
+
+<Figures/error2b.png, id=79, 1153.30875pt x 811.03pt>
+File: Figures/error2b.png Graphic file (type png)
+
+<use Figures/error2b.png>
+Package pdftex.def Info: Figures/error2b.png used on input line 271.
+(pdftex.def)             Requested size: 426.79135pt x 300.1259pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7] <Figures/error_d.png, id=84, 462.528pt x 346.896pt>
+File: Figures/error_d.png Graphic file (type png)
+
+<use Figures/error_d.png>
+Package pdftex.def Info: Figures/error_d.png used on input line 278.
+(pdftex.def)             Requested size: 426.79135pt x 320.11154pt.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8 <./Figures/heatb.png (PNG copy)> <./Figures/error2b.png (PNG copy)>]
 
 Package caption Warning: Unused \captionsetup[table] on input line 58.
 See the caption package documentation for explanation.
@@ -2504,16 +2549,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6] (Main.aux)
+[9 <./Figures/error_d.png>] (Main.aux)
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45362 strings out of 493323
- 915389 string characters out of 3139069
- 1516477 words of memory out of 3000000
- 48054 multiletter control sequences out of 15000+200000
+ 45383 strings out of 493323
+ 915771 string characters out of 3139069
+ 1516476 words of memory out of 3000000
+ 48072 multiletter control sequences out of 15000+200000
  570193 words of font info for 50 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  65i,15n,101p,10407b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2532,9 +2577,9 @@ les/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
 m/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Main.pdf (6 pages, 598528 bytes).
+Output written on Main.pdf (9 pages, 976157 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
+ 143 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 
