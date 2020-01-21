@@ -16,8 +16,16 @@ def main():
     return
 
 def generatetransformation2D(k, e2, x, y):
-    T = np.zeros([3, 3])
-    T[2, :] = y[e2]
+    zi1 = x[e2][0]
+    zj1 = x[e2][1]
+    zk1 = x[e2][2]
+    zi2 = y[e2][0]
+    zj2 = y[e2][1]
+    zk2 = y[e2][2]
+
+    A = [[zj1-zi1, zk1-zi1],[zj2-zi2, zk2-zi2]]
+
+    print(A)
     Fdet = np.linalg.det(T)
 
     return
