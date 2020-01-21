@@ -24,4 +24,4 @@ def generatetransformation2D(k, e2, x, y):
 
 
 if __name__ == '__main__':
-    main()w
+    main()
