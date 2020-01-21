@@ -8,6 +8,7 @@ import pandas as pd
 from readtria import *
 
 def main():
+    # Exercise b, check generatetransformation2D by calculating the area of the house mesh
     [x, y, npoint, nelement, e2p, idp, ide] = readtria("./meshes/haus")
     # initialize area
     area = 0
@@ -31,6 +32,15 @@ def generatetransformation2D(k, e2p, x, y):
     Finv = 1/Fdet
 
     return Fdet, Finv
+
+def localmass2D(Fdet):
+    mloc = 1
+    return mloc
+
+
+def localstiff2D(Fdet,Finv):
+    sloc = 1
+    return sloc
 
 
 if __name__ == '__main__':
