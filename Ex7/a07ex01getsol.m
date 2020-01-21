@@ -1,6 +1,6 @@
-function [EigVal, Nu] = a06ex01_solveEVPb(R)
+function [U] = a07ex01getsol(X_H, T)
 % ------------------------------------------------------------------------\
-% Assignment 6, Exercise 1b                                               |
+% Assignment 7, Exercise 1d                                               |
 %                                                             submitted by|
 %                                                                         |
 %                        Kagan Atci | 338131 | Physical Engineering, M.Sc.|
@@ -13,20 +13,15 @@ function [EigVal, Nu] = a06ex01_solveEVPb(R)
 %
 %                                                                 Solution
 % -------------------------------------------------------------------------
-% Matrix of the k-th Bessel zeros
-Bessel = [2.40483, 5.52008,  8.65373, 11.79153, 14.93092; % n = 0
-          3.83171, 7.01559, 10.17347, 13.32369, 16.47063; % n = 1
-          3.83171, 7.01559, 10.17347, 13.32369, 16.47063; % n = 1 - duplicated
-          5.13562, 8.41724, 11.61984, 14.79595, 17.95982; % n = 2
-          5.13562, 8.41724, 11.61984, 14.79595, 17.95982; % n = 2 - duplicated
-          6.38016, 9.76102, 13.01520, 16.22347, 19.40942; % n = 3
-          6.38016, 9.76102, 13.01520, 16.22347, 19.40942];% n = 3 - duplicated
-   
-% Discretisized eigen values of the given disc problem for given radius
-EigVal = sort(Bessel(:)).^2 / R^2;
+% Fourrier row indices
+K = 1 : 1 : 300;
 
-% Crop first six eigenvalues
-EigVal = flipud(EigVal(1:6));
+% Loop over all Fourrier rows
+for k = K
+    % Calculate inhomogenous problem
+    U0(k, :) = (-1)^(k-1) / (k * pi) * sin(k * 2 * pi * X_H) * exp(-(k*2*pi)^2 * T);
+    
+end % of loop over Fourrier rows
 
-% Nu values of the first six eigen values
-Nu = fliplr([0, 1, 1, 2, 2, 0]);
+% Calculate U by summing all Fourrier rows and subtract from the homogenous part
+U = X_H - sum(U0, 1); U = U';
