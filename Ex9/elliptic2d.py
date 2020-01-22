@@ -6,15 +6,40 @@ from mpl_toolkits.mplot3d import Axes3D
 
 from readtria import readtria
 
+
 # These you need to implement:
 # def generatetransformation2D(k,e2,x,y):
 # def localstiff2D(Fdet,Finv):
 # def localmass2D(Fdet):
 
+def generatetransformation2D(k,e2,x,y):
+    i,j,k=e2[k,:]
+    zi1,zj1,zk1=x[i],x[j],x[k]
+    zi2,zj2,zk2=y[i],y[j],y[k]
+
+    F_l=np.array([[zj1-zi1,zk1-zi1],[zj2-zi2,zk2-zi2]])
+    b=np.array([[zi1],[zi2]])
+
+    Fdet=np.linalg.det(F_l)
+
+    Finv=np.linalg.inv(F_l)
+
+    return Fdet, Finv
+
+#matrices from previous assignment
+def localmass2D(Fdet):
+    mref=np.array([[1/12,1/24,1/24],[1/24,1/12,1/24],[1/24,1/24,1/12]])
+    mloc=mref*abs(Fdet)
+    return mloc
+def localstiff2D(Fdet,Finv):
+    B_l = Finv.dot(Finv.transpose())
+    grad_phi=np.array([[-1,0,1],[-1,1,0]])
+    sloc=abs(Fdet)*np.linalg.multi_dot([grad_phi.transpose(),B_l,grad_phi])
+    return sloc
 
 if __name__ == "__main__":
     # FEM Python sample code
-    x, y, npo, ne, e2, idp, ide = readtria('box')  # read mesh from file
+    x, y, npo, ne, e2, idp, ide = readtria('./meshes/box')  # read mesh from file
     localtoglobal2DP1 = e2                  # could it be this simple? why?
     # select points without Dirichlet bc
     it = np.logical_not(idp == 1)
