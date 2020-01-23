@@ -27,13 +27,13 @@ def generatetransformation2D(k,e2,x,y):
 
 #matrices from previous assignment
 def localmass2D(Fdet):
-    mref=2*np.array([[1/12,1/24,1/24],[1/24,1/12,1/24],[1/24,1/24,1/12]])
+    mref=np.array([[1/12,1/24,1/24],[1/24,1/12,1/24],[1/24,1/24,1/12]])
     mloc=mref*abs(Fdet)
     return mloc
 def localstiff2D(Fdet,Finv):
     B_l = Finv.dot(Finv.transpose())
     grad_phi=np.array([[-1,0,1],[-1,1,0]])
-    sloc=abs(Fdet)*np.linalg.multi_dot([grad_phi.transpose(),B_l,grad_phi])
+    sloc=1/2*abs(Fdet)*np.linalg.multi_dot([grad_phi.transpose(),B_l,grad_phi])
     return sloc
 
 if __name__ == "__main__":
@@ -81,7 +81,9 @@ if __name__ == "__main__":
     ax = fig.gca(projection='3d')
 
     # , linewidth=0.2, antialiased=True)
-    u_exact=-1/4*(x**2+y**2)+1
+    u_exact=-1/16*(x**2+y**2)+1/4
     ax.plot_trisurf(x, y, u, triangles=e2)
+
+    ax.plot_trisurf(x, y, u_exact, triangles=e2)
     plt.show()
     print(sum(u-u_exact)/len(u))
