@@ -1,0 +1,27 @@
+# A box with eight vertices in 2D, no attributes, one boundary marker.
+    9 2 0 1
+     # Outer box has these vertices:
+     1   0 0   0
+     2   0 3   0
+     3   3 0   0
+     4   3 3   33     # A special marker for this vertex.
+     # Inner square has these vertices:
+     5   1 1   0
+     6   1 2   0
+     7   2 1   0
+     8   2 2   0
+     9   2.1 1.9 0
+    # 8 segments with boundary markers.
+    9 1
+     1   1 2   0
+     2   2 4   0
+     3   4 3   0
+     4   3 1   0
+     5   5 6   0
+     6   6 8   0
+     7   8 7   0   
+     8   7 9   0
+     9   9 5   0
+    # One hole in the middle of the inner square.
+    1
+     1   1.5 1.5
