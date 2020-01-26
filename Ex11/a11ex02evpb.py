@@ -3,18 +3,12 @@ from scipy import sparse
 from scipy.sparse.linalg import spsolve
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-
 from readtria import readtria
-
-# These you need to implement:
-# def generatetransformation2D(k,e2,x,y):
-# def localstiff2D(Fdet,Finv):
-# def localmass2D(Fdet):
-
+from elliptic2d import *
 
 if __name__ == "__main__":
     # FEM Python sample code
-    x, y, npo, ne, e2, idp, ide = readtria('box')  # read mesh from file
+    x, y, npo, ne, e2, idp, ide = readtria('mdisc')  # read mesh from file
     localtoglobal2DP1 = e2                  # could it be this simple? why?
     # select points without Dirichlet bc
     it = np.logical_not(idp == 1)
@@ -52,11 +46,9 @@ if __name__ == "__main__":
     rhs = M*np.ones(npo)
     u = np.zeros(npo)
     u[it] = spsolve(A[np.ix_(it, it)], rhs[it])
-
     # plotting
     fig = plt.figure()
     ax = fig.gca(projection='3d')
-
     # , linewidth=0.2, antialiased=True)
     ax.plot_trisurf(x, y, u, triangles=e2)
     plt.show()
