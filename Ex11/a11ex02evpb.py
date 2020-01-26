@@ -99,6 +99,6 @@ if __name__ == "__main__":
     for i in range(6):
         u[it] = np.real(v[:, i])
         ax[i].tricontourf(x, y, u, 100, cmap="inferno")
-        ax[i].title.set_text("%3.1f + %3.1fj" % (np.real(w[i]), np.real(w[i])))
+        ax[i].title.set_text("%3.1f + %3.1fj" % (np.real(w[i]), np.imag(w[i])))
         ax[i].axis('off')
     plt.show()
