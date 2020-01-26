@@ -6,7 +6,6 @@ from mpl_toolkits.mplot3d import Axes3D
 
 from readtria import readtria
 
-
 def generatetransformation2D(k, e2, x, y):
     dx1 = x[e2[k, 1]]-x[e2[k, 0]]
     dy1 = y[e2[k, 1]]-y[e2[k, 0]]
@@ -43,10 +42,23 @@ def localmass2D(Fdet):
 
 if __name__ == "__main__":
     # FEM Python sample code
-    x, y, npo, ne, e2, idp, ide = readtria('box')  # read mesh from file
-    localtoglobal2DP1 = e2                  # could it be this simple? why?
+    # x, y, npo, ne, e2, idp, ide = readtria('mdisc')  # read mesh from file
     # select points without Dirichlet bc
-    it = np.logical_not(idp == 1)
+    # it = np.logical_not(idp == 1)
+
+    # fake mesh
+    x = np.array([0, 1, 1, 0, 0.5])
+    y = np.array([0, 0, 1, 1, 0.5])
+    e2 = np.array([[0, 1, 4], [1, 2, 4], [2, 3, 4], [3, 0, 4]])
+    # select points without Dirichlet bc
+    it = np.array([False, False, False, False, True])
+    ne = 4
+    npo = 5
+    idp = np.array([1, 1, 1, 1, 0])
+    ide = np.array([[1], [1], [1], [1], [1]])
+
+
+    localtoglobal2DP1 = e2                  # could it be this simple? why?
     nphi = 3
 
     # build matrices

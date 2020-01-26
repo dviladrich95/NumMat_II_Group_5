@@ -6,6 +6,13 @@ from mpl_toolkits.mplot3d import Axes3D
 from readtria import readtria
 from elliptic2d import *
 
+def localstiff2D2(Fdet, Finv):
+    gradphi = np.array([[0, 0], [0, 0], [0, 0]])
+    dphi = gradphi.dot(Finv)
+    S = 1/2*(dphi[:, 0].reshape(-1, 1).dot(dphi[:, 0].reshape(1, -1)) +
+             dphi[:, 1].reshape(-1, 1).dot(dphi[:, 1].reshape(1, -1)))*Fdet
+    return S
+
 if __name__ == "__main__":
     # FEM Python sample code
     x, y, npo, ne, e2, idp, ide = readtria('mdisc')  # read mesh from file
@@ -43,9 +50,12 @@ if __name__ == "__main__":
         order="F"), jj.flatten(order="F"))), shape=(npo, npo))
 
     # build rhs and take into account Dirichlet bcs, solve, plot
-    rhs = M*np.ones(npo)
+    rhs = M
     u = np.zeros(npo)
-    u[it] = spsolve(A[np.ix_(it, it)], rhs[it])
+    # rhs = M * 1 * np.ones(npo)
+    # u[it] = spsolve(A[np.ix_(it, it)], rhs[it])
+    z = np.zeros(npo)
+    u[it] = spsolve(A[np.ix_(it, it)]-20*M[np.ix_(it, it)], z[it])
     # plotting
     fig = plt.figure()
     ax = fig.gca(projection='3d')
