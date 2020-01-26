@@ -91,13 +91,13 @@ if __name__ == "__main__":
     # build rhs and take into account Dirichlet bcs, solve, plot
     rhs = M*np.ones(npo)
     u = np.zeros(npo)
-    w, v = eigs(A, M=M, sigma=1)
+    w, v = eigs(A[np.ix_(it, it)], M=M[np.ix_(it, it)], sigma=1)
 
     # plotting
     fig, ax = plt.subplots(1, 6, figsize=(18, 4))
     fig.suptitle('Eigenvalues')
     for i in range(6):
-        u = np.real(v[:, i])
+        u[it] = np.real(v[:, i])
         ax[i].tricontourf(x, y, u, 100, cmap="inferno", vmax=1, vmin=-1)
         ax[i].title.set_text("%3.1f + %3.1fj" % (np.real(w[i]), np.imag(w[i])))
         ax[i].axis('off')
