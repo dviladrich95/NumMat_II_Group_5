@@ -41,7 +41,7 @@ if __name__ == "__main__":
     # FEM Python sample code
     x, y, npo, ne, e2, idp, ide = readtria('./meshes/box')  # read mesh from file
     localtoglobal2DP1 = e2                  # could it be this simple? why?
-    # select points without Dirichlet bc
+    # select points without Dirichlet b
     it = np.logical_not(idp == 1)
     nphi = 3
 
