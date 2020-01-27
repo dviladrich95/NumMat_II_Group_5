@@ -1,9 +1,8 @@
 import numpy as np
 from scipy import sparse
-from scipy.sparse.linalg import spsolve
+from scipy.sparse.linalg import spsolve, eigs, eigsh
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-
 from readtria import readtria
 
 def generatetransformation2D(k, e2, x, y):
@@ -42,20 +41,20 @@ def localmass2D(Fdet):
 
 if __name__ == "__main__":
     # FEM Python sample code
-    # x, y, npo, ne, e2, idp, ide = readtria('mdisc')  # read mesh from file
+    x, y, npo, ne, e2, idp, ide = readtria('mdisc')  # read mesh from file
     # select points without Dirichlet bc
-    # it = np.logical_not(idp == 1)
+    it = np.logical_not(idp == 1)
 
     # fake mesh
-    x = np.array([0, 1, 1, 0, 0.5])
-    y = np.array([0, 0, 1, 1, 0.5])
-    e2 = np.array([[0, 1, 4], [1, 2, 4], [2, 3, 4], [3, 0, 4]])
-    # select points without Dirichlet bc
-    it = np.array([False, False, False, False, True])
-    ne = 4
-    npo = 5
-    idp = np.array([1, 1, 1, 1, 0])
-    ide = np.array([[1], [1], [1], [1], [1]])
+    # x = np.array([0, 1, 1, 0, 0.5])
+    # y = np.array([0, 0, 1, 1, 0.5])
+    # e2 = np.array([[0, 1, 4], [1, 2, 4], [2, 3, 4], [3, 0, 4]])
+    # # select points without Dirichlet bc
+    # it = np.array([False, False, False, False, True])
+    # ne = 4
+    # npo = 5
+    # idp = np.array([1, 1, 1, 1, 0])
+    # ide = np.array([[1], [1], [1], [1], [1]])
 
 
     localtoglobal2DP1 = e2                  # could it be this simple? why?
@@ -92,10 +91,14 @@ if __name__ == "__main__":
     # build rhs and take into account Dirichlet bcs, solve, plot
     rhs = M*np.ones(npo)
     u = np.zeros(npo)
-    u[it] = spsolve(A[np.ix_(it, it)], rhs[it])
+    w, v = eigs(A[np.ix_(it, it)], M=M[np.ix_(it, it)], sigma=1)
+
     # plotting
-    fig = plt.figure()
-    ax = fig.gca(projection='3d')
-    # , linewidth=0.2, antialiased=True)
-    ax.plot_trisurf(x, y, u, triangles=e2)
+    fig, ax = plt.subplots(1, 6, figsize=(18, 4))
+    fig.suptitle('Eigenvalues')
+    for i in range(6):
+        u[it] = np.real(v[:, i])
+        ax[i].tricontourf(x, y, u, 100, cmap="inferno", vmax=1, vmin=-1)
+        ax[i].title.set_text("%3.1f + %3.1fj" % (np.real(w[i]), np.imag(w[i])))
+        ax[i].axis('off')
     plt.show()
